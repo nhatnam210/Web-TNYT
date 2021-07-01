@@ -12,8 +12,7 @@ namespace The_NewYork_Time.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Section()
         {
-            Articles = new HashSet<Article>();
-            Cetegories = new HashSet<Cetegory>();
+            Cetegories = new HashSet<Category>();
         }
 
         [Key]
@@ -24,9 +23,6 @@ namespace The_NewYork_Time.Models
         public string sectionname { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Article> Articles { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cetegory> Cetegories { get; set; }
+        public virtual ICollection<Category> Cetegories { get; set; }
     }
 }

@@ -10,107 +10,112 @@ using The_NewYork_Time.Models;
 
 namespace The_NewYork_Time.Views
 {
-    public class SectionsController : Controller
+    public class ArticlesController : Controller
     {
-        private TNYTModel db = new TNYTModel();
+        private TNYTContext db = new TNYTContext();
 
-        // GET: Sections
+        // GET: Articles
         public ActionResult Index()
         {
-            return View(db.Sections.ToList());
+            var articles = db.Articles.Include(a => a.Cetegory);
+            return View(articles.ToList());
         }
 
-        // GET: Sections/Details/5
+        // GET: Articles/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Section section = db.Sections.Find(id);
-            if (section == null)
+            Article article = db.Articles.Find(id);
+            if (article == null)
             {
                 return HttpNotFound();
             }
-            return View(section);
+            return View(article);
         }
 
-        // GET: Sections/Create
+        // GET: Articles/Create
         public ActionResult Create()
         {
+            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname");
             return View();
         }
 
-        // POST: Sections/Create
+        // POST: Articles/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idsection,sectionname")] Section section)
+        public ActionResult Create([Bind(Include = "idarticle,articlename,description,image1,image2,image3,image4a,image4b,image5,content1,content2,content3,content4,content5,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
             {
-                db.Sections.Add(section);
+                db.Articles.Add(article);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(section);
+            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            return View(article);
         }
 
-        // GET: Sections/Edit/5
+        // GET: Articles/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Section section = db.Sections.Find(id);
-            if (section == null)
+            Article article = db.Articles.Find(id);
+            if (article == null)
             {
                 return HttpNotFound();
             }
-            return View(section);
+            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            return View(article);
         }
 
-        // POST: Sections/Edit/5
+        // POST: Articles/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idsection,sectionname")] Section section)
+        public ActionResult Edit([Bind(Include = "idarticle,articlename,description,image1,image2,image3,image4a,image4b,image5,content1,content2,content3,content4,content5,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(section).State = EntityState.Modified;
+                db.Entry(article).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(section);
+            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            return View(article);
         }
 
-        // GET: Sections/Delete/5
+        // GET: Articles/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Section section = db.Sections.Find(id);
-            if (section == null)
+            Article article = db.Articles.Find(id);
+            if (article == null)
             {
                 return HttpNotFound();
             }
-            return View(section);
+            return View(article);
         }
 
-        // POST: Sections/Delete/5
+        // POST: Articles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Section section = db.Sections.Find(id);
-            db.Sections.Remove(section);
+            Article article = db.Articles.Find(id);
+            db.Articles.Remove(article);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

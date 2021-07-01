@@ -105,3 +105,4 @@ D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_T
 D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CopyComplete
 D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.dll
 D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.pdb
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
