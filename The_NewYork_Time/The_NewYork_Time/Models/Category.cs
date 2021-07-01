@@ -6,11 +6,11 @@ namespace The_NewYork_Time.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Cetegory")]
-    public partial class Cetegory
+    [Table("Category")]
+    public partial class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cetegory()
+        public Category()
         {
             Articles = new HashSet<Article>();
         }

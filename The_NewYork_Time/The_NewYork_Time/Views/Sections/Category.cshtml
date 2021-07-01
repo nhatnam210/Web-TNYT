@@ -1,0 +1,160 @@
+﻿@model The_NewYork_Time.Models.Category
+
+@*<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Section.sectionname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Section.sectionname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoryname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoryname)
+        </dd>
+
+    </dl>
+</div>*@
+
+    <main>
+        <!-- Section header -->
+        <header id="section-header">
+            <div class="section-world">
+                <p> @Html.DisplayFor(model => model.Section.sectionname)</p>
+            </div>
+            <div class="section-title">
+                <h1> @Html.DisplayFor(model => model.categoryname)</h1>
+            </div>
+        </header>
+        <!-- End Section Header -->
+        <!-- Section Latest -->
+        <section id="latest">
+            <div>
+                <!-- Tab items -->
+                <div class="tabs">
+                    <div class="tab-item active">
+
+                        Latest
+                    </div>
+                    <div class="tab-item">
+                        <form action="">
+                            <input placeholder="Search" style="padding: 2px 0; border-radius: 5px;">
+                            <i class="fas fa-search"></i>
+                        </form>
+
+                    </div>
+
+                    <div class="line"></div>
+                </div>
+
+                <!-- Tab content -->
+                <div class="tab-content ">
+                    <div class="tab-pane active">
+                        <div class="lastes-item row">
+                            <div class="col col-2  display-sm">
+                                <span>June 24, 2021</span>
+                            </div>
+                            <div class="col col-7 col-sm12">
+                                <h2>
+                                    <a href="#">
+                                        Brazil Passes 500,000 Covid Deaths, a Tragedy With No Sign of Letup
+                                    </a>
+                                </h2>
+                                <p>With 2.7 percent of the world’s population, Brazil has suffered 13 percent of the Covid-19 fatalities, and the pandemic there is not abating.</p>
+                            </div>
+                            <div class="col col-3 col-sm12 mt-19">
+                                <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
+                            </div>
+                        </div>
+                        <div class="lastes-item row">
+                            <div class="col col-2 display-sm">
+                                <span>June 24, 2021</span>
+                            </div>
+                            <div class="col col-7 col-sm12">
+                                <h2>
+                                    <a href="#">
+                                        Why More People Are Getting Two Different Coronavirus Vaccines
+                                    </a>
+                                </h2>
+                                <p>
+                                    Several countries are allowing mix-and-match inoculation, which scientists hope will have benefits, and Chancellor Angela Merkel of Germany is among those to get it.
+
+                                </p>
+                            </div>
+                            <div class="col col-3 col-sm12 mt-19">
+                                <img src="https://static01.nyt.com/images/2021/06/23/world/23mix-n-match-explainer01/merlin_187969563_eed9bb59-2ad2-4862-bb44-ebbd4ca946a5-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
+                            </div>
+                        </div>
+                        <div class="lastes-item row">
+                            <div class="col col-2 display-sm">
+                                <span>June 24, 2021</span>
+                            </div>
+                            <div class="col col-7 col-sm12">
+                                <h2>
+                                    <a href="#">
+                                        Hold the Tequila. The Sunrise Is All Some Travelers Need.
+                                    </a>
+                                </h2>
+                                <p>As vaccination levels rise and Americans head back to the roads and skies, sober travel, a subset of vacations once relegated to 12-steppers and recovering addicts, is going mainstream.</p>
+                            </div>
+                            <div class="col col-3 col-sm12 mt-19">
+                                <img src="https://static01.nyt.com/images/2021/06/23/travel/oakImage-1624476417887/oakImage-1624476417887-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane">
+                        <div class="lastes-item row">
+                            <div class="col col-2 display-sm">
+                                <span>June 24, 2021</span>
+                            </div>
+                            <div class="col col-7 col-sm12">
+                                <h2>
+                                    <a href="#">
+                                        Brazil Passes 500,000 Covid Deaths, a Tragedy With No Sign of Letup
+                                    </a>
+                                </h2>
+                                <p>With 2.7 percent of the world’s population, Brazil has suffered 13 percent of the Covid-19 fatalities, and the pandemic there is not abating.</p>
+                            </div>
+                            <div class="col col-3 col-sm12 mt-19">
+                                <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
+                            </div>
+                        </div>
+                        <div class="lastes-item row">
+                            <div class="col col-2 display-sm">
+                                <span>June 24, 2021</span>
+                            </div>
+                            <div class="col col-7 col-sm12">
+                                <h2>
+                                    <a href="#">
+                                        Why More People Are Getting Two Different Coronavirus Vaccines
+                                    </a>
+                                </h2>
+                                <p>
+                                    Several countries are allowing mix-and-match inoculation, which scientists hope will have benefits, and Chancellor Angela Merkel of Germany is among those to get it.
+
+                                </p>
+                            </div>
+                            <div class="col col-3 col-sm12 mt-19">
+                                <img src="https://static01.nyt.com/images/2021/06/23/world/23mix-n-match-explainer01/merlin_187969563_eed9bb59-2ad2-4862-bb44-ebbd4ca946a5-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- End Section Latest -->
+    </main>
+    <script>
+        tab()
+    </script>
+

@@ -7,8 +7,8 @@
     @*@Styles.Render("~/Content/css")*@
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="~/Assets/css/style.css">
-    @*<link rel="stylesheet" href="~/Assets/css/base.css">*@
-    <link rel="stylesheet" href="~/Assets/css/responsive.css">
+    <link rel="stylesheet" href="~/Assets/css/base.css">
+    @*<link rel="stylesheet" href="~/Assets/css/responsive.css">*@
     <script language="javascript" src="~/Assets/js/javascript.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
@@ -33,15 +33,15 @@
                     <li>@Html.ActionLink("Food", "Section/3", "Home")</li>
 
                     @*<li>@Html.ActionLink("coi section", "Index", "Sections")</li>
-        <li>@Html.ActionLink("coi category", "Index", "Categories")</li>
-        <li>@Html.ActionLink("coi Article", "Index", "Articles")</li>*@
+                        <li>@Html.ActionLink("coi category", "Index", "Categories")</li>
+                        <li>@Html.ActionLink("coi Article", "Index", "Articles")</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
 
-<!--Custom Code body HTML-->
+    <!--Custom Code body HTML-->
     <div class="container body-content">
         @RenderBody()
         <hr />
