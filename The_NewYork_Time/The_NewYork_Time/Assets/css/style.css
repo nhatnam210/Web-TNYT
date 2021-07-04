@@ -93,13 +93,23 @@ html {
     margin-top: 45px;
 }
 
+.section-header-link {
+    color:#333;
+    text-decoration:none;
+}
+
+/*.section-header-link:hover {
+        color: #757575;
+        transition: all linear .2s;
+    }*/
+
 .section-title h1 {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 48px;
-    line-height: 48px;
-    font-family: nyt-franklin,helvetica,arial,sans-serif;
-    font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-size: 48px;
+        line-height: 48px;
+        font-family: nyt-franklin,helvetica,arial,sans-serif;
+        font-weight: 700;
 }
 
 .section-world {
@@ -109,7 +119,7 @@ html {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-family: nyt-franklin,helvetica,arial,sans-serif;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
 .section-nav {
@@ -137,6 +147,7 @@ html {
         font-size: 11px;
         line-height: 11px;
         border-right: 1px solid #ccc;
+        text-transform:uppercase;
     }
 
         .list-nav li:first-child {
@@ -252,27 +263,32 @@ html {
 
 .list-content {
     display: flex;
-    padding-left:0;
+    flex-wrap: wrap;
 }
 
-    .list-content img {
-        max-width: 100%;
-        height: auto;
+.list-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.list-content li {
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    border-right: 1px solid #e2e2e2;
+    flex-basis: 20%;
+}
+
+    .list-content li:last-child,
+    .list-content li:nth-child(5) {
+        border: none;
+        margin-right: -20px;
     }
 
-    .list-content li {
-        padding: 0 20px;
-        border-right: 1px solid #e2e2e2;
-    }
 
+    .list-content li:nth-child(6),
     .list-content li:first-child {
-            padding-left: 0 !important;
-        }
-
-    .list-content li:last-child {
-            padding-right: 0;
-            border-right: 0;
-        }
+        margin-left: -20px;
+    }
 
     .list-content a {
         text-decoration: none;
@@ -408,6 +424,16 @@ html {
         display: block;
     }
 
+.article-author {
+    margin: 11px 0 4px;
+    color: #999;
+    font-family: nyt-franklin,helvetica,arial,sans-serif;
+    font-size: 11px !important;
+    font-weight: 500;
+    line-height: 12px;
+}
+
+
 .lastes-item span {
     color: rgb(208, 1, 27);
     font-family: nyt-franklin, helvetica, arial, sans-serif;
@@ -541,12 +567,17 @@ select option{
 }
 
 .title {
+    margin-bottom: 3rem;
     text-transform: uppercase;
     color: var(--text-dark);
     font-weight: 700;
     font-family: var(--famlily-1);
     font-size: 1.3rem;
 
+}
+
+.main-title {
+    margin-bottom: 2rem;
 }
 
 .main-title h1 {
@@ -605,7 +636,7 @@ select option{
     padding: 0.5rem;
     width: 1.5rem;
     height: 1.5rem;
-    background-image: url(~/Assets/img/call.svg);
+    background-image: url(/Assets/img/call.svg);
     background-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: center;

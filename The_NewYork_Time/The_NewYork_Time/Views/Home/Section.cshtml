@@ -12,13 +12,7 @@
         <div class="section-title">
             <h1>@Html.DisplayFor(model => model.sectionname) News</h1>
         </div>
-        <nav class="section-nav">
-            <ul class="list-nav">
-                @Html.ListBox(new SelectList(Model.ListCategory,"categoryname"),htmlAttributes: new {@class="list"})
-
-
-            </ul>
-        </nav>
+       @Html.Partial("_Category", The_NewYork_Time.Models.BUS.CategoryBUS.DanhSachCaTe(Model.idsection))
     </header>
     <!-- End Section Header -->
     <!-- Section New Info -->
@@ -139,96 +133,9 @@
                 </div>
             </div>
         </div>
-        <div class="section-content-center">
-            <ul class="list-content">
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/23/world/23hongkong-trial1/merlin_189736158_509935f6-b9e7-4f86-bb1b-3b654006e1de-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Protester Who Crashed Into Police Faces Hong Kong’s First Security Law Trial</a>
-                    </h2>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/24/world/24aquino-top/24aquino-top-videoLarge-v2.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Benigno S. Aquino III, Former President of the Philippines, Is Dead at 61</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/23/world/23tigray-sub1/merlin_189765255_abb63b0e-01bc-4e1e-a116-4e0e7bd36f7b-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Dozens Killed in Market Airstrike in Ethiopia, Officials Say</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/23/world/23europe-lgbt01/merlin_189238635_bd16cd3d-8c5f-479a-a921-f93ed1c43dbd-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">A Culture War Between Hungary and Europe Escalates Over L.G.B.T. Bill</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/23/world/23mexico-subway/merlin_187578138_89a99e5f-0f11-4b1e-b39d-f5c12bd01646-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Mexico’s President Says Carlos Slim Might Help Rebuild Collapsed Metro Line</a>
-                    </h2>
-                </li>
-            </ul>
-        </div>
-        <div class="section-content-foot">
-            <ul class="list-content">
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/23/world/23iran/merlin_186291114_eeeb7be8-7c67-4f35-a098-d4d380a81f32-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Iran Atomic Agency Says It Thwarted Attack on a Facility</a>
-                    </h2>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/24/business/24mcafee-print/24mcafee-print-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">John McAfee, Software Pioneer Turned Fugitive, Dies in Spanish Prison</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/23/world/23japan-pandas1/23japan-pandas1-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">A Joyful Surprise at Japan’s Oldest Zoo: The Birth of Twin Pandas</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/04/15/world/xx-suez-hfo-01sub/merlin_185647902_fe26a1bd-8701-4e72-bd34-b9ff77bb2466-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Settlement Is Reached Over Stuck Ship That Blocked Suez Canal in Egypt</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/23/world/23russia-ship/23russia-ship-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Russia Says It Fired Warning Shots at a U.K. Warship Near Crimea</a>
-                    </h2>
-                </li>
-            </ul>
-        </div>
+        <!--show 10 aricle random-->
+        @Html.Partial("_Random_10_Article", The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleRandom(Model.idsection))
+        <!--end show 10 aricle random-->
     </section>
     <!-- End Section New Info -->
     <!-- Section US -->
@@ -456,8 +363,6 @@
                     </div>
 
                 </div>
-
-
             </div>
         </div>
     </section>
