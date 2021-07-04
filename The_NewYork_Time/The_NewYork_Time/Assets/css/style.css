@@ -20,13 +20,13 @@ html {
     --line-light: #e2e2e2;
 }
 
-.row::after {
+.rowp::after {
     content: "";
     display: block;
     clear: both;
 }
 
-.row {
+.rowp {
     margin-left: -16px;
     margin-right: -16px;
 }
@@ -252,6 +252,7 @@ html {
 
 .list-content {
     display: flex;
+    padding-left:0;
 }
 
     .list-content img {
@@ -264,11 +265,11 @@ html {
         border-right: 1px solid #e2e2e2;
     }
 
-        .list-content li:first-child {
-            padding-left: 0;
+    .list-content li:first-child {
+            padding-left: 0 !important;
         }
 
-        .list-content li:last-child {
+    .list-content li:last-child {
             padding-right: 0;
             border-right: 0;
         }
@@ -442,6 +443,9 @@ html {
     padding: 21px 0;
     border-bottom: 1px solid #e2e2e2;
 }
+.lastes-item:last-child{
+    border:none;
+}
 
 .tab-item i {
     padding-left: 4px;
@@ -601,7 +605,7 @@ select option{
     padding: 0.5rem;
     width: 1.5rem;
     height: 1.5rem;
-    background-image: url(/img/call.svg);
+    background-image: url(~/Assets/img/call.svg);
     background-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: center;

@@ -1,0 +1,15 @@
+.btn-primary {
+    background-color: #4F7D9C !important;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.col-link {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 8px;
+} .col-link:hover {
+    color: black;
+}

@@ -25,14 +25,14 @@ html{
     margin: 0 auto;
 }
 
-.row {
+.rown {
     display: flex;
     flex-wrap: wrap;
     margin-left: -4px;
     margin-right: -4px;
 }
 
-.row.no-gutters {
+.rown.no-gutters {
     margin-left: 0;
     margin-right: 0;
 }
@@ -42,7 +42,7 @@ html{
     padding-right: 4px;
 }
 
-.row.no-gutters .col {
+.rown.no-gutters .col {
     padding-left: 0;
     padding-right: 0;
 }
@@ -164,7 +164,7 @@ html{
 
 /* >= Tablet */
 @media (min-width: 740px) {
-    .row {
+    .rown {
         margin-left: -8px;
         margin-right: -8px;
     }
@@ -300,12 +300,12 @@ html{
 
 /* PC medium resolution > */
 @media (min-width: 1113px) {
-    .row {
+    .rown {
         margin-left: -12px;
         margin-right: -12px;
     }
 
-    .row.sm-gutter {
+    .rown.sm-gutter {
         margin-left: -5px;
         margin-right: -5px;
     }
@@ -315,7 +315,7 @@ html{
         padding-right: 12px;
     }
 
-    .row.sm-gutter .col {
+    .rown.sm-gutter .col {
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -456,12 +456,12 @@ html{
         width: 984px;
     }
 
-    .wide .row {
+    .wide .rown {
         margin-left: -12px;
         margin-right: -12px;
     }
 
-    .wide .row.sm-gutter {
+    .wide .rown.sm-gutter {
         margin-left: -5px;
         margin-right: -5px;
     }
@@ -471,7 +471,7 @@ html{
         padding-right: 12px;
     }
 
-    .wide .row.sm-gutter .col {
+    .wide .rown.sm-gutter .col {
         padding-left: 5px;
         padding-right: 5px;
     }
