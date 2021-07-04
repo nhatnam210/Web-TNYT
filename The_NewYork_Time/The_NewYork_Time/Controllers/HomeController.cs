@@ -12,9 +12,10 @@ namespace The_NewYork_Time.Controllers
     {
         private TNYTContext db = new TNYTContext();
 
+
         public ActionResult Index()
         {
-            return View();
+            return View(db.Sections.ToList());
         }
 
         public ActionResult About()

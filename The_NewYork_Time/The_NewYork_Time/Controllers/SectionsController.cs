@@ -20,6 +20,16 @@ namespace The_NewYork_Time.Views
             return View(db.Sections.ToList());
         }
 
+        public ActionResult ShowCate()
+        {
+            //get list caategories
+            Section section = new Section();
+            section.ListCategory = db.Cetegories.ToList();
+
+            return View(section);
+        }
+
+
         // GET: Sections/Details/5
         public ActionResult Details(int? id)
         {

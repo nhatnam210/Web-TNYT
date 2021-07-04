@@ -24,5 +24,7 @@ namespace The_NewYork_Time.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Category> Cetegories { get; set; }
+
+        public List<Category> ListCategory = new List<Category>();
     }
 }
