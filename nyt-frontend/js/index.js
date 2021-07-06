@@ -4,17 +4,17 @@ const daysOfWeek = [
     'Thursday', 'Friday', 'Saturday'
 ]
 const months = [
-    'January', 'February', 'March', 'April', 'May', 'June', 'July',
-    'August', 'September', 'October', 'November', 'December'
-]
-// ---- NEWS HEADER CATEGORIES
+        'January', 'February', 'March', 'April', 'May', 'June', 'July',
+        'August', 'September', 'October', 'November', 'December'
+    ]
+    // ---- NEWS HEADER CATEGORIES
 const categories = [
-    'World', 'U.S.', 'Politics', 'N.Y.', 'Business',
-    'Opinion', 'Tech', 'Science', 'Health', 'Sports',
-    'Arts', 'Books', 'Style', 'Food', 'Travel',
-    'Magazine', 'T Magazine', 'Real Estate', 'Video'
-]
-// ---- NEWS FOOTER CATEGORIES
+        'World', 'U.S.', 'Politics', 'N.Y.', 'Business',
+        'Opinion', 'Tech', 'Science', 'Health', 'Sports',
+        'Arts', 'Books', 'Style', 'Food', 'Travel',
+        'Magazine', 'T Magazine', 'Real Estate', 'Video'
+    ]
+    // ---- NEWS FOOTER CATEGORIES
 const newsCol = [
     'Home Page', 'World', 'Coronavirus', 'U.S.', 'Politics',
     'New York', 'Business', 'Tech', 'Science', 'Sports',
@@ -70,6 +70,8 @@ function parseCategory() {
     categories.forEach(category => $('#header-navbar').append(
         '<li class="nav-item"><a class="nav-link" href="#">' + category + '</a></li>'
     ));
+    $(".nav-item").css("margin", "-5px");
+    $(".nav-item").css("font-size", "12px");
 }
 
 function parseFooterColumns() {
@@ -94,7 +96,7 @@ function parseFooterColumns() {
 }
 
 $(document).ready(
-    function () {
+    function() {
         parseToday()
         parseCategory()
         parseFooterColumns()
