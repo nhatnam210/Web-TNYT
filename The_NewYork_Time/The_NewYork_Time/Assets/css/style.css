@@ -295,15 +295,16 @@ html {
         color: black;
     }
 
-        .list-content a:hover {
+.list-content a:hover {
             text-decoration: underline;
-        }
+   }
 
-    .list-content h2 {
+.list-content h2 {
         font-weight: 500;
         font-size: 16px;
         line-height: 18px;
-    }
+        
+}
 
 .section-content-foot {
     margin-top: 30px;

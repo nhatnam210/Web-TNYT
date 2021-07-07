@@ -19,5 +19,24 @@ namespace The_NewYork_Time.Models.BUS
             var db = new TNYTDB();
             return db.Query<Article>("SELECT TOP 10 * FROM Article as a, Category as c, Section as s where a.idcategory = c.idcategory and c.idsection= s.idsection and s.idsection = '"+ id +"' ORDER BY NEWID()");
         }
+        public static IEnumerable<Article> DanhSachArticleTop1(int id)
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("select top 1 * from Article a , Section s , Category c  where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' ORDER BY idarticle DESC ");
+            
+        }
+        //public static IEnumerable<Article> DanhSachArticleTop2(int id)
+        //{
+        //    var db = new TNYTDB();
+        //    return db.Execute("exec  TOP2 @idsection= '" + id + "'");
+
+        //}
+
+        public static IEnumerable<Article> DanhsachArticleLastest(int id)
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("select * from Article a , Section s , Category c  where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' ORDER BY idarticle DESC ");
+
+        }
     }
 }
