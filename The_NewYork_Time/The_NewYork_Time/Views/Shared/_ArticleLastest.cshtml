@@ -23,39 +23,27 @@
         <!-- Tab content -->
         <div class="tab-content ">
             <div class="tab-pane active">
-                @foreach (var item in Model)
-                {
-                    <div class="lastes-item row">
-
-                        <div class="col col-2 display-sm">
-                            <span>@item.date</span>
-                        </div>
-                        <div class="col col-7 col-sm12">
-                            <h2>
-                                <a href="#">
-                                    @item.articlename
-                                </a>
-                            </h2>
-                            <p>@item.description</p>
-                            <p class="article-author">
-                                By @item.author
-                            </p>
-                        </div>
-                        <div class="col col-3 col-sm12 mt-19">
-                            <a href="#">
-                                <img src="@item.image1" alt="">
-                               </a>
-                        </div>
-
-                       
-
-
+                @foreach(var item in Model) { 
+                <div class="lastes-item rowp">
+                    <div class="col col-2  display-sm">
+                        <span>@item.date</span>
                     </div>
-                }
-
+                    <div class="col col-7 col-sm12">
+                        <h2>
+                            <a href="#">
+                               @item.articlename
+                            </a>
+                        </h2>
+                        <p>@item.description</p>
+                    </div>
+                    <div class="col col-3 col-sm12 mt-19">
+                        <img src="@item.image1" alt="">
+                    </div>
                 </div>
+                }
+            </div>
             <div class="tab-pane">
-                <div class="lastes-item row">
+                <div class="lastes-item rowp">
                     <div class="col col-2 display-sm">
                         <span>June 24, 2021</span>
                     </div>
@@ -71,7 +59,7 @@
                         <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
                     </div>
                 </div>
-                <div class="lastes-item row">
+                <div class="lastes-item rowp">
                     <div class="col col-2 display-sm">
                         <span>June 24, 2021</span>
                     </div>
@@ -92,8 +80,6 @@
                 </div>
 
             </div>
-
-
         </div>
     </div>
 </section>

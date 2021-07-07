@@ -665,9 +665,13 @@
     <Content Include="Views\Shared\_Category.cshtml" />
     <Content Include="Views\Shared\_ArticleTheoCate.cshtml" />
     <Content Include="Views\Shared\_Random_10_Article.cshtml" />
+    <Content Include="Views\Shared\_Top1ArticleSection.cshtml" />
+    <Content Include="Views\Shared\_ArticleLastest.cshtml" />
+    <Content Include="Views\Shared\_2ndArticleSection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Partial\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

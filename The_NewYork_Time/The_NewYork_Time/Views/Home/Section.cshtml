@@ -20,7 +20,7 @@
         <div class="section-content-head">
             <div class="rowp">
                 <div class="boder-md">
-                    <div class="col col-6 col-md7 col-sm12 content-left">
+                    @*<div class="col col-6 col-md7 col-sm12 content-left">
                         <div class="head-img">
                             <a href="/Categories/Article/1">
                                 <img src="https://static01.nyt.com/images/2021/06/24/multimedia/24canada-graves--sub/24canada-graves--sub-videoLarge.jpg" alt="">
@@ -46,35 +46,9 @@
                             </div>
                         </div>
 
-                    </div>
-                    <div class="col col-3 col-md5 col-sm12 content-center">
-                        <div class="">
-                            <div class="head-img">
-                                <a href="">
-                                    <img src="https://static01.nyt.com/images/2021/06/21/world/Nigeria-StolenArt-07/merlin_189587424_3dbb9ffc-0c9a-4fdc-8003-bbcc4b18cb9f-videoLarge.jpg" alt="">
-                                </a>
-
-                                <p>TOM SAATER FOR THE NEW YORK TIMES</p>
-                            </div>
-                            <div class="head-content">
-                                <div class="head-title">
-                                    <h2><a href="#">In the West, the Looted Bronzes Are Museum Pieces. In Nigeria, ‘They Are Our Ancestors.’</a></h2>
-                                </div>
-                                <div class="head-descrip">
-                                    <p>When British soldiers stole the treasured works in 1897, it left a gaping hole in an ancient culture. With a few set to return to Nigeria, can their meaning be restored, too?</p>
-                                </div>
-                                <div class="head-article">
-                                    <span class="minute">
-                                        15h ago
-                                    </span>
-                                    <span class="space"></span>
-                                    <span class="name-aricle">
-                                        By RUTH MACLEAN and ALEX MARSHALL
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>*@
+                    @Html.Partial("_Top1ArticleSection",The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop1(Model.idsection))
+                    @*@Html.Partial("_2ndArticleSection",The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop2(Model.idsection))*@
                 </div>
 
                 <div class="col col-3 col-md12 col-sm12">
@@ -251,121 +225,7 @@
     </section>
     <!-- End Section Vietnam -->
     <!-- Section Latest -->
-    <section id="latest">
-        <div>
-            <!-- Tab items -->
-            <div class="tabs">
-                <div class="tab-item active">
-
-                    Latest
-                </div>
-                <div class="tab-item">
-                    <form action="">
-                        <input placeholder="Search" style="padding: 2px 0; border-radius: 5px;">
-                        <i class="fas fa-search"></i>
-                    </form>
-
-                </div>
-
-                <div class="line"></div>
-            </div>
-
-            <!-- Tab content -->
-            <div class="tab-content ">
-                <div class="tab-pane active">
-                    <div class="lastes-item rowp">
-                        <div class="col col-2  display-sm">
-                            <span>June 24, 2021</span>
-                        </div>
-                        <div class="col col-7 col-sm12">
-                            <h2>
-                                <a href="#">
-                                    Brazil Passes 500,000 Covid Deaths, a Tragedy With No Sign of Letup
-                                </a>
-                            </h2>
-                            <p>With 2.7 percent of the world’s population, Brazil has suffered 13 percent of the Covid-19 fatalities, and the pandemic there is not abating.</p>
-                        </div>
-                        <div class="col col-3 col-sm12 mt-19">
-                            <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
-                        </div>
-                    </div>
-                    <div class="lastes-item rowp">
-                        <div class="col col-2 display-sm">
-                            <span>June 24, 2021</span>
-                        </div>
-                        <div class="col col-7 col-sm12">
-                            <h2>
-                                <a href="#">
-                                    Why More People Are Getting Two Different Coronavirus Vaccines
-                                </a>
-                            </h2>
-                            <p>
-                                Several countries are allowing mix-and-match inoculation, which scientists hope will have benefits, and Chancellor Angela Merkel of Germany is among those to get it.
-
-                            </p>
-                        </div>
-                        <div class="col col-3 col-sm12 mt-19">
-                            <img src="https://static01.nyt.com/images/2021/06/23/world/23mix-n-match-explainer01/merlin_187969563_eed9bb59-2ad2-4862-bb44-ebbd4ca946a5-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
-                        </div>
-                    </div>
-                    <div class="lastes-item rowp">
-                        <div class="col col-2 display-sm">
-                            <span>June 24, 2021</span>
-                        </div>
-                        <div class="col col-7 col-sm12">
-                            <h2>
-                                <a href="#">
-                                    Hold the Tequila. The Sunrise Is All Some Travelers Need.
-                                </a>
-                            </h2>
-                            <p>As vaccination levels rise and Americans head back to the roads and skies, sober travel, a subset of vacations once relegated to 12-steppers and recovering addicts, is going mainstream.</p>
-                        </div>
-                        <div class="col col-3 col-sm12 mt-19">
-                            <img src="https://static01.nyt.com/images/2021/06/23/travel/oakImage-1624476417887/oakImage-1624476417887-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane">
-                    <div class="lastes-item rowp">
-                        <div class="col col-2 display-sm">
-                            <span>June 24, 2021</span>
-                        </div>
-                        <div class="col col-7 col-sm12">
-                            <h2>
-                                <a href="#">
-                                    Brazil Passes 500,000 Covid Deaths, a Tragedy With No Sign of Letup
-                                </a>
-                            </h2>
-                            <p>With 2.7 percent of the world’s population, Brazil has suffered 13 percent of the Covid-19 fatalities, and the pandemic there is not abating.</p>
-                        </div>
-                        <div class="col col-3 col-sm12 mt-19">
-                            <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
-                        </div>
-                    </div>
-                    <div class="lastes-item rowp">
-                        <div class="col col-2 display-sm">
-                            <span>June 24, 2021</span>
-                        </div>
-                        <div class="col col-7 col-sm12">
-                            <h2>
-                                <a href="#">
-                                    Why More People Are Getting Two Different Coronavirus Vaccines
-                                </a>
-                            </h2>
-                            <p>
-                                Several countries are allowing mix-and-match inoculation, which scientists hope will have benefits, and Chancellor Angela Merkel of Germany is among those to get it.
-
-                            </p>
-                        </div>
-                        <div class="col col-3 col-sm12 mt-19">
-                            <img src="https://static01.nyt.com/images/2021/06/23/world/23mix-n-match-explainer01/merlin_187969563_eed9bb59-2ad2-4862-bb44-ebbd4ca946a5-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
+    @Html.Partial("_ArticleLastest",The_NewYork_Time.Models.BUS.ArticleBUS.DanhsachArticleLastest(Model.idsection))
     <!-- End Section Latest -->
 </main>
 <script>
