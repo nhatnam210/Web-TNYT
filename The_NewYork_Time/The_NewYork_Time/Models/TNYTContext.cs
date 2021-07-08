@@ -34,5 +34,7 @@ namespace The_NewYork_Time.Models
                 .WithRequired(e => e.Section)
                 .WillCascadeOnDelete(false);
         }
+
+        public System.Data.Entity.DbSet<TNYT.AspNetUser> AspNetUsers { get; set; }
     }
 }

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<The_NewYork_Time.Models.Section>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/_MainLayoutAdmin.cshtml";
+}
+
+<h1 class="h3 mb-2 text-gray-800">Quản lí Sections</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+
+    <div class="card-body">
+        <div style="margin-left: 50px" class="table-responsive">
+            <table class="table table-bordered" id="dataTable" style="width:500px ; margin-left: -10px" cellspacing="0">
+
+                <thead>
+                    <tr>
+                        <th> @Html.DisplayNameFor(model => model.sectionname) </th>
+                       
+
+                        <th style="text-align: center">Tùy chọn</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.sectionname)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.idsection }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.idsection }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.idsection })
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+
+            </table>
+
+            </div>
+        </div>
+    </div>
+
+
