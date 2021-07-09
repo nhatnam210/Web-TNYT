@@ -34,10 +34,10 @@
                 <!-- Menus -->
                 <div class="col-xl-3">
                     <div id="header-btn-left">
-                        <a href="#" class="btn btn-light px-2">
+                        <a href="#" class="btn text-dark px-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
                             <ion-icon name="menu-outline" />
                         </a>
-                        <a href="#" class="btn btn-light px-2">
+                        <a href="#" class="btn text-dark px-2">
                             <ion-icon name="search-outline" />
                         </a>
                     </div>
@@ -46,6 +46,17 @@
                         <p id="info-subtitle">Today's Paper</p>
                     </div>
                 </div>
+
+                <!-- Drawer Menu -->
+                <!-- REF: https://stackoverflow.com/a/65506255 -->
+                <div class="offcanvas offcanvas-start p-1" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                    <div class="offcanvas-body">
+                        <ul id="group-third" class="list-group list-group-flush" />
+                        <ul id="group-second" class="list-group list-group-flush" />
+                        <ul id="group-first" class="list-group list-group-flush" />
+                    </div>
+                </div>
+                
 
                 <!-- Title -->
                 <div class="col-xl-6 mx-auto">
@@ -100,9 +111,9 @@
                 <div class="container-fluid">
 
                     <div class="row minishow-tab">
-                        <div class=" col-sm ">
+                        <div class="col-sm">
                             <div class="row">
-                                <div class=" col-2 ">
+                                <div class="col-2">
                                     <a href="#"><img class="img-tab " src="https://static01.nyt.com/images/2021/07/01/multimedia/01ambriefing-aus-nl-PROMO3/01ambriefing-aus-nl-PROMO3-square640-v2.png?quality=75&auto=webp&disable=upscale&width=350" alt=""></a>
                                 </div>
                                 <div class="col-10 content-tab">
@@ -111,9 +122,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class=" col-sm ">
-                            <div class="row ">
-                                <div class=" col-2  ">
+                        <div class="col-sm">
+                            <div class="row">
+                                <div class="col-2 ">
                                     <a href="#"><img class="img-tab " src="https://static01.nyt.com/images/2021/07/01/multimedia/01ambriefing-aus-nl-PROMO3/01ambriefing-aus-nl-PROMO3-square640-v2.png?quality=75&auto=webp&disable=upscale&width=350" alt=""></a>
                                 </div>
                                 <div class="col-10 content-tab">
@@ -122,9 +133,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class=" col-sm ">
-                            <div class="row ">
-                                <div class=" col-2 ">
+                        <div class="col-sm">
+                            <div class="row">
+                                <div class="col-2">
                                     <a href="#"><img class="img-tab " src="https://static01.nyt.com/images/2021/07/01/multimedia/01ambriefing-aus-nl-PROMO3/01ambriefing-aus-nl-PROMO3-square640-v2.png?quality=75&auto=webp&disable=upscale&width=350" alt=""></a>
                                 </div>
                                 <div class="col-10 content-tab">
@@ -145,8 +156,8 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="paper">
-                                        <div class="paper-body ">
-                                            <h5 class="title-paper "><a class="text-decoration-none text-dark" href="">Trump Organization and Top Executive Are Indicted in Tax
+                                        <div class="paper-body">
+                                            <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">Trump Organization and Top Executive Are Indicted in Tax
                                                     Investigation</a></h5>
                                             <ul class="paper-list-abstract">
                                                 <li class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for
@@ -163,7 +174,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
-                                    <a href=""><img class="carg-img" style=" width: 100%;" src="https://static01.nyt.com/images/2021/06/30/us/30weisselberg-profile-promo/merlin_190163763_35d81e3b-0f30-44f8-9a24-5a1aa3bb4588-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"
+                                    <a href=""><img class="carg-img" style="width: 100%;" src="https://static01.nyt.com/images/2021/06/30/us/30weisselberg-profile-promo/merlin_190163763_35d81e3b-0f30-44f8-9a24-5a1aa3bb4588-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"
                                             alt=""></a>
                                     <p class="caption-picture"><a class="text-decoration-none text-dark" href="">Allen
                                             Weisselberg, center, arriving in court to face charges of receiving fringe
@@ -173,7 +184,7 @@
                             </div>
                         </div>
                         <div class="col-sm-2 paper-border-left">
-                            <div class="paper ">
+                            <div class="paper">
                                 <div class="paper-body">
                                     <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House
                                             Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
@@ -186,10 +197,10 @@
                     <!-- end: breaking new layout -->
 
                     <!-- other-news -->
-                    <div class="container-fluid paper-border-top ">
+                    <div class="container-fluid paper-border-top">
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="paper ">
+                                <div class="paper">
                                     <div class="paper-body">
                                         <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House
                                                 Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
@@ -222,7 +233,7 @@
                                 </div>
                             </div>
                             <div class="col-md-3 paper-border-left">
-                                <div class="paper ">
+                                <div class="paper">
                                     <div class="paper-body">
                                         <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House
                                                 Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
@@ -237,17 +248,17 @@
                     <!-- end: other-news -->
 
                     <!-- menu news -->
-                    <div class="container-fluid  ">
-                        <div class="row ">
+                    <div class="container-fluid ">
+                        <div class="row">
                             <!-- Left side -->
-                            <div class="col-md-8 bg-light ">
+                            <div class="col-md-8 bg-light">
                                 <div class="row paper-border-top">
                                     <div class="col-8">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="paper">
-                                                    <div class="paper-body ">
-                                                        <h5 class="title-paper "><a class="text-decoration-none text-dark" href="">Trump
+                                                    <div class="paper-body">
+                                                        <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">Trump
                                                                 Organization and Top Executive Are Indicted in Tax
                                                                 Investigation</a></h5>
                                                         <ul class="paper-list-abstract">
@@ -259,7 +270,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
-                                                <a href=""><img class="carg-img" style=" max-width: 100%;" src="https://static01.nyt.com/images/2021/06/30/us/30weisselberg-profile-promo/merlin_190163763_35d81e3b-0f30-44f8-9a24-5a1aa3bb4588-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"
+                                                <a href=""><img class="carg-img" style="max-width: 100%;" src="https://static01.nyt.com/images/2021/06/30/us/30weisselberg-profile-promo/merlin_190163763_35d81e3b-0f30-44f8-9a24-5a1aa3bb4588-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"
                                                         alt=""></a>
                                                 <p class="caption-picture"><a class="text-decoration-none text-dark" href="">Allen Weisselberg, center, arriving in court to face
                                                         charges of receiving fringe benefits without paying taxes on
@@ -269,7 +280,7 @@
                                     </div>
                                     <!-- 1 paper -->
                                     <div class="col-4 paper-border-left">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -285,7 +296,7 @@
                                 <!-- other news replay -->
                                 <div class="row">
                                     <div class="col-md paper-border-top-light">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">Lorem ipsum dolor sit amet, consectetur adipiscing
                                                         elit,</a></h5>
@@ -302,7 +313,7 @@
 
                                 <div class="row paper-border-top-light">
                                     <div class="col-md">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -326,7 +337,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md paper-border-left">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -345,8 +356,8 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="paper">
-                                                    <div class="paper-body ">
-                                                        <h5 class="title-paper "><a class="text-decoration-none text-dark" href="">Trump
+                                                    <div class="paper-body">
+                                                        <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">Trump
                                                                 Organization and Top Executive Are Indicted in Tax
                                                                 Investigation</a></h5>
                                                         <ul class="paper-list-abstract">
@@ -369,7 +380,7 @@
                                     </div>
                                     <!-- only one layout -->
                                     <div class="col-4 paper-border-left">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -385,7 +396,7 @@
                                 <!-- double layout  -->
                                 <div class="row paper-border-top-light">
                                     <div class="col-md">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -411,12 +422,12 @@
                                 </div>
 
                                 <!-- the Great Read  -->
-                                <div class="row ">
+                                <div class="row">
                                     <h5 class="paper-border-top" style="font-size: 1rem;"><a class="text-decoration-none text-dark" href="#">The Great Read </a></h5>
                                 </div>
                                 <div class="row">
-                                    <div class=" col-md">
-                                        <div class="paper ">
+                                    <div class="col-md">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -433,7 +444,7 @@
                                 </div>
                                 <div class="row paper-border-top-light">
                                     <div class="col-md">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -451,7 +462,7 @@
 
                                 <div class="row paper-border-top-light">
                                     <div class="col-md">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -481,8 +492,8 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="paper">
-                                                    <div class="paper-body ">
-                                                        <h5 class="title-paper "><a class="text-decoration-none text-dark" href="">Trump
+                                                    <div class="paper-body">
+                                                        <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">Trump
                                                                 Organization and Top Executive Are Indicted in Tax
                                                                 Investigation</a></h5>
                                                         <ul class="paper-list-abstract">
@@ -505,7 +516,7 @@
                                     </div>
                                     <!-- only one layout -->
                                     <div class="col-4 paper-border-left">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Allen
                                                         Weisselberg, center, arriving in court to face charges of
@@ -518,7 +529,7 @@
 
                                 <div class="row paper-border-top-light">
                                     <div class="col-md">
-                                        <div class="paper ">
+                                        <div class="paper">
                                             <div class="paper-body">
                                                 <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican
                                                         Opposition</a></h5>
@@ -554,10 +565,10 @@
                             <!-- Right side -->
                             <div class="col-md-4 paper-border-top bg-light paper-border-left">
                                 <!-- opinion stage -->
-                                <div class="row ">
+                                <div class="row">
                                     <h5 class="title-paper" style="font-size: 1rem;"><a class="text-decoration-none text-dark" href="#">Opinion</a></h5>
                                 </div>
-                                <div class="row paper-border-top-light ">
+                                <div class="row paper-border-top-light">
                                     <div class="col-sm">
                                         <div class="paper">
                                             <div class="paper-body">
@@ -611,7 +622,7 @@
                                     </div>
                                 </div>
                                 <!-- reply :) -->
-                                <div class="row paper-border-top-light ">
+                                <div class="row paper-border-top-light">
                                     <div class="col-sm">
                                         <div class="paper">
                                             <div class="paper-body">
@@ -671,7 +682,7 @@
                                     <h5 class="title-paper" style="font-size: 1rem;"><a class="text-decoration-none text-dark" href="#">Editors's Picks</a></h5>
                                 </div>
                                 <div class="row-md paper-border-top">
-                                    <div class="col-md ">
+                                    <div class="col-md">
                                         <a href="">
                                             <div class="box"></div>
                                         </a>
@@ -737,64 +748,64 @@
                                                 </a>
                                             </div>
                                             <div class="col-xl-5">
-                                                <img style="width: 100%;height: 92px; " src="https://static01.nyt.com/images/2021/06/20/arts/02narrated-1/00launder-square640.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " alt=" ">
+                                                <img style="width: 100%;height: 92px; " src="https://static01.nyt.com/images/2021/06/20/arts/02narrated-1/00launder-square640.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " alt="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-lg-3">
-                                    <div class="new-navbar_paper ">
-                                        <div class="row " style="border-right:2px solid #ccc ">
-                                            <div class="col-xl-7 ">
-                                                <a href=" ">
+                                    <div class="new-navbar_paper">
+                                        <div class="row " style="border-right:2px solid #ccc">
+                                            <div class="col-xl-7">
+                                                <a href="">
                                                     <h3>Listen to ‘The Book Review Podcast’</h3>
                                                 </a>
 
-                                                <a href=" ">
+                                                <a href="">
                                                     <p> An outsider finds suspense in Hollywood. </p>
                                                 </a>
                                             </div>
-                                            <div class="col-xl-5 ">
-                                                <img src="https://static01.nyt.com/images/2021/07/02/books/02pod-cover/02pod-cover-square320.png?format=pjpg&quality=75&auto=webp&disable=upscale " alt=" " style="width: 100%;height:92px; ">
+                                            <div class="col-xl-5">
+                                                <img src="https://static01.nyt.com/images/2021/07/02/books/02pod-cover/02pod-cover-square320.png?format=pjpg&quality=75&auto=webp&disable=upscale " alt="" style="width: 100%;height:92px;">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class=" col-xl-3 col-lg-3">
-                                    <div class="new-navbar_paper ">
-                                        <div class="row " style="border-right:2px solid #ccc ">
-                                            <div class="col-xl-7 ">
+                                <div class="col-xl-3 col-lg-3">
+                                    <div class="new-navbar_paper">
+                                        <div class="row " style="border-right:2px solid #ccc">
+                                            <div class="col-xl-7">
 
-                                                <a href=" ">
+                                                <a href="">
                                                     <h3>Listen to ‘The Modern Love Podcast’</h3>
                                                 </a>
 
-                                                <a href=" ">
+                                                <a href="">
                                                     <p> When two open marriages collide. </p>
                                                 </a>
                                             </div>
-                                            <div class="col-xl-5 ">
-                                                <img src="https://static01.nyt.com/images/2020/01/12/fashion/30MODERNLOVE-PODCAST/12MODERN-OPEN-square640.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " alt=" " style="width:100%;height: 92px; padding: 0;">
+                                            <div class="col-xl-5">
+                                                <img src="https://static01.nyt.com/images/2020/01/12/fashion/30MODERNLOVE-PODCAST/12MODERN-OPEN-square640.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " alt="" style="width:100%;height: 92px; padding: 0;">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class=" col-xl-3 col-lg-3">
-                                    <div class="new-navbar_paper ">
-                                        <div class="row ">
-                                            <div class="col-xl-7 ">
+                                <div class="col-xl-3 col-lg-3">
+                                    <div class="new-navbar_paper">
+                                        <div class="row">
+                                            <div class="col-xl-7">
 
-                                                <a href=" ">
+                                                <a href="">
                                                     <h3>Listen to ‘Day X’</h3>
                                                 </a>
 
-                                                <a href=" ">
+                                                <a href="">
                                                     <p> Has the far right infiltrated the German military?</p>
                                                 </a>
                                             </div>
-                                            <div class="col-xl-5 ">
+                                            <div class="col-xl-5">
                                                 <img style="background-color: #ccc;width: 100%;height: 92px; " src="https://static01.nyt.com/images/2021/04/27/podcasts/dayx-podcast-albumartwork/dayx-podcast-albumartwork-square640-v2.jpg?format=pjpg&quality=75&auto=webp&disable=upscale
-                                                    " alt=" ">
+                                                    " alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -806,26 +817,26 @@
                             <h6>More News</h6>
                             <div class="row">
                                 <div class="col-xl-10 bdr">
-                                    <div class=" row ">
-                                        <div class=" col-xl-4 ">
-                                            <a href=" ">
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <a href="">
                                                 <h3>Bucks Beat Hawks and Advance to the N.B.A. Finals</h3>
                                             </a>
-                                            <a href=" ">
+                                            <a href="">
                                                 <p>Milwaukee was playing without its injured star, Giannis Antetokounmpo. The Bucks will face the Phoenix Suns in the finals.</p>
                                             </a>
                                         </div>
-                                        <div class=" col-xl-4 " style=" border-right:1px solid #ccc;margin-bottom: 20px; ">
-                                            <img src=" https://static01.nyt.com/images/2021/07/03/sports/03nba-eastern-finals-1/03nba-eastern-finals-1-threeByTwoSmallAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " style=" width:100%;height:230px
-                                    " alt=" ">
-                                            <figcaption style=" font-size: 11px;color: rgb(129, 128, 128);
-                                    ">Jrue Holiday, right, and the Milwaukee Bucks beat Trae Young, left, who was back from injury, and the Atlanta Hawks in Game 6 of the Eastern Conference finals. <span style=" opacity: 0.5; ">Jason Getz/USA Today Sports, via Reuters</span>                                                </figcaption>
+                                        <div class="col-xl-4 " style="border-right:1px solid #ccc;margin-bottom: 20px;">
+                                            <img src="https://static01.nyt.com/images/2021/07/03/sports/03nba-eastern-finals-1/03nba-eastern-finals-1-threeByTwoSmallAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " style="width:100%;height:230px
+                                    " alt="">
+                                            <figcaption style="font-size: 11px;color: rgb(129, 128, 128);
+                                   ">Jrue Holiday, right, and the Milwaukee Bucks beat Trae Young, left, who was back from injury, and the Atlanta Hawks in Game 6 of the Eastern Conference finals. <span style="opacity: 0.5;">Jason Getz/USA Today Sports, via Reuters</span>                                                </figcaption>
                                         </div>
-                                        <div class=" col-xl-4 ">
-                                            <a href=" ">
-                                                <h3 style=" font-size: 16px; ">‘Red Cradles’ Nurture China’s Next Generation of Communist Leaders</h3>
+                                        <div class="col-xl-4">
+                                            <a href="">
+                                                <h3 style="font-size: 16px;">‘Red Cradles’ Nurture China’s Next Generation of Communist Leaders</h3>
                                             </a>
-                                            <a href=" ">
+                                            <a href="">
                                                 <p>Communist Party schools and academies are inculcating Chinese officials in Xi Jinping Thought as the country shifts in a more authoritarian direction.</p>
                                             </a>
                                         </div>
@@ -837,18 +848,18 @@
                                     <div class="row mt-2">
                                         <h6 style="color: red;font-size: 14px;"> BREAKING</h6>
                                         <div class="col-xl-6 bdr">
-                                            <a href=" ">
-                                                <h3 style=" font-size: 14px; ">Philippine Military Plane Crashes With 92 People Aboard</h3>
+                                            <a href="">
+                                                <h3 style="font-size: 14px;">Philippine Military Plane Crashes With 92 People Aboard</h3>
                                             </a>
-                                            <a href=" ">
+                                            <a href="">
                                                 <p>More than 80 soldiers were on the C-130 plane, officials said. Seventeen deaths were confirmed, and it was feared that the toll would climb.</p>
                                             </a>
                                         </div>
                                         <div class="col-xl-6">
-                                            <a href=" ">
-                                                <h3 style=" font-size: 14px; ">As England’s Deer Population Explodes, Some Propose a Mass Cull</h3>
+                                            <a href="">
+                                                <h3 style="font-size: 14px;">As England’s Deer Population Explodes, Some Propose a Mass Cull</h3>
                                             </a>
-                                            <a href=" ">
+                                            <a href="">
                                                 <p>A pandemic-fueled growth of the herds threatens the plant life that many species depend on to live. But will the public accept killing many more deer?</p>
                                             </a>
                                         </div>
@@ -1003,27 +1014,27 @@
 
                                 <hr style="width: 95%;margin: 10px auto;">
 
-                                <div class="row" ">
-                                    <div class="col bdr ">
-                                        <a href=" ">
-                                            <img src="https://static01.nyt.com/images/2021/07/04/arts/27SCHMIGADOON2/27SCHMIGADOON2-threeByTwoSmallAt2X-v3.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt=" ">
-                                            <div class="setion-paper_span ">
+                                <div class="row"">
+                                    <div class="col bdr">
+                                        <a href="">
+                                            <img src="https://static01.nyt.com/images/2021/07/04/arts/27SCHMIGADOON2/27SCHMIGADOON2-threeByTwoSmallAt2X-v3.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt="">
+                                            <div class="setion-paper_span">
                                                 <span>Apple TV+</span>
                                             </div>
-                                            <h3 class="section-mid_h3 ">Gotta Sing! Gotta Dance! No, Really, You Gotta!</h3>
-                                            <p class="section-mid_p ">One would think that everyone involved in the parody series “Schmigadoon!” was in love with musicals. Not quite.</p>
+                                            <h3 class="section-mid_h3">Gotta Sing! Gotta Dance! No, Really, You Gotta!</h3>
+                                            <p class="section-mid_p">One would think that everyone involved in the parody series “Schmigadoon!” was in love with musicals. Not quite.</p>
 
                                         </a>
                                     </div>
-                                    <div class="col ">
-                                        <a href=" ">
+                                    <div class="col">
+                                        <a href="">
                                             <img src="https://static01.nyt.com/images/2021/07/04/books/review/04ByTheBook-SPIOTTA/04ByTheBook-SPIOTTA-threeByTwoSmallAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100%
-                                    " alt=" ">
-                                            <div class="setion-paper_span ">
+                                    " alt="">
+                                            <div class="setion-paper_span">
                                                 <span>Rebecca Clarke</span>
                                             </div>
-                                            <h3 class="section-mid_h3 ">Dana Spiotta Loves Discovering Jokes in Really Old Books</h3>
-                                            <p class="section-mid_p ">“I feel such connection to the human who made it, which delights and moves me. If you can write a joke that is still funny in 100 years, you are great.”</p>
+                                            <h3 class="section-mid_h3">Dana Spiotta Loves Discovering Jokes in Really Old Books</h3>
+                                            <p class="section-mid_p">“I feel such connection to the human who made it, which delights and moves me. If you can write a joke that is still funny in 100 years, you are great.”</p>
 
                                         </a>
                                     </div>
@@ -1036,14 +1047,14 @@
                         </div>
                     </div>
 
-                    <div class="section-last_paper ">
-                        <h5 style="font-size: 16px; ">New York Times Cooking</h5>
-                        <div class="row row-cols-xl-5 ">
-                            <div class="col bdr ">
-                                <a href=" ">
+                    <div class="section-last_paper">
+                        <h5 style="font-size: 16px;">New York Times Cooking</h5>
+                        <div class="row row-cols-xl-5">
+                            <div class="col bdr">
+                                <a href="">
                                     <img src="https://static01.nyt.com/images/2021/06/14/well/00well-pandemic-relationships/00well-pandemic-relationships-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px
-                                    " width="100% " alt=" ">
-                                    <div class="setion-paper_span ">
+                                    " width="100% " alt="">
+                                    <div class="setion-paper_span">
                                         <span>Michael Kraus for The New York Times</span>
                                     </div>
                                     <h6>Fourth of July Recipes</h6>
@@ -1052,40 +1063,40 @@
 
 
                             </div>
-                            <div class="col bdr ">
-                                <a href=" ">
-                                    <img src="https://static01.nyt.com/images/2020/01/12/fashion/30MODERNLOVE-PODCAST/12MODERN-OPEN-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt=" ">
-                                    <div class="setion-paper_span ">
+                            <div class="col bdr">
+                                <a href="">
+                                    <img src="https://static01.nyt.com/images/2020/01/12/fashion/30MODERNLOVE-PODCAST/12MODERN-OPEN-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt="">
+                                    <div class="setion-paper_span">
                                         <span>Christopher Simpson for The New York Times</span>
                                     </div>
                                     <h6>Butter Mochi</h6>
                                 </a>
 
                             </div>
-                            <div class="col bdr ">
-                                <a href=" ">
-                                    <img src="https://static01.nyt.com/images/2017/09/13/science/relationshipguidestyle/relationshipguidestyle-square640.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt=" ">
-                                    <div class="setion-paper_span ">
+                            <div class="col bdr">
+                                <a href="">
+                                    <img src="https://static01.nyt.com/images/2017/09/13/science/relationshipguidestyle/relationshipguidestyle-square640.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt="">
+                                    <div class="setion-paper_span">
                                         <span>Johnny Miller for The New York Times</span>
                                     </div>
                                     <h6>Grilled Swordfish With Corn Salad</h6>
                                 </a>
 
                             </div>
-                            <div class="col bdr ">
-                                <a href=" ">
-                                    <img src="https://static01.nyt.com/images/2018/04/20/well/20ties/20ties-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt=" ">
-                                    <div class="setion-paper_span ">
+                            <div class="col bdr">
+                                <a href="">
+                                    <img src="https://static01.nyt.com/images/2018/04/20/well/20ties/20ties-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt="">
+                                    <div class="setion-paper_span">
                                         <span>Ryan Liebe for The New York Times</span>
                                     </div>
                                     <h6>Quick and Easy Grilling Recipes</h6>
                                 </a>
 
                             </div>
-                            <div class="col ">
-                                <a href=" ">
-                                    <img src="https://static01.nyt.com/images/2021/04/20/well/20Parenting-NL-Labor/20Parenting-NL-Labor-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt=" ">
-                                    <div class="setion-paper_span ">
+                            <div class="col">
+                                <a href="">
+                                    <img src="https://static01.nyt.com/images/2021/04/20/well/20Parenting-NL-Labor/20Parenting-NL-Labor-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " height="140px " width="100% " alt="">
+                                    <div class="setion-paper_span">
                                         <span>Johnny Miller for The New York Times</span>
                                     </div>
                                     <h6>Grilled Oysters With Lemony Garlic-Herb Butter</h6>
@@ -1102,11 +1113,11 @@
             <!-- END BODY -->
 
             <!-- FOOTER -->
-            <footer class="row ">
-                <div id="footer-logo " class="col-12 pt-3 mt-3 ">
-                    <a href="/ " aria-label="The New York Times ">
-                        <svg width="20% " viewBox="0 0 184 25 " fill="#000 " data-darkreader-inline-fill=" ">
-                            <path d=" M13.8 2.9c0-2-1.9-2.5-3.4-2.5v.3c.9 0 1.6.3 1.6 1 0 .4-.3 1-1.2 1-.7 0-2.2-.4-3.3-.8C6.2 1.4 5 1 4 1 2 1 .6 2.5.6 4.2c0 1.5 1.1 2 1.5 2.2l.1-.2c-.2-.2-.5-.4-.5-1 0-.4.4-1.1 1.4-1.1.9 0 2.1.4 3.7.9 1.4.4 2.9.7 3.7.8v3.1L9
+            <footer class="row">
+                <div id="footer-logo" class="col-12 pt-3 mt-3">
+                    <a href="/" aria-label="The New York Times">
+                        <svg width="20% " viewBox="0 0 184 25 " fill="#000 " data-darkreader-inline-fill="">
+                            <path d="M13.8 2.9c0-2-1.9-2.5-3.4-2.5v.3c.9 0 1.6.3 1.6 1 0 .4-.3 1-1.2 1-.7 0-2.2-.4-3.3-.8C6.2 1.4 5 1 4 1 2 1 .6 2.5.6 4.2c0 1.5 1.1 2 1.5 2.2l.1-.2c-.2-.2-.5-.4-.5-1 0-.4.4-1.1 1.4-1.1.9 0 2.1.4 3.7.9 1.4.4 2.9.7 3.7.8v3.1L9
                                     10.2v.1l1.5 1.3v4.3c-.8.5-1.7.6-2.5.6-1.5 0-2.8-.4-3.9-1.6l4.1-2V6l-5 2.2C3.6 6.9 4.7 6 5.8 5.4l-.1-.3c-3 .8-5.7 3.6-5.7 7 0 4 3.3 7 7 7 4 0 6.6-3.2 6.6-6.5h-.2c-.6 1.3-1.5 2.5-2.6 3.1v-4.1l1.6-1.3v-.1l-1.6-1.3V5.8c1.5
                                     0 3-1 3-2.9zm-8.7 11l-1.2.6c-.7-.9-1.1-2.1-1.1-3.8 0-.7 0-1.5.2-2.1l2.1-.9v6.2zm10.6 2.3l-1.3 1 .2.2.6-.5 2.2 2 3-2-.1-.2-.8.5-1-1V9.4l.8-.6 1.7 1.4v6.1c0 3.8-.8 4.4-2.5 5v.3c2.8.1 5.4-.8 5.4-5.7V9.3l.9-.7-.2-.2-.8.6-2.5-2.1L18.5
                                     9V.8h-.2l-3.5 2.4v.2c.4.2 1 .4 1 1.5l-.1 11.3zM34 15.1L31.5 17 29 15v-1.2l4.7-3.2v-.1l-2.4-3.6-5.2 2.8v6.6l-1 .8.2.2.9-.7 3.4 2.5 4.5-3.6-.1-.4zm-5-1.7V8.5l.2-.1 2.2 3.5-2.4 1.5zM53.1 2c0-.3-.1-.6-.2-.9h-.2c-.3.8-.7 1.2-1.7
@@ -1124,42 +1135,42 @@
                                     0-.7.1-1.5.3-2.1l2.1-.9-.1 6.2zm12.2-12h-.1l-2 1.7v.1l1.7 1.9h.2l2-1.7v-.1l-1.8-1.9zm3 14.8l-.8.5-1-1V9.3l1-.7-.2-.2-.7.6-1.8-2.1-2.9 2 .2.3.7-.5.9 1.1v6.5l-1.3 1 .1.2.7-.5 2.2 2 3-2-.1-.3zm16.7-.1l-.7.5-1.1-1V9.3l1-.8-.2-.2-.8.7-2.3-2.1-3
                                     2.1-2.3-2.1L154 9l-1.8-2.1-2.9 2 .1.3.7-.5 1 1.1v6.5l-.8.8 2.3 1.9 2.2-2-.9-.9V9.3l.9-.6 1.5 1.4v6l-.8.8 2.3 1.9 2.2-2-.9-.9V9.3l.8-.5 1.6 1.4v6l-.7.7 2.3 2.1 3.1-2.1v-.3zm8.7-1.5l-2.5 1.9-2.5-2v-1.2l4.7-3.2v-.1l-2.4-3.6-5.2
                                     2.8v6.8l3.5 2.5 4.5-3.6-.1-.3zm-5-1.7V8.5l.2-.1 2.2 3.5-2.4 1.5zm14.1-.9l-1.9-1.5c1.3-1.1 1.8-2.6 1.8-3.6v-.6h-.2c-.2.5-.6 1-1.4 1-.8 0-1.3-.4-1.8-1L176 9.3v3.6l1.7 1.3c-1.7 1.5-2 2.5-2 3.3 0 1 .5 1.7 1.3 2l.1-.2c-.2-.2-.4-.3-.4-.8
-                                    0-.3.4-.8 1.2-.8 1 0 1.6.7 1.9 1l4.3-2.6v-3.6h-.1zm-1.1-3c-.7 1.2-2.2 2.4-3.1 3l-1.1-.9V8.1c.4 1 1.5 1.8 2.6 1.8.7 0 1.1-.1 1.6-.4zm-1.7 8c-.5-1.1-1.7-1.9-2.9-1.9-.3 0-1.1 0-1.9.5.5-.8 1.8-2.2 3.5-3.2l1.2 1 .1 3.6z " />
+                                    0-.3.4-.8 1.2-.8 1 0 1.6.7 1.9 1l4.3-2.6v-3.6h-.1zm-1.1-3c-.7 1.2-2.2 2.4-3.1 3l-1.1-.9V8.1c.4 1 1.5 1.8 2.6 1.8.7 0 1.1-.1 1.6-.4zm-1.7 8c-.5-1.1-1.7-1.9-2.9-1.9-.3 0-1.1 0-1.9.5.5-.8 1.8-2.2 3.5-3.2l1.2 1 .1 3.6z" />
                         </svg>
                     </a>
                 </div>
-                <div id=" news-col " class=" col-xl-2 col-md-4 col-sm-6 mt-3 ">
-                    <div class=" footer-col-name pb-2 text-uppercase fw-bold ">News</div>
-                    <ul class=" footer-col-ul list-group list-group-flush " />
+                <div id="news-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
+                    <div class="footer-col-name pb-2 text-uppercase fw-bold">News</div>
+                    <ul class="footer-col-ul list-group list-group-flush" />
                 </div>
-                <div id=" opinion-col " class=" col-xl-2 col-md-4 col-sm-6 mt-3 ">
-                    <div class=" footer-col-name pb-2 text-uppercase fw-bold ">Opinions</div>
-                    <ul class=" footer-col-ul list-group list-group-flush " />
+                <div id="opinion-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
+                    <div class="footer-col-name pb-2 text-uppercase fw-bold">Opinions</div>
+                    <ul class="footer-col-ul list-group list-group-flush" />
                 </div>
-                <div id=" arts-col " class=" col-xl-2 col-md-4 col-sm-6 mt-3 ">
-                    <div class=" footer-col-name pb-2 text-uppercase fw-bold ">Arts</div>
-                    <ul class=" footer-col-ul list-group list-group-flush " />
+                <div id="arts-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
+                    <div class="footer-col-name pb-2 text-uppercase fw-bold">Arts</div>
+                    <ul class="footer-col-ul list-group list-group-flush" />
                 </div>
-                <div id=" living-col " class=" col-xl-2 col-md-4 col-sm-6 mt-3 ">
-                    <div class=" footer-col-name pb-2 text-uppercase fw-bold ">Living</div>
-                    <ul class=" footer-col-ul list-group list-group-flush " />
+                <div id="living-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
+                    <div class="footer-col-name pb-2 text-uppercase fw-bold">Living</div>
+                    <ul class="footer-col-ul list-group list-group-flush" />
                 </div>
-                <div id=" more-col " class=" col-xl-2 col-md-4 col-sm-6 mt-3 ">
-                    <div class=" footer-col-name pb-2 text-uppercase fw-bold ">More</div>
-                    <ul class=" footer-col-ul list-group list-group-flush " />
+                <div id="more-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
+                    <div class="footer-col-name pb-2 text-uppercase fw-bold">More</div>
+                    <ul class="footer-col-ul list-group list-group-flush" />
                 </div>
-                <div id=" subscribe-col " class=" col-xl-2 col-md-4 col-sm-6 mt-3 " style=" border-left: 1px solid lightgray; ">
-                    <div class=" footer-col-name pb-2 text-uppercase fw-bold ">Subscribe</div>
-                    <ul class=" footer-col-ul list-group list-group-flush " />
+                <div id="subscribe-col" class="col-xl-2 col-md-4 col-sm-6 mt-3 " style="border-left: 1px solid lightgray;">
+                    <div class="footer-col-name pb-2 text-uppercase fw-bold">Subscribe</div>
+                    <ul class="footer-col-ul list-group list-group-flush" />
                 </div>
             </footer>
-            <div id=" footer-copyright " class=" row ">
-                <p class=" text-muted text-center m-0 py-3 " style=" font-size: x-small; ">
+            <div id="footer-copyright" class="row">
+                <p class="text-muted text-center m-0 py-3 " style="font-size: x-small;">
                     © 2021 The New York Times Company
-                    <a href=" # " class=" text-muted px-2 ">Privacy Policy</a>
-                    <a href=" # " class=" text-muted px-2 ">Help</a>
-                    <a href=" # " class=" text-muted px-2 ">Contact Us</a>
-                    <a href=" # " class=" text-muted px-2 ">California Notices</a>
+                    <a href="#" class="text-muted px-2">Privacy Policy</a>
+                    <a href="#" class="text-muted px-2">Help</a>
+                    <a href="#" class="text-muted px-2">Contact Us</a>
+                    <a href="#" class="text-muted px-2">California Notices</a>
                 </p>
             </div>
             <!-- END FOOTER -->
