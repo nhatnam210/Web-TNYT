@@ -213,7 +213,6 @@ D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.cs
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CopyComplete
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.dll
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.pdb
-D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\The_NewYork_Time.dll.config
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\The_NewYork_Time.dll
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\The_NewYork_Time.pdb
@@ -322,3 +321,4 @@ D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CopyComplete
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.dll
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.pdb
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
