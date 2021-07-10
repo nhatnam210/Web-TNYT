@@ -1,0 +1,174 @@
+﻿@model IEnumerable<The_NewYork_Time.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
+}
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <!-- Topbar -->
+        @Html.Partial("_NavAdmin")
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <h1 class="h3 mb-2 text-gray-800">Article</h1>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cetegory.categoryname)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.articlename)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.description)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.image1)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.image2)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.image3)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.image4a)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.image4b)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.image5)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.content1)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.content2)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.content3)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.content4)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.content5)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.author)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.date)
+                                    </th>
+                                    <th> Option</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Cetegory.categoryname)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.articlename)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.image1)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.image2)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.image3)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.image4a)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.image4b)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.image5)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.content1)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.content2)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.content3)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.content4)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.content5)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.author)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.date)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.idarticle }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.idarticle }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.idarticle })
+                                        </td>
+                                    </tr>
+                                }
+
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Your Website 2020</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+</div>
+
+
+
