@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using TNYT;
 using The_NewYork_Time.Models;
+using PagedList;
 
 namespace The_NewYork_Time.Areas.Admin.Controllers
 {
@@ -16,9 +17,47 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         private TNYTContext db = new TNYTContext();
         [Authorize(Roles = "Admin")]
         // GET: Admin/AspNetUsersAdmin
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            return View(db.AspNetUsers.ToList());
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.TenSortParm = String.IsNullOrEmpty(sortOrder) ? "Ten" : "";
+            
+
+            //phan trang
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+            //tìm kiếm
+            var users = from s in db.AspNetUsers
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                users = users.Where(s => s.UserName.Contains(searchString));
+                //|| s.author.Contains(searchString)
+                //|| s.description.Contains(searchString)
+                //|| s.content1.Contains(searchString));
+            }
+            //sắp xếp 
+            switch (sortOrder)
+            {
+                case "Ten":
+                    users = users.OrderByDescending(s => s.UserName);
+                    break;
+                
+                default:
+                    users = users.OrderBy(s => s.UserName);
+                    break;
+            }
+            //var articles = db.Articles.Include(a => a.Cetegory);
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            return View(users.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Admin/AspNetUsersAdmin/Details/5

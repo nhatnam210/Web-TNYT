@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -15,10 +16,47 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         private TNYTContext db = new TNYTContext();
         [Authorize(Roles = "Admin")]
         // GET: Admin/CategoriesAdmin
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            var cetegories = db.Cetegories.Include(c => c.Section);
-            return View(cetegories.ToList());
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.TenSortParm = String.IsNullOrEmpty(sortOrder) ? "Ten" : "";
+            
+
+            //phan trang
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+            //tìm kiếm
+            var categories = from s in db.Cetegories
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                categories = categories.Where(s => s.categoryname.Contains(searchString));
+                //|| s.author.Contains(searchString)
+                //|| s.description.Contains(searchString)
+                //|| s.content1.Contains(searchString));
+            }
+            //sắp xếp 
+            switch (sortOrder)
+            {
+                case "Ten":
+                    categories = categories.OrderByDescending(s => s.categoryname);
+                    break;
+                
+                default:
+                    categories = categories.OrderBy(s => s.categoryname);
+                    break;
+            }
+            //var articles = db.Articles.Include(a => a.Cetegory);
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            return View(categories.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Admin/CategoriesAdmin/Details/5

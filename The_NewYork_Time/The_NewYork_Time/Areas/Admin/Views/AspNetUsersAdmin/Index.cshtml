@@ -1,5 +1,6 @@
-﻿@model IEnumerable<TNYT.AspNetUser>
-
+﻿@model PagedList.IPagedList<TNYT.AspNetUser>
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
@@ -15,7 +16,72 @@
     <div id="content">
 
         <!-- Topbar -->
-        @Html.Partial("_NavAdmin")
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <form class="form-inline">
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </form>
+
+            <!-- Topbar Search -->
+            <form method="post" action="/Admin/AspNetUsersAdmin" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                    <input type="text" name="SearchString" class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
+                           aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fas fa-search fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                <li class="nav-item dropdown no-arrow d-sm-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <!-- Dropdown - Messages -->
+                    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                         aria-labelledby="searchDropdown">
+                        <form class="form-inline mr-auto w-100 navbar-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small"
+                                       placeholder="Search for..." aria-label="Search"
+                                       aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+
+
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                        <img class="img-profile rounded-circle"
+                             src="img/undraw_profile.svg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+
+                </li>
+
+            </ul>
+
+        </nav>
         <!-- End of Topbar -->
         <!-- Begin Page Content -->
         <div class="container-fluid">
@@ -36,10 +102,13 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.Email)
+                                        Id
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.UserName)
+                                        Email
+                                    </th>
+                                    <th>
+                                        User Name
                                     </th>
                                     <th> Option</th>
                                 </tr>
@@ -50,35 +119,38 @@
                                 {
                                     <tr>
                                         <td>
+                                            @Html.DisplayFor(modelItem => item.Id)
+                                        </td>
+                                        <td>
                                             @Html.DisplayFor(modelItem => item.Email)
                                         </td>
                                         @*<td>
-                                            @Html.DisplayFor(modelItem => item.EmailConfirmed)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.PasswordHash)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.SecurityStamp)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.PhoneNumber)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.PhoneNumberConfirmed)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.TwoFactorEnabled)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.LockoutEndDateUtc)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.LockoutEnabled)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.AccessFailedCount)
-                                        </td>*@
+                                                @Html.DisplayFor(modelItem => item.EmailConfirmed)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.PasswordHash)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.SecurityStamp)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.PhoneNumberConfirmed)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.TwoFactorEnabled)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.LockoutEndDateUtc)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.LockoutEnabled)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.AccessFailedCount)
+                                            </td>*@
                                         <td>
                                             @Html.DisplayFor(modelItem => item.UserName)
                                         </td>
@@ -94,6 +166,11 @@
 
                             </tbody>
                         </table>
+                        <br />
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+                        @Html.PagedListPager(Model, page => Url.Action("Index",
+                            new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
                     </div>
                 </div>
             </div>
