@@ -38,10 +38,10 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                            select s;
             if (!String.IsNullOrEmpty(searchString))
             {
-                articles = articles.Where(s => s.articlename.Contains(searchString)
-                                       || s.author.Contains(searchString)
-                                       || s.description.Contains(searchString)
-                                       || s.content1.Contains(searchString));
+                articles = articles.Where(s => s.articlename.Contains(searchString));   
+                                       //|| s.author.Contains(searchString)
+                                       //|| s.description.Contains(searchString)
+                                       //|| s.content1.Contains(searchString));
             }
             //sắp xếp 
             switch (sortOrder)

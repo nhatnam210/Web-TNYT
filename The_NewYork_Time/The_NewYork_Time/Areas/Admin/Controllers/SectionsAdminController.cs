@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -15,9 +16,46 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         private TNYTContext db = new TNYTContext();
         [Authorize(Roles = "Admin")]
         // GET: Admin/SectionsAdmin
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            return View(db.Sections.ToList());
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.TenSortParm = String.IsNullOrEmpty(sortOrder) ? "Ten" : "";
+           
+
+            //phan trang
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+            //tìm kiếm
+            var sections = from s in db.Sections
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                sections = sections.Where(s => s.sectionname.Contains(searchString));
+                //|| s.author.Contains(searchString)
+                //|| s.description.Contains(searchString)
+                //|| s.content1.Contains(searchString));
+            }
+            //sắp xếp 
+            switch (sortOrder)
+            {
+                case "Ten":
+                    sections = sections.OrderByDescending(s => s.sectionname);
+                    break;               
+                default:
+                    sections = sections.OrderBy(s => s.sectionname);
+                    break;
+            }
+            //var articles = db.Articles.Include(a => a.Cetegory);
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            return View(sections.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Admin/SectionsAdmin/Details/5

@@ -330,3 +330,11 @@ D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Intercom.dll
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\RestSharp.dll
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Intercom.pdb
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\RestSharp.xml
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Intercom.dll
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.dll
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.Mvc.dll
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\RestSharp.dll
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Intercom.pdb
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.xml
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.Mvc.xml
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\RestSharp.xml
