@@ -3,11 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The New York Times - Breaking News, US News, World News and Videos</title>
-    <!-- themify icons -->
-    <link rel="stylesheet" href="./asset/themify-icons/themify-icons.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -51,15 +48,16 @@
                 <!-- REF: https://stackoverflow.com/a/65506255 -->
                 <div class="offcanvas offcanvas-start p-1" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
                     <div class="offcanvas-body">
-                        <ul id="group-third" class="list-group list-group-flush" />
-                        <ul id="group-second" class="list-group list-group-flush" />
-                        <ul id="group-first" class="list-group list-group-flush" />
+                        <!-- drawer links in /js/index.js -->
+                        <ul id="group-third" class="list-group" />
+                        <ul id="group-second" class="list-group" />
+                        <ul id="group-first" class="list-group" />
                     </div>
                 </div>
                 
 
                 <!-- Title -->
-                <div class="col-xl-6 mx-auto">
+                <div class="col-xl-6">
                     <div id="header-btn-middle" class="text-center justify-content-center align-self-center">
                         <a href="#" class="title-lang px-2 text-dark text-uppercase text-decoration-none fw-bold">
                             U.S.
@@ -72,7 +70,8 @@
                         </a>
                         <a href="#" class="title-lang px-2 text-dark text-uppercase text-decoration-none">
                             ESPAÑOL
-                        </a> <a href="#" class="title-lang px-2 text-dark text-uppercase text-decoration-none">
+                        </a>
+                        <a href="#" class="title-lang px-2 text-dark text-uppercase text-decoration-none">
                             中文
                         </a>
                     </div>
@@ -94,7 +93,7 @@
                             <a href="./html/form.html" class="btn btn-primary px-3 text-uppercase fw-bold">Log in</a>
                         </div>
                         <div id="header-widget" class="bg-light m-2" style="width: 200px; height: 80px;">
-                            *WEATHER WIDGET
+                            <!-- weather widget -->
                         </div>
                     </div>
                 </div>
@@ -114,11 +113,11 @@
                         <div class="col-sm">
                             <div class="row">
                                 <div class="col-2">
-                                    <a href="#"><img class="img-tab " src="https://static01.nyt.com/images/2021/07/01/multimedia/01ambriefing-aus-nl-PROMO3/01ambriefing-aus-nl-PROMO3-square640-v2.png?quality=75&auto=webp&disable=upscale&width=350" alt=""></a>
+                                    <a href="#"><img class="img-tab" src="https://static01.nyt.com/images/2021/07/01/multimedia/01ambriefing-aus-nl-PROMO3/01ambriefing-aus-nl-PROMO3-square640-v2.png?quality=75&auto=webp&disable=upscale&width=350" alt=""></a>
                                 </div>
                                 <div class="col-10 content-tab">
-                                    <h2 class="title-tab"><a class="text-decoration-none" href="">/ Title tab /</a></h2>
-                                    <a class="des-tab">/ this is 1 line describe the title /</a>
+                                    <h2 class="title-tab"><a class="text-decoration-none" href="#">/ Title tab /</a></h2>
+                                    <a href="#" class="des-tab">/ this is 1 line describe the title /</a>
                                 </div>
                             </div>
                         </div>
@@ -128,8 +127,8 @@
                                     <a href="#"><img class="img-tab " src="https://static01.nyt.com/images/2021/07/01/multimedia/01ambriefing-aus-nl-PROMO3/01ambriefing-aus-nl-PROMO3-square640-v2.png?quality=75&auto=webp&disable=upscale&width=350" alt=""></a>
                                 </div>
                                 <div class="col-10 content-tab">
-                                    <h2 class="title-tab"><a class="text-decoration-none" href="">/ Title tab /</a></h2>
-                                    <a class="des-tab">/ this is 1 line describe the title /</a>
+                                    <h2 class="title-tab"><a class="text-decoration-none" href="#">/ Title tab /</a></h2>
+                                    <a href="#" class="des-tab">/ this is 1 line describe the title /</a>
                                 </div>
                             </div>
                         </div>
@@ -139,8 +138,8 @@
                                     <a href="#"><img class="img-tab " src="https://static01.nyt.com/images/2021/07/01/multimedia/01ambriefing-aus-nl-PROMO3/01ambriefing-aus-nl-PROMO3-square640-v2.png?quality=75&auto=webp&disable=upscale&width=350" alt=""></a>
                                 </div>
                                 <div class="col-10 content-tab">
-                                    <h2 class="title-tab"><a class="text-decoration-none" href="">/ Title tab /</a></h2>
-                                    <a class="des-tab">/ this is 1 line describe the title /</a>
+                                    <h2 class="title-tab"><a class="text-decoration-none" href="#">/ Title tab /</a></h2>
+                                    <a href="#" class="des-tab">/ this is 1 line describe the title /</a>
                                 </div>
                             </div>
                         </div>
@@ -212,12 +211,16 @@
                             </div>
                             <!-- widget -->
                             <div class="col-md-3">
-                                <h4 class="title-paper" style="font-size:1rem"><a class="text-decoration-none text-dark" href="">How the Supreme Court Voted This Term</a></h4>
+                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">How the Supreme Court Voted This Term</a></h4>
                                 <a href="#">
                                     <img style="width: 100%;" src="https://static01.nyt.com/images/2021/07/01/reader-center/scotus-decisions-hp-promo/scotus-decisions-hp-promo-master1050-v4.png" alt="">
                                 </a>
-                                <a class="text-dark " style="font-size: 0.8em;" href="">See all the major decisions this
-                                    term <i class="ti-arrow-circle-right"></i></a>
+                                <a class="text-dark" href="">
+                                    <small><small>
+                                        See all the major decisions this term
+                                    </small></small>
+                                    <ion-icon name="caret-forward-circle-outline"></ion-icon>
+                                </a>
 
                             </div>
                             <!-- end: widget -->
@@ -739,7 +742,7 @@
                                         <div class="row" style="border-right:2px solid #ccc">
                                             <div class="col-xl-7">
                                                 <a href="">
-                                                    <h3>Great Wekends Listens</h3>
+                                                    <h3>Great Weekends Listens</h3>
                                                 </a>
 
                                                 <a href="">
@@ -1141,31 +1144,31 @@
                 </div>
                 <div id="news-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
                     <div class="footer-col-name pb-2 text-uppercase fw-bold">News</div>
-                    <ul class="footer-col-ul list-group list-group-flush" />
+                    <ul class="footer-col-ul list-group" />
                 </div>
                 <div id="opinion-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
                     <div class="footer-col-name pb-2 text-uppercase fw-bold">Opinions</div>
-                    <ul class="footer-col-ul list-group list-group-flush" />
+                    <ul class="footer-col-ul list-group" />
                 </div>
                 <div id="arts-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
                     <div class="footer-col-name pb-2 text-uppercase fw-bold">Arts</div>
-                    <ul class="footer-col-ul list-group list-group-flush" />
+                    <ul class="footer-col-ul list-group" />
                 </div>
                 <div id="living-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
                     <div class="footer-col-name pb-2 text-uppercase fw-bold">Living</div>
-                    <ul class="footer-col-ul list-group list-group-flush" />
+                    <ul class="footer-col-ul list-group" />
                 </div>
                 <div id="more-col" class="col-xl-2 col-md-4 col-sm-6 mt-3">
                     <div class="footer-col-name pb-2 text-uppercase fw-bold">More</div>
-                    <ul class="footer-col-ul list-group list-group-flush" />
+                    <ul class="footer-col-ul list-group" />
                 </div>
                 <div id="subscribe-col" class="col-xl-2 col-md-4 col-sm-6 mt-3 " style="border-left: 1px solid lightgray;">
                     <div class="footer-col-name pb-2 text-uppercase fw-bold">Subscribe</div>
-                    <ul class="footer-col-ul list-group list-group-flush" />
+                    <ul class="footer-col-ul list-group" />
                 </div>
             </footer>
             <div id="footer-copyright" class="row">
-                <p class="text-muted text-center m-0 py-3 " style="font-size: x-small;">
+                <p class="text-muted text-center m-0 py-3" style="font-size: x-small;">
                     © 2021 The New York Times Company
                     <a href="#" class="text-muted px-2">Privacy Policy</a>
                     <a href="#" class="text-muted px-2">Help</a>

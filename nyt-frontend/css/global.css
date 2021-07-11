@@ -1,8 +1,15 @@
 .btn-primary {
     background-color: #4F7D9C !important;
+    border-color: #4F7D9C !important;
+} .btn-primary:hover {
+    background-color: #3e637c !important;
+    border-color: #3e637c !important;
+    color: #fff !important;
 }
 
 .nav-link {
+    color: black !important;
+} .nav-link:hover {
     color: black !important;
 }
 
@@ -11,5 +18,5 @@
     text-decoration: none;
     margin-bottom: 8px;
 } .col-link:hover {
-    color: black;
+    color: black !important;
 }

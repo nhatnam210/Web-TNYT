@@ -16,10 +16,6 @@ h5 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.text-decoration-none {
-    text-decoration: none !important;
-}
-
 .paper-border-left {
     border-left: 2px solid rgba(0, 0, 0, 0.2);
     padding-left: 2%;
@@ -94,9 +90,10 @@ header .title-lang {
     /* Dropdown hover action */
     display: block;
     right: 4px;
-} li.btn-group > .dropdown-toggle:active {
-    pointer-events: none;
 }
+/* li.btn-group > .dropdown-toggle:active {
+    pointer-events: none;
+} */
  
 /* end */
 
@@ -121,7 +118,6 @@ header .title-lang {
     margin: 0px;
     text-decoration: none;
     color: black;
-    cursor: pointer;
 }
 
 .title-lang a:hover,
