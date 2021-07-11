@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Intercom.Core;
+using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -15,10 +17,52 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         private TNYTContext db = new TNYTContext();
         [Authorize(Roles = "Admin")]
         // GET: Admin/ArticlesAdmin
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            var articles = db.Articles.Include(a => a.Cetegory);
-            return View(articles.ToList());
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.TenSortParm = String.IsNullOrEmpty(sortOrder) ? "Ten" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "Date_desc" : "Date";
+
+            //phan trang
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+            //tìm kiếm
+            var articles = from s in db.Articles
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                articles = articles.Where(s => s.articlename.Contains(searchString)
+                                       || s.author.Contains(searchString)
+                                       || s.description.Contains(searchString)
+                                       || s.content1.Contains(searchString));
+            }
+            //sắp xếp 
+            switch (sortOrder)
+            {
+                case "Ten":
+                    articles = articles.OrderByDescending(s => s.articlename);
+                    break;
+                case "Date":
+                    articles = articles.OrderBy(s => s.date);
+                    break;
+                case "Date_desc":
+                    articles = articles.OrderByDescending(s => s.date);
+                    break;
+                default:
+                    articles = articles.OrderBy(s => s.articlename);
+                    break;
+            }
+            //var articles = db.Articles.Include(a => a.Cetegory);
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(articles.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Admin/ArticlesAdmin/Details/5

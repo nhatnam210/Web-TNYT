@@ -1,4 +1,6 @@
-﻿@model IEnumerable<The_NewYork_Time.Models.Article>
+﻿@model PagedList.IPagedList<The_NewYork_Time.Models.Article>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
@@ -23,6 +25,14 @@
                 @Html.ActionLink("Create New", "Create")
             </p>
 
+            @using (Html.BeginForm())
+            {
+                <p>
+                    Find by name: @Html.TextBox("SearchString")
+                    <input type="submit" value="Search" />
+                </p>
+            }
+
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
 
@@ -32,54 +42,57 @@
 
                             <thead>
                                 <tr>
+                                    
+                                    
                                     <th>
-                                        @Html.DisplayNameFor(model => model.Cetegory.categoryname)
+                                        @Html.ActionLink("CategoryName", "Index", new { sortOrder = ViewBag.TenSortParm })
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.articlename)
+                                        @Html.ActionLink(" Date", "Index", new { sortOrder = ViewBag.DateSortParm })
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.description)
+                                        articlename
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.image1)
+                                        description
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.image2)
+                                        image1
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.image3)
+                                        image2
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.image4a)
+                                        image3
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.image4b)
+                                        image4a
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.image5)
+                                        image4b
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.content1)
+                                        image5
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.content2)
+                                        content1
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.content3)
+                                        content2
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.content4)
+                                        content3
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.content5)
+                                        content4
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.author)
+                                        content5
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.date)
+                                        author
                                     </th>
+                                    
                                     <th> Option</th>
                                 </tr>
                             </thead>
@@ -87,61 +100,63 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.Cetegory.categoryname)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.articlename)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.description)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.image1)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.image2)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.image3)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.image4a)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.image4b)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.image5)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.content1)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.content2)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.content3)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.content4)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.content5)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.author)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.date)
-                                        </td>
-                                        <td>
-                                            @Html.ActionLink("Edit", "Edit", new { id = item.idarticle }) |
-                                            @Html.ActionLink("Details", "Details", new { id = item.idarticle }) |
-                                            @Html.ActionLink("Delete", "Delete", new { id = item.idarticle })
-                                        </td>
-                                    </tr>
+                                <tr>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cetegory.categoryname)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.articlename)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.image1)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.image2)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.image3)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.image4a)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.image4b)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.image5)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.content1)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.content2)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.content3)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.content4)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.content5)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.author)
+                                    </td>
+
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.idarticle }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.idarticle }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.idarticle })
+                                    </td>
+                                </tr>
                                 }
 
 
@@ -149,6 +164,11 @@
 
                             </tbody>
                         </table>
+                        <br />
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+                        @Html.PagedListPager(Model, page => Url.Action("Index",
+                            new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
                     </div>
                 </div>
             </div>
