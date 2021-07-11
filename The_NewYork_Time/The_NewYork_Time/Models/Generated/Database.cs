@@ -6,7 +6,7 @@
 // 
 //     Connection String Name: `TNYT`
 //     Provider:               `System.Data.SqlClient`
-//     Connection String:      `data source=DESKTOP-A73BAU0\SQLEXPRESS01;initial catalog=TNYT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework`
+//     Connection String:      `data source=LAPTOP-9F4GMIKT\SQLEXPRESS;initial catalog=TNYT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework`
 //     Schema:                 ``
 //     Include Views:          `False`
 
