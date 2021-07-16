@@ -25,12 +25,24 @@ namespace The_NewYork_Time.Models.BUS
             return db.Query<Article>("select top 1 * from Article a , Section s , Category c  where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' ORDER BY idarticle DESC ");
             
         }
-        //public static IEnumerable<Article> DanhSachArticleTop2(int id)
-        //{
-        //    var db = new TNYTDB();
-        //    return db.Execute("exec  TOP2 @idsection= '" + id + "'");
+        public static IEnumerable<Article> DanhSachArticleTop2(int id)
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("SELECT top 1 * FROM Article WHERE idarticle IN(SELECT Max(idarticle - 1)  from Article a , Section s, Category c where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' GROUP BY  idarticle)ORDER BY idarticle DESC");
 
-        //}
+        }
+        public static IEnumerable<Article> DanhSachArticleTop3(int id)
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("SELECT top 1 * FROM Article WHERE idarticle IN(SELECT Max(idarticle - 2)  from Article a , Section s, Category c where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' GROUP BY  idarticle)ORDER BY idarticle DESC");
+
+        }
+        public static IEnumerable<Article> DanhSachArticleTop4(int id)
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("SELECT top 1 * FROM Article WHERE idarticle IN(SELECT Max(idarticle - 3)  from Article a , Section s, Category c where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' GROUP BY  idarticle)ORDER BY idarticle DESC");
+
+        }
 
         public static IEnumerable<Article> DanhsachArticleLastest(int id)
         {

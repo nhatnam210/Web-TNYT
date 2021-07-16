@@ -1,11 +1,11 @@
-﻿@*@model IEnumerable<The_NewYork_Time.Models.Article>-->*@
-@* 2nd Article *@
-@*<div class="col col-3 col-md5 col-sm12 content-center">
+﻿@model IEnumerable<The_NewYork_Time.Models.Article>
+
+<div class="col col-3 col-md5 col-sm12 content-center">
     @foreach(var item in Model)
  {
     <div class="">
         <div class="head-img">
-            <a href="">
+            <a href="/Categories/Article/@item.idarticle">
                 <img src="@item.image1" alt="">
             </a>
 
@@ -13,7 +13,7 @@
         </div>
         <div class="head-content">
             <div class="head-title">
-                <h2><a href="#">@item.articlename</a></h2>
+                <h2><a href="/Categories/Article/@item.idarticle">@item.articlename</a></h2>
             </div>
             <div class="head-descrip">
                 <p>@item.description</p>
@@ -31,4 +31,4 @@
     </div>
     }
     
-</div>*@
+</div>

@@ -271,41 +271,53 @@ html {
     height: auto;
 }
 
-.list-content li {
-    padding: 0px 20px;
-    margin-bottom: 20px;
-    border-right: 1px solid #e2e2e2;
-    flex-basis: 20%;
+    .list-content li {
+        padding: 0px 20px;
+        padding-bottom: 20px;
+       
+        border-right: 1px solid #e2e2e2;
+        flex-basis: 20%;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+.list-content li:last-child,
+.list-content li:nth-child(6),
+.list-content li:nth-child(7),
+.list-content li:nth-child(8),
+.list-content li:nth-child(9)
+ {
+        border-bottom: none !important;
+        margin-top:20px;
+        
+    }
+.list-content li:last-child,.list-content li:nth-child(5){
+    border-right:0;
 }
 
-    .list-content li:last-child,
-    .list-content li:nth-child(5) {
-        border: none;
-        margin-right: -20px;
-    }
 
+.list-content li:nth-child(6),
+.list-content li:first-child {
+     margin-left: -20px;
+}
+.list-content li:first-child {
+      
+}
 
-    .list-content li:nth-child(6),
-    .list-content li:first-child {
-        margin-left: -20px;
-    }
-
-    .list-content a {
+.list-content a {
         text-decoration: none;
         color: black;
-    }
+}
 
 .list-content a:hover {
             text-decoration: underline;
-   }
+}
 
 .list-content h2 {
         
         font-weight: 500;
         font-size: 16px;
         line-height: 18px;
-        
-}
+    }
 
 .section-content-foot {
     margin-top: 30px;
