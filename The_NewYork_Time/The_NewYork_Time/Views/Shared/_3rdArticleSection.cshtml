@@ -1,0 +1,29 @@
+﻿@model IEnumerable<The_NewYork_Time.Models.Article>
+<div class="col col-md6 head-content content-right">
+    @foreach (var item in Model)
+    {
+        <div class="head-title">
+            <h2><a href="/Categories/Article/@item.idarticle">@item.articlename</a></h2>
+        </div>
+        <div class="head-img-right">
+            <a href="/Categories/Article/@item.idarticle">
+                <img src="@item.image1" alt="">
+            </a>
+
+
+        </div>
+        <div class="head-descrip">
+            <p>@item.description</p>
+        </div>
+        <div class="head-article">
+            <span class="minute">
+                10h ago
+
+            </span>
+            <span class="space"></span>
+            <span class="name-aricle">
+                By @item.author
+            </span>
+        </div>
+    }
+    </div>

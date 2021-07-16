@@ -2572,6 +2572,8 @@
     <Content Include="Views\Shared\_ArticleLastest.cshtml" />
     <Content Include="Views\Shared\_2ndArticleSection.cshtml" />
     <Content Include="Views\Shared\_NameCateForArticle.cshtml" />
+    <Content Include="Views\Shared\_3rdArticleSection.cshtml" />
+    <Content Include="Views\Shared\_4thArticleSection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
