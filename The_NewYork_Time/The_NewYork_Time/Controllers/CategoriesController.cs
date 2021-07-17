@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using The_NewYork_Time.Models;
+using System.Linq;
 
 namespace The_NewYork_Time.Controllers
 {
@@ -19,6 +20,12 @@ namespace The_NewYork_Time.Controllers
         {
             var cetegories = db.Cetegories.Include(c => c.Section);
             return View(cetegories.ToList());
+        }
+
+        public ActionResult ViewArticle(int? id)
+        {
+            var objArticle = db.Articles.Where(p => p.idarticle == id);
+            return View(objArticle);
         }
 
         // GET: Categories/Details/5

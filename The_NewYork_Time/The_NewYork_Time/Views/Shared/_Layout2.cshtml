@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="~/Assets/css/style.css">
     <link rel="stylesheet" href="~/Assets/css/base.css">
     <link rel="stylesheet" href="~/Assets/css/global.css">
-    <link rel="stylesheet" href="~/Assets/css/index.css">
+    @*<link rel="stylesheet" href="~/Assets/css/index.css">*@
     @*<link rel="stylesheet" href="~/Assets/css/responsive.css">*@
+    <link rel="stylesheet" href="~/Assets/themify-icons/themify-icons.css">
 
     <!-- themify icons -->
     <!--<link rel="stylesheet" href="~/Assets/themify-icons/themify-icons.css">-->
@@ -31,30 +32,13 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("World", "Section/1", "Home")</li>
-                    <li>@Html.ActionLink("USA", "Section/2", "Home")</li>
-                    <li>@Html.ActionLink("Food", "Section/3", "Home")</li>
 
-                    @*<li>@Html.ActionLink("coi section", "Index", "Sections")</li>
-                        <li>@Html.ActionLink("coi category", "Index", "Categories")</li>
-                        <li>@Html.ActionLink("coi Article", "Index", "Articles")</li>*@
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
+    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    @Html.Partial("_Navbar")
+
+    @Html.Partial("_LoginPartial") 
+
 
     <!--Custom Code body HTML-->
     <div class="container body-content">

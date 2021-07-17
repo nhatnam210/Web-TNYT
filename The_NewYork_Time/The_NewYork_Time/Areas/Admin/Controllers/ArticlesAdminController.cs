@@ -47,7 +47,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             switch (sortOrder)
             {
                 case "Ten":
-                    articles = articles.OrderByDescending(s => s.articlename);
+                    articles = articles.OrderBy(s => s.articlename);
                     break;
                 case "Date":
                     articles = articles.OrderBy(s => s.date);

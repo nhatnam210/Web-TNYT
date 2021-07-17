@@ -48,36 +48,37 @@ namespace The_NewYork_Time.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Hãy nhập Email!")]
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Hãy nhập mật khẩu!")]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Ghi nhớ?")]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Hãy nhập Email!")]
+        [EmailAddress(ErrorMessage = "Sai định dạng Email!")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessage = "Hãy nhập mật khẩu!")]
+        [StringLength(100, ErrorMessage = " {0} phải có ít nhất {2} ký tự.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập lại mật khẩu!")]
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Nhập lại mật khẩu")]
+        [Compare("Password", ErrorMessage = "Các mật khẩu không khớp nhau")]
         public string ConfirmPassword { get; set; }
     }
 

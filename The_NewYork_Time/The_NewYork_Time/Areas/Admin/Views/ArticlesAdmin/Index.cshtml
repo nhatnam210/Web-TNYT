@@ -26,7 +26,7 @@
             <!-- Topbar Search -->
             <form method="post" action="/Admin/ArticlesAdmin"  class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group">
-                    <input type="text" name="SearchString"  class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
+                    <input type="text" name="searchString"  class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
                            aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit">
@@ -104,20 +104,20 @@
                                     
                                     
                                     <th>
-                                        @Html.ActionLink("CategoryName", "Index", new { sortOrder = ViewBag.TenSortParm , currentFilter = ViewBag.CurrentFilter })
+                                       Category
                                     </th>
                                     <th>
                                         @Html.ActionLink(" Date", "Index", new { sortOrder = ViewBag.DateSortParm , currentFilter = ViewBag.CurrentFilter })
                                     </th>
                                     <th>
-                                        articlename
+                                        @Html.ActionLink("AriticleName", "Index", new { sortOrder = ViewBag.TenSortParm, currentFilter = ViewBag.CurrentFilter })
                                     </th>
                                     <th>
                                         description
                                     </th>
-                                    <th>
+                                    @*<th>
                                         image1
-                                    </th>
+                                    </th>*@
                                     @*<th>
                                         image2
                                     </th>
@@ -134,7 +134,7 @@
                                         image5
                                     </th>*@
                                     <th>
-                                        content1
+                                        content
                                     </th>
                                     @*<th>
                                         content2
@@ -173,9 +173,9 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.description)
                                     </td>
-                                    <td>
+                                    @*<td>
                                         @Html.DisplayFor(modelItem => item.image1)
-                                    </td>
+                                    </td>*@
                                     @*<td>
                                         @Html.DisplayFor(modelItem => item.image2)
                                     </td>

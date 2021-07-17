@@ -49,7 +49,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                     sections = sections.OrderByDescending(s => s.sectionname);
                     break;               
                 default:
-                    sections = sections.OrderBy(s => s.sectionname);
+                    sections = sections.OrderBy(s => s.idsection);
                     break;
             }
             //var articles = db.Articles.Include(a => a.Cetegory);

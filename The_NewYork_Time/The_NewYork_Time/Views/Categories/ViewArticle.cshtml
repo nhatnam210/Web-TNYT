@@ -1,18 +1,17 @@
-﻿@*@model The_NewYork_Time.Models.Article*@
-<!--@model IEnumerable<The_NewYork_Time.Models.Article>
+﻿@model IEnumerable<The_NewYork_Time.Models.Article>
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "ViewArticle";
     Layout = "~/Views/Shared/_Layout2.cshtml";
-}-->
+}
 
-@*@Html.Partial("_NameCateForArticle", The_NewYork_Time.Models.BUS.ArticleBUS.DetailArticle(Model.idarticle))*@
-<!--@foreach (var item in Model)
+@foreach (var item in Model)
 {
+
 
     <div class="grid wide container">
         <div>
             <!--Header-->
-            <!--<div class="header">
+            <div class="header">
                 <div class="rown">
                     <div class="header_title col l-6 l-o-3 m-10 m-o-1 s-11">
                         <div class="title">
@@ -23,9 +22,9 @@
                         </div>
                         <p class="main-description">
                             @item.description
-                        </p>-->
+                        </p>
                         <!--Connection-->
-                        <!--<div class="connection">
+                        <div class="connection">
                             <div class="rown no-gutters">
                                 <div class="connection-top col l-6 m-6 s-12">
                                     <a class="connection__link" href="">
@@ -72,9 +71,9 @@
                                 </div>
                                 <div class="col l-6 m-6 s-12"></div>
                             </div>
-                        </div>-->
+                        </div>
                         <!--End Connection-->
-                    <!--</div>
+                    </div>
 
                     <div class=" col l-12 s-12 m-12 main-pic">
                         <a class="main-pic__link" href="#">
@@ -106,10 +105,10 @@
                         <span class="time">@item.date</span>
                     </div>
                 </div>
-            </div>-->
+            </div>
             <!--End Header-->
             <!--Body-->
-            <!--<div class="body">
+            <div class="body">
                 <div class="rown">
                     <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="main-content">
@@ -146,12 +145,12 @@
                                 New York Times
                             </span>
                         </span>
-                    </div>-->
+                    </div>
                     <!--Read Content-->
-                    <!--<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1 ">
+                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1 ">
                         <div class="main-content">
                             @item.content3
-                        </div>-->
+                        </div>
                         @*<div class="main-content">
                                 @item.content4
                             </div>
@@ -163,9 +162,9 @@
                                 eyebrowns in Kandahar. In New York, it is simply the sign of a new food business with hopes to
                                 succeed.
                             </div>*@
-                    <!--</div>-->
+                    </div>
                     <!--End Read Content-->
-                    <!--<div class="pic-content col l-6 l-o-3 m-8 m-o-2 s-12">
+                    <div class="pic-content col l-6 l-o-3 m-8 m-o-2 s-12">
                         <img src="@item.image3" width="100%" alt="">
                         <span class="main-pic__description">
                             Karim Khan, the cart’s chef and owner, drew on Pakistani and
@@ -174,12 +173,12 @@
                                 New York Times
                             </span>
                         </span>
-                    </div>-->
+                    </div>
                     <!--Read Content-->
-                    <!--<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="main-content">
                             @item.content4
-                        </div>-->
+                        </div>
                         @*<div class="main-content">
                                 All three varieties taste clearly of ground cumin and coriander seeds, with the jab of powdered
                                 and crushed red chiles darting in and out. That slight crunchiness comes from pomegranate seeds.
@@ -194,9 +193,9 @@
                                 clearer view of the details that would set Chapli & Chips apart from other halal carts even if
                                 it sold gyros rather than chapli.
                             </div>*@
-                    <!--</div>-->
+                    </div>
                     <!--End Read Content-->
-                    <!--<div class="col l-12 s-12 m-6 m-12">
+                    <div class="col l-12 s-12 m-6 m-12">
                         <div class="rown">
                             <div class="col l-6 m-6 s-12">
                                 <img src="@item.image4a" width="100%" alt="">
@@ -219,12 +218,12 @@
                                 </span>
                             </div>
                         </div>
-                    </div>-->
+                    </div>
                     <!--Read Content-->
-                    <!--<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="main-content">
                             @item.content5
-                        </div>-->
+                        </div>
                         @*<div class="main-content">
                                 The bread is useful for soaking up the sauces, of which there are about a dozen. All but one or
                                 two are whipped up by Chapli & Chips’s owner and chef, Karim Khan. This being a New York City
@@ -240,10 +239,10 @@
                                 got mixed up with the restaurant business not long after, when he began handing out fliers for a
                                 pizzeria in exchange for $5 and a slice. He has worked for a large catering hall and a halal
                                 chicken-and-rice cart owned by his brother.*@
-                    </div>-->
+                    </div>
 
                     <!--End Read Content-->
-                    <!--<div class="pic-content col l-6 l-o-3 m-10 m-o-1 s-12">
+                    <div class="pic-content col l-6 l-o-3 m-10 m-o-1 s-12">
                         <img src="@item.image5" width="100%" alt="">
                         <span class="main-pic__description">
                             Potatoes enter; fries leave.Credit...<span class="main-pic__description--small">
@@ -251,11 +250,11 @@
                                 New York Times
                             </span>
                         </span>
-                    </div>-->
+                    </div>
 
                     <!--Read Content-->
 
-                    <!--<div class="col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1">
+                    <div class="col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1">
                         <div class="main-content">
                             After he decided that New York might have an opening for a chapli-focused food cart, he began
                             with his mother’s recipe, an Afghan version, and later modified it with guidance from a friend,
@@ -274,10 +273,10 @@
                             another. But they are, without a doubt, the only fries in town that are cut to order by forcing
                             a russet potato through a hand-operated press mounted to the wall of a chapli kebab cart.
                         </div>
-                    </div>-->
+                    </div>
                     <!--End Read Content-->
                     <!--Other Article-->
-                    <!--<div class="other-articles col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                    <div class="other-articles col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="other-articles__title">More on Chapli and Restaurants</div>
                         <div class="other-articles__list">
                             <a href="" class="other-articles__link">
@@ -348,21 +347,21 @@
                             </div>
                         </a>
                     </div>
-                </div>-->
+                </div>
 
                 <!--Map-->
-                <!--<div class="map col l-8 m-12 s-12">
+                <div class="map col l-8 m-12 s-12">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.212732869788!2d106.71966481454628!3d10.795012492308937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529aff2892003%3A0x856b53b1af6b19f3!2sLandmark%2081!5e0!3m2!1svi!2s!4v1624812845784!5m2!1svi!2s"
                             width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>-->
+                </div>
                 <!--End Map-->
-            <!--</div>-->
+            </div>
             <!--End Other Article-->
 
 
-            <!--<div class="under col l-6 l-o-3 m-10 m-o-1 s-12 ">-->
+            <div class="under col l-6 l-o-3 m-10 m-o-1 s-12 ">
                 <!--Connection-->
-                <!--<div class="connection">
+                <div class="connection">
                     <div class="rown no-gutters">
                         <div class="connection-now col l-6 m-12 s-12">Conect with us right now !!!</div>
                         <div class="connection-bottom col l-6 m-12 s-12">
@@ -409,11 +408,12 @@
                             </a>
                         </div>
                     </div>
-                </div>-->
+                </div>
                 <!--End Connection-->
-            <!--</div>
+            </div>
         </div>
     </div>
 
 
-}-->
+}
+

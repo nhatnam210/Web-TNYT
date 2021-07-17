@@ -34,7 +34,13 @@
 
 </head>
 <body>
-    
+
+    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    @*@Html.Partial("_Navbar")*@
+
+    @Html.Partial("_LoginPartial")
+
     <!--Custom Code body HTML-->
     <div class="container body-content">
         <div>

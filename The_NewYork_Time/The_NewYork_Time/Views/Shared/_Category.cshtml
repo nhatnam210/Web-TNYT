@@ -1,13 +1,10 @@
-﻿
-@model  IEnumerable<The_NewYork_Time.Models.Category>
+﻿@model  IEnumerable<The_NewYork_Time.Models.Category>
 <nav class="section-nav">
     <ul class="list-nav">
-
-
-
         @foreach (var item in Model)
         {
-            <li> <a href="/Sections/Category/@item.idcategory">@item.categoryname</a> </li>}
+            <li> <a href="/Sections/Category/@item.idcategory">@item.categoryname</a> </li>
+          }
 
     </ul>
 </nav>

@@ -98,7 +98,7 @@
 
                             <thead>
                                 <tr>
-                                    <th> Id Section </th>
+                                    <th> @Html.ActionLink("Id", "Index", new { sortOrder = ViewBag.TenSortParm, currentFilter = ViewBag.CurrentFilter }) </th>
                                     <th> Section Name</th>
                                     <th> Option</th>
                                 </tr>

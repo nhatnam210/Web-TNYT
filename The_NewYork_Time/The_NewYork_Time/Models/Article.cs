@@ -55,7 +55,7 @@ namespace The_NewYork_Time.Models
         [Column(TypeName = "date")]
         public DateTime date { get; set; }
 
-        public int idcategory { get; set; }
+        public int idcategory { get; set; }   
 
         public virtual Category Cetegory { get; set; }
 

@@ -105,7 +105,6 @@ D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_T
 D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CopyComplete
 D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.dll
 D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.pdb
-D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\The_NewYork_Time.dll.config
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\The_NewYork_Time.dll
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\The_NewYork_Time.pdb
@@ -338,3 +337,11 @@ D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Intercom.pdb
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.xml
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.Mvc.xml
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\RestSharp.xml
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\bin\Intercom.dll
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\bin\PagedList.dll
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\bin\PagedList.Mvc.dll
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\bin\RestSharp.dll
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\bin\Intercom.pdb
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\bin\PagedList.xml
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\bin\PagedList.Mvc.xml
+D:\.IT\DO AN\Do An Web\The_NewYork_Time\The_NewYork_Time\bin\RestSharp.xml
