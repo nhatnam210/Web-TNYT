@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -128,5 +129,7 @@ namespace The_NewYork_Time.Views
             }
             base.Dispose(disposing);
         }
+
+       
     }
 }

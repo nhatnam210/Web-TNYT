@@ -13,7 +13,11 @@ namespace The_NewYork_Time.Models.BUS
             var db = new TNYTDB();
             return db.Query<Category>("select * from Category where idsection =  '" + id + "'");
         }
-
+        public static IEnumerable<Category> ShowsectionName(int id)
+        {
+            var db = new TNYTDB();
+            return db.Query<Category>("select * from Category where idsection =  '" + id + "'");
+        }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -135,18 +136,23 @@ namespace The_NewYork_Time.Views
         }
 
         // GET: Categories/Details/5
-        public ActionResult Category(int? id)
+        //public ActionResult Category(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Category category = db.Cetegories.Find(id);
+        //    if (category == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(category);
+        //}
+        public ActionResult Category(int id, int page = 1, int pagesize = 3)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Category category = db.Cetegories.Find(id);
-            if (category == null)
-            {
-                return HttpNotFound();
-            }
-            return View(category);
+            var ds = The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTheoCate(id).ToPagedList(page, pagesize); ;
+            return View(ds);
         }
     }
 

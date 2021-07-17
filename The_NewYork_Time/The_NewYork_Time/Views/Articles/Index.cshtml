@@ -1,124 +1,115 @@
-﻿@model IEnumerable<The_NewYork_Time.Models.Article>
-
+﻿@model PagedList.IPagedList<The_NewYork_Time.Models.Article>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Cetegory.categoryname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.articlename)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image3)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image4a)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image4b)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image5)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.content1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.content2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.content3)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.content4)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.content5)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.author)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.date)
-        </th>
-        <th></th>
-    </tr>
+<!-- Section Latest -->
+<!--<section id="latest">
+    <div>-->
+        <!-- Tab items -->
+        <!--<div class="tabs">
+            <div class="tab-item active">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cetegory.categoryname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.articlename)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image4a)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image4b)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image5)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.content1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.content2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.content3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.content4)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.content5)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.author)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.date)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idarticle }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idarticle }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idarticle })
-        </td>
-    </tr>
-}
+                Latest
+            </div>
+            <div class="tab-item">
+                <form action="">
+                    <input placeholder="Search" style="padding: 2px 0; border-radius: 5px;">
+                    <i class="fas fa-search"></i>
+                </form>
 
-</table>
+            </div>
+
+            <div class="line"></div>
+        </div>-->
+
+        <!-- Tab content -->
+        <!--<div class="tab-content ">
+            <div class="tab-pane active">
+                @foreach (var item in Model)
+                {
+                    <div class="lastes-item row">
+
+                        <div class="col col-2 display-sm">
+                            <span>@item.date</span>
+                        </div>
+                        <div class="col col-7 col-sm12">
+                            <h2>
+                                <a href="/Categories/Article/@item.idarticle">
+                                    @item.articlename
+                                </a>
+                            </h2>
+                            <p>@item.description</p>
+                            <p class="article-author">
+                                By @item.author
+                            </p>
+                        </div>
+                        <div class="col col-3 col-sm12 mt-19">
+                            <a href="/Categories/Article/@item.idarticle">
+                                <img src="@item.image1" alt="">
+                            </a>
+                        </div>
+
+
+
+
+                    </div>
+                }-->
+                <!-- Pagination Start -->
+                <!--<div class="col-md-12">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            @Html.PagedListPager(Model, Page => Url.Action("Index", new { Page }))
+                        </ul>
+                    </nav>
+                </div>-->
+                <!-- Pagination Start -->
+    
+            <!--</div>
+            <div class="tab-pane">
+                <div class="lastes-item row">
+                    <div class="col col-2 display-sm">
+                        <span>June 24, 2021</span>
+                    </div>
+                    <div class="col col-7 col-sm12">
+                        <h2>
+                            <a href="#">
+                                Brazil Passes 500,000 Covid Deaths, a Tragedy With No Sign of Letup
+                            </a>
+                        </h2>
+                        <p>With 2.7 percent of the world’s population, Brazil has suffered 13 percent of the Covid-19 fatalities, and the pandemic there is not abating.</p>
+                    </div>
+                    <div class="col col-3 col-sm12 mt-19">
+                        <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
+                    </div>
+                </div>
+                <div class="lastes-item row">
+                    <div class="col col-2 display-sm">
+                        <span>June 24, 2021</span>
+                    </div>
+                    <div class="col col-7 col-sm12">
+                        <h2>
+                            <a href="#">
+                                Why More People Are Getting Two Different Coronavirus Vaccines
+                            </a>
+                        </h2>
+                        <p>
+                            Several countries are allowing mix-and-match inoculation, which scientists hope will have benefits, and Chancellor Angela Merkel of Germany is among those to get it.
+
+                        </p>
+                    </div>
+                    <div class="col col-3 col-sm12 mt-19">
+                        <img src="https://static01.nyt.com/images/2021/06/23/world/23mix-n-match-explainer01/merlin_187969563_eed9bb59-2ad2-4862-bb44-ebbd4ca946a5-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>-->
+<!-- End Section Latest -->
