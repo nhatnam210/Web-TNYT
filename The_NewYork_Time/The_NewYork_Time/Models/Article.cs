@@ -28,25 +28,11 @@ namespace The_NewYork_Time.Models
 
         public string image1 { get; set; }
 
-        public string image2 { get; set; }
-
-        public string image3 { get; set; }
-
-        public string image4a { get; set; }
-
-        public string image4b { get; set; }
-
-        public string image5 { get; set; }
+       
 
         public string content1 { get; set; }
 
-        public string content2 { get; set; }
-
-        public string content3 { get; set; }
-
-        public string content4 { get; set; }
-
-        public string content5 { get; set; }
+       
 
         [Required]
         [StringLength(255)]

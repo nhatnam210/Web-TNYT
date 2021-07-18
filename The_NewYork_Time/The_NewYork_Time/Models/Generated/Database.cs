@@ -126,16 +126,7 @@ namespace TNYT
 		[Column] public string articlename { get; set; }
 		[Column] public string description { get; set; }
 		[Column] public string image1 { get; set; }
-		[Column] public string image2 { get; set; }
-		[Column] public string image3 { get; set; }
-		[Column] public string image4a { get; set; }
-		[Column] public string image4b { get; set; }
-		[Column] public string image5 { get; set; }
 		[Column] public string content1 { get; set; }
-		[Column] public string content2 { get; set; }
-		[Column] public string content3 { get; set; }
-		[Column] public string content4 { get; set; }
-		[Column] public string content5 { get; set; }
 		[Column] public string author { get; set; }
 		[Column] public DateTime date { get; set; }
 		[Column] public int idcategory { get; set; }
