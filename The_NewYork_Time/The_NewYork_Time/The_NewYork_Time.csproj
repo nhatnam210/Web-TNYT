@@ -2576,6 +2576,8 @@
     <Content Include="Views\Shared\_4thArticleSection.cshtml" />
     <Content Include="Views\Sections\Category.cshtml" />
     <Content Include="Views\Shared\_SectionName.cshtml" />
+    <Content Include="Views\Shared\_nav.cshtml" />
+    <Content Include="Views\Shared\_showcatename.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

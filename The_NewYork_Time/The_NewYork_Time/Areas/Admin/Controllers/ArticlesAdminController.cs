@@ -92,7 +92,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idarticle,articlename,description,image1,image2,image3,image4a,image4b,image5,content1,content2,content3,content4,content5,author,date,idcategory")] Article article)
+        public ActionResult Create([Bind(Include = "idarticle,articlename,description,image1,content1,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
             {
@@ -126,7 +126,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idarticle,articlename,description,image1,image2,image3,image4a,image4b,image5,content1,content2,content3,content4,content5,author,date,idcategory")] Article article)
+        public ActionResult Edit([Bind(Include = "idarticle,articlename,description,image1,content1,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
             {

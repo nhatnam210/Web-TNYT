@@ -316,7 +316,6 @@ D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Microsoft.Owin.Securit
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Microsoft.Owin.Security.OAuth.xml
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csprojAssemblyReference.cache
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CoreCompileInputs.cache
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CopyComplete
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.dll
