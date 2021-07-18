@@ -3,7 +3,7 @@
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Category";
-    Layout = "~/Views/Shared/_Layout2.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @*@Html.Partial("_SectionName",The_NewYork_Time.Models.BUS.CategoryBUS.ShowsectionName())*@
 <!-- Section Latest -->
@@ -13,15 +13,15 @@
         <div class="tabs">
             <div class="tab-item active">
 
-                Latest
+                All Article 
             </div>
-            <div class="tab-item">
+            @*<div class="tab-item">
                 <form action="">
                     <input placeholder="Search" style="padding: 2px 0; border-radius: 5px;">
                     <i class="fas fa-search"></i>
                 </form>
 
-            </div>
+            </div>*@
 
             <div class="line"></div>
         </div>
@@ -31,27 +31,29 @@
             <div class="tab-pane active">
                 @foreach (var item in Model)
                 {
-                    <div class="lastes-item row">
-
-                        <div class="col col-2 display-sm">
-                            <span>@item.date</span>
-                        </div>
-                        <div class="col col-7 col-sm12">
-                            <h2>
+                    <div class="lastes-item rowp">
+                        <div class="lastes-item-content">
+                            <div class="col col-2 display-sm">
+                                <span>@item.date</span>
+                            </div>
+                            <div class="col col-7 col-sm12">
+                                <h2>
+                                    <a href="/Categories/Article/@item.idarticle">
+                                        @item.articlename
+                                    </a>
+                                </h2>
+                                <p>@item.description</p>
+                                <p class="article-author">
+                                    By @item.author
+                                </p>
+                            </div>
+                            <div class="col col-3 col-sm12 mt-19">
                                 <a href="/Categories/Article/@item.idarticle">
-                                    @item.articlename
+                                    <img src="@item.image1" alt="">
                                 </a>
-                            </h2>
-                            <p>@item.description</p>
-                            <p class="article-author">
-                                By @item.author
-                            </p>
+                            </div>
                         </div>
-                        <div class="col col-3 col-sm12 mt-19">
-                            <a href="/Categories/Article/@item.idarticle">
-                                <img src="@item.image1" alt="">
-                            </a>
-                        </div>
+                        
 
 
 
@@ -61,8 +63,8 @@
                
 
             </div>
-            <div class="tab-pane">
-                <div class="lastes-item row">
+            @*<div class="tab-pane">
+                <div class="lastes-item rowp">
                     <div class="col col-2 display-sm">
                         <span>June 24, 2021</span>
                     </div>
@@ -78,7 +80,7 @@
                         <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
                     </div>
                 </div>
-                <div class="lastes-item row">
+                <div class="lastes-item rowp">
                     <div class="col col-2 display-sm">
                         <span>June 24, 2021</span>
                     </div>
@@ -99,13 +101,13 @@
                 </div>
 
 
-            </div>
+            </div>*@
             <!-- Pagination Start -->
-            <div class="col-md-12">
-                <ul class="pagination justify-content-center">
+            <div class="col-md-12" style="max-width:1200px;margin:auto">
+                <div class="pagination justify-content-center">
                     Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
                     @Html.PagedListPager(Model, Page => Url.Action("Category", "Sections", new { Page }))
-                </ul>
+                </div>
             </div>
             <!-- Pagination Start -->
 

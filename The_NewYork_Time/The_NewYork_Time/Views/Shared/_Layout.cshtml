@@ -6,27 +6,23 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @*@Styles.Render("~/Content/css")*@
     @Scripts.Render("~/bundles/modernizr")
-    <!--CSS-->
     <link rel="stylesheet" href="~/Assets/css/style.css">
-    @*<link rel="stylesheet" href="~/Assets/css/base.css">*@
-    <link rel="stylesheet" href="~/Assets/css/responsive.css">
+    <link rel="stylesheet" href="~/Assets/css/base.css">
     <link rel="stylesheet" href="~/Assets/css/global.css">
     <link rel="stylesheet" href="~/Assets/css/index.css">
+    <link rel="stylesheet" href="~/Assets/css/responsive.css">
 
     <!-- themify icons -->
-    <link rel="stylesheet" href="~/Assets/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="~/Assets/themify-icons/themify-icons.css"
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">-->
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>-->
     <!-- IonIcons -->
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!--<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>-->
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
-    <!-- JS -->
-    <script src="~/Assets/js/index.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-latest.min.js"></script>-->
+    @*<script src="~/Assets/js/index.js"></script>*@
     <script language="javascript" src="~/Assets/js/javascript.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
@@ -34,7 +30,7 @@
 
 </head>
 <body>
-    
+    @Html.Partial("_nav", The_NewYork_Time.Models.BUS.SectionBUS.DanhSachSection())
     <!--Custom Code body HTML-->
     <div class="container body-content">
         <div>

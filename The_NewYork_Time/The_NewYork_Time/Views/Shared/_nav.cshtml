@@ -106,8 +106,8 @@
                     <circle cx="8" cy="4" r="4"></circle>
                 </svg>
             </label>
-            <a href="facebook.com" class="btn subscribe">subscribe now</a>
-            <a href="facebook.com" class="btn login">login</a>
+            @Html.ActionLink("Đăng ký", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary px-3 text-uppercase fw-bold" })
+            @Html.ActionLink("Đăng nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary px-3 text-uppercase fw-bold" })
         </div>
     </div>
 </div>
@@ -116,8 +116,8 @@
 <div id="under-nav" class="grid navbar-sec login-mobile">
     <div class="rown navbar__header">
         <div class="col form-right">
-            <a href="facebook.com" class="btn subscribe-link">subscribe now</a>
-            <a href="facebook.com" class="btn login-link">login</a>
+            <a href="@Url.Action("Admin")" class="btn subscribe-link">subscribe now</a>
+            <a href="@Url.Action("Admin")" class="btn login-link">login</a>
         </div>
     </div>
 </div>
