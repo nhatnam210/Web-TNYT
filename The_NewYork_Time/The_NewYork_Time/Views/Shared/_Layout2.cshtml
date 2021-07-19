@@ -58,8 +58,11 @@
     @Html.Partial("_nav",The_NewYork_Time.Models.BUS.SectionBUS.DanhSachSection())
     <!--Custom Code body HTML-->
     <div class="container body-content">
-        @RenderBody()
+        <div>
 
+            @RenderBody()
+        </div>
+        
     </div>
 
     @Scripts.Render("~/bundles/jquery")

@@ -282,7 +282,7 @@ html {
         
     }
 
-        .list-content li:last-child,
+        .list-content li:nth-child(10),
         .list-content li:nth-child(6),
         .list-content li:nth-child(7),
         .list-content li:nth-child(8),
@@ -355,7 +355,7 @@ html {
 
     .nation-header > h2 {
         font-family: nyt-franklin,helvetica,arial,sans-serif;
-        font-size: 1.125rem;
+        font-size: 1.75rem;
         font-weight: 700;
         line-height: 1.25rem;
     }
@@ -363,7 +363,7 @@ html {
     .nation-header > a {
         color: #326891;
         font-family: nyt-franklin,helvetica,arial,sans-serif;
-        font-size: 0.75rem;
+        font-size: 1.25rem;
         font-weight: 400;
         line-height: 0.875rem;
     }
