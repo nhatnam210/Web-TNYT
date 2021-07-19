@@ -1225,6 +1225,7 @@ select {
     border-radius: .3rem;
 }
 
+
 .navbar-sec {
     height: 4.2rem;
     border-bottom: 1px solid var(--line);
@@ -1357,9 +1358,10 @@ select {
     text-decoration: none;
     text-align: center;
 }
-
+    .up-to-head__icon:hover,
     .btn:hover {
-        background-color: #326891;
+        background-color: #326891 !important;
+        color: #fff !important;
     }
 
 .go,
