@@ -6,6 +6,7 @@
 
 html {
     margin: auto;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -19,6 +20,8 @@ html {
     --line-light: #e2e2e2;
     --blue: #567b95;
     --blue-hover: #b8ecec42;
+    --blue-blur: rgba(86, 123, 149,0.3);
+    --blue-blur-background: rgba(86, 123, 149,0.1);
     --hover-light: #f7f7f7;
     --shadow: #3333333a;
 }
@@ -127,22 +130,24 @@ html {
 
 .section-nav {
     border-top: 1px solid #e2e2e2;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--text-dark);
 }
 
 .list-nav {
     list-style: none;
     display: flex;
     padding: 9px 0 7px;
+    font-family: var(--famlily-1);
 }
 
     .list-nav a {
         text-decoration: none;
-        color: black;
+        color: var(--text-dark);
     }
 
         .list-nav a:hover {
             text-decoration: underline;
+            color: var(--text-dark) !important;
         }
 
     .list-nav li {
@@ -190,11 +195,12 @@ html {
 
 .head-content .head-title a {
     text-decoration: none;
-    color: black;
+    color: var(--text-dark);
 }
 
     .head-content .head-title a:hover {
         text-decoration: underline;
+        color: var(--text-dark) !important;
     }
 
 .head-content .head-title h2 {
@@ -306,11 +312,13 @@ html {
 
     .list-content a {
         text-decoration: none;
-        color: black;
+        color: var(--text-dark);
+        font-weight: bold;
     }
 
         .list-content a:hover {
             text-decoration: underline;
+            color: var(--text-dark) !important;
         }
 
     .list-content h2 {
@@ -350,7 +358,7 @@ html {
 }
 
     .nation-header > h2 > a {
-        color: black;
+        color: var(--text-dark);
     }
 
     .nation-header > h2 {
@@ -366,7 +374,14 @@ html {
         font-size: 1.25rem;
         font-weight: 400;
         line-height: 0.875rem;
+        transition: all linear .2s
     }
+
+        .nation-header > a:hover {
+            transform: translateX(10px);
+            color: #326891 !important;
+        }
+
 /* Section VietNam */
 #vietnam {
     border-top: 1px solid #000;
@@ -395,7 +410,7 @@ html {
         width: 0;
         height: 6px;
         border-radius: 15px;
-        background-color: #7c1a1a;
+        background-color: var(--blue) ;
         transition: all 0.2s ease;
     }
 
@@ -416,8 +431,8 @@ html {
 
     .tab-item:hover {
         opacity: 1;
-        background-color: rgba(194, 53, 100, 0.05);
-        border-color: rgba(194, 53, 100, 0.1);
+        background-color: var(--blue-blur-background);
+        border-color: var(--blue-blur);
     }
 
     .tab-item.active {
@@ -453,7 +468,7 @@ html {
 
 
 .lastes-item span {
-    color: rgb(208, 1, 27);
+    color: #999;
     font-family: nyt-franklin, helvetica, arial, sans-serif;
     font-size: 11px;
     font-weight: 400;
@@ -462,11 +477,12 @@ html {
 
 .lastes-item a {
     text-decoration: none;
-    color: black;
+    color: var(--text-dark);
 }
 
     .lastes-item a:hover {
         text-decoration: underline;
+        color: var(--text-dark) !important;
     }
 
 .lastes-item h2 {
@@ -495,6 +511,7 @@ html {
 .tab-item i {
     padding-left: 4px;
     font-size: 15px;
+    color: var(--text-dark);
 }
 /* Search */
 #div1 {
@@ -566,16 +583,6 @@ select {
 
 
 /* Detail */
-:root {
-    --famlily-1: nyt-franklin,helvetica,arial,sans-serif;
-    --famlily-2: nyt-cheltenham,georgia,'times new roman',times,serif;
-    --text: #333;
-    --text-dark: #111;
-    --text-gray: #444;
-    --text-gray-light: #888;
-    --line: #d6d6d6;
-    --line-light: #e2e2e2;
-}
 
 .container {
     /* background-color: #ff8c00; */
@@ -1132,6 +1139,7 @@ select {
 
     .menu-item__link:hover {
         background-color: var(--blue-hover);
+        color: var(--text-dark) !important;
     }
 
 .menu-sub {
@@ -1352,7 +1360,7 @@ select {
     font-weight: bold;
     margin-left: 1rem;
     border-radius: 2px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1rem;
     transition: all linear .2s;
     text-decoration: none;

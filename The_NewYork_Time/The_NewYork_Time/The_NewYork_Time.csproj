@@ -2580,6 +2580,7 @@
     <Content Include="Views\Shared\_showcatename.cshtml" />
     <Content Include="Views\Shared\_ShowArticleofCatetoSection.cshtml" />
     <Content Include="Views\Shared\_ArticleforCate.cshtml" />
+    <Content Include="Views\Shared\_ShowCateNameInPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
