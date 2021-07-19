@@ -1,0 +1,17 @@
+﻿@model IEnumerable<The_NewYork_Time.Models.Article>
+<ul class="list-content">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="/Categories/Article/@item.idarticle">
+                <img src="@item.image1" alt="">
+            </a>
+            <h2>
+                <a href="/Categories/Article/@item.idarticle">@item.description</a>
+            </h2>
+        </li>
+    }
+
+   
+
+</ul>

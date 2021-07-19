@@ -320,7 +320,6 @@ D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CopyComplete
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.dll
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.pdb
-D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.dll
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.Mvc.dll
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\PagedList.xml
