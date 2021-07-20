@@ -19,8 +19,9 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
-            ViewBag.TenSortParm = String.IsNullOrEmpty(sortOrder) ? "Ten" : "";
-            
+            ViewBag.IdSortParm = String.IsNullOrEmpty(sortOrder) ? "Id" : "";
+            ViewBag.TenSortParm = sortOrder == "Ten" ? "Ten_desc" : "Ten";
+
 
             //phan trang
             if (searchString != null)
@@ -45,12 +46,17 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             //sắp xếp 
             switch (sortOrder)
             {
+                case "Id":
+                    categories = categories.OrderByDescending(s => s.idcategory);
+                    break;
                 case "Ten":
+                    categories = categories.OrderBy(s => s.categoryname);
+                    break;
+                case "Ten_desc":
                     categories = categories.OrderByDescending(s => s.categoryname);
                     break;
-                
                 default:
-                    categories = categories.OrderBy(s => s.categoryname);
+                    categories = categories.OrderBy(s => s.idcategory);
                     break;
             }
             //var articles = db.Articles.Include(a => a.Cetegory);
