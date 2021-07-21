@@ -3432,6 +3432,8 @@
     <Content Include="Views\Shared\_ShowArticleofCatetoSection.cshtml" />
     <Content Include="Views\Shared\_ArticlesOfCateInSection.cshtml" />
     <Content Include="Views\Shared\_CategoryHeader.cshtml" />
+    <Content Include="Views\Shared\_FooterPage.cshtml" />
+    <Content Include="Views\Shared\_CateOfFooterPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
