@@ -7,16 +7,10 @@
 }
 @*@Html.Partial("_SectionName",The_NewYork_Time.Models.BUS.CategoryBUS.ShowsectionName())*@
 <!-- Section header -->
-<header id="section-header" class="page"">
-
-        <div class="section-world">
-            <p> world</p>
-        </div>
-        <div class="section-title">
-            <h1>USA</h1>
-        </div>
-
-</header>
+@*@foreach (var i in Model)
+{
+  @Html.Partial("_CategoryHeader", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCategoryName(i.Cetegory.idcategory))
+}*@
 <!-- End Section Header -->
 <section id="latest">
     <div>

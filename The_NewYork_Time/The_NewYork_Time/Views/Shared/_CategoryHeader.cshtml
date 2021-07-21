@@ -1,14 +1,12 @@
 ﻿@model The_NewYork_Time.Models.Category
 
-<!-- Section header -->
-<header id="section-header">
+<header id="section-header" class="page">
     <div class="section-world">
         <a href="/Home/Section/@Model.idsection" class="section-header-link">
-            <p> @Html.DisplayFor(model => model.Section.sectionname)</p>
+            <p>@Model.Section.sectionname</p>
         </a>
     </div>
     <div class="section-title">
-        <h1> @Html.DisplayFor(model => model.categoryname)</h1>
+        <h1>@Model.categoryname</h1>
     </div>
 </header>
-<!-- End Section Header -->

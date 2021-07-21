@@ -3420,7 +3420,6 @@
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Categories\Article.cshtml" />
     <Content Include="Views\Shared\_Category.cshtml" />
-    <Content Include="Views\Shared\_ArticleTheoCate.cshtml" />
     <Content Include="Views\Shared\_Random_10_Article.cshtml" />
     <Content Include="Views\Shared\_Top1ArticleSection.cshtml" />
     <Content Include="Views\Shared\_ArticleLastestBySection.cshtml" />
@@ -3428,11 +3427,11 @@
     <Content Include="Views\Shared\_3rdArticleSection.cshtml" />
     <Content Include="Views\Shared\_4thArticleSection.cshtml" />
     <Content Include="Views\Sections\Category.cshtml" />
-    <Content Include="Views\Shared\_SectionName.cshtml" />
     <Content Include="Views\Shared\_nav.cshtml" />
     <Content Include="Views\Shared\_showcatename.cshtml" />
     <Content Include="Views\Shared\_ShowArticleofCatetoSection.cshtml" />
     <Content Include="Views\Shared\_ArticlesOfCateInSection.cshtml" />
+    <Content Include="Views\Shared\_CategoryHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

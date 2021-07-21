@@ -12,7 +12,7 @@
         <div class="section-title">
             <h1>@Html.DisplayFor(model => model.sectionname) News</h1>
         </div>
-       @Html.Partial("_Category", The_NewYork_Time.Models.BUS.CategoryBUS.DanhSachCaTe(Model.idsection))
+       @Html.Partial("_Category", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(Model.idsection))
     </header>
     <!-- End Section Header -->
     <!-- Section New Info -->
@@ -68,7 +68,7 @@
     </section>
     <!-- End Section New Info -->
     <!-- Section US -->
-    @Html.Partial("_ShowArticleofCatetoSection",The_NewYork_Time.Models.BUS.CategoryBUS.DanhSachCaTe(Model.idsection))
+    @Html.Partial("_ShowArticleofCatetoSection",The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(Model.idsection))
     <!-- End Section Us -->
     
     <!-- Section Latest -->
