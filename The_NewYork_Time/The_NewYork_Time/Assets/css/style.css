@@ -444,9 +444,10 @@ html {
     border-top: 1px solid #e2e2e2;
     
 }
-.lastes-item-content{
-    max-width:1200px;
-    margin:auto;
+.page,
+.lastes-item-content {
+    max-width: 1000px;
+    margin: auto;
 }
 .tab-pane {
     color: #333;
@@ -1054,20 +1055,133 @@ select {
         font-size: 1.5rem;
         line-height: 2rem;
     }
+    .page,
+    .lastes-item-content {
+        max-width: 400px;
+        width:auto;
+    }
 }
 
 /* >= Tablet */
 @media (min-width: 740px) {
-}
 
 /* PC medium resolution > */
 @media (min-width: 1113px) {
+    .page,
+    .lastes-item-content {
+        max-width: 1200px;
+    }
 }
 
 /* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
+
 }
 
+
+@media (max-width: 1023px) {
+    .icon__search,
+    .category__name,
+    .menu-item__icon,
+    .menu-item__head,
+    .menu-item:hover .menu-sub,
+    .check-search:checked ~ .search-box,
+    .check-search:checked ~ .go,
+    .subscribe,
+    .login {
+        display: none;
+    }
+
+    .check-under-nav:checked ~ .login-mobile {
+        display: block !important;
+    }
+
+    .form-right {
+        right: 1rem;
+    }
+
+    .icon-user {
+        width: 1.5rem;
+        display: block;
+    }
+
+    .menu-list {
+        display: flex;
+    }
+
+    .menu-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .menu-item__link {
+        padding-left: 1rem;
+    }
+
+    .menu-mobile {
+        padding: 2rem 20vw;
+    }
+
+    .menu {
+        width: 100%;
+        padding: 0;
+    }
+
+    .logo-menu {
+        display: block;
+        width: 100%;
+        margin: auto;
+        border-bottom: 1px solid var(--line);
+        position: relative;
+    }
+
+        .logo-menu a {
+            display: block;
+        }
+
+        .logo-menu svg {
+            width: 23rem;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: .5rem;
+            padding-top: 1.5rem;
+        }
+
+    .icon-exit {
+        font-size: 1.7rem;
+        position: absolute;
+        right: 1rem;
+        top: 55%;
+        transform: translateY(-50%);
+    }
+
+    .form-search-header {
+        display: flex;
+        height: auto;
+    }
+
+    .search-box__header {
+        font-family: var(--famlily-1);
+        height: 35px;
+        flex: 1;
+        min-width: 10px;
+        outline: none;
+        border: 1px solid var(--line);
+        padding: 0 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .go-header {
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+    }
+    .page,
+    .lastes-item-content {
+        max-width: 748px;
+    }
+
+}
 
 /*Navbar sec*/
 
@@ -1388,104 +1502,7 @@ select {
     padding: 8px;
 }
 
-@media (max-width: 1023px) {
-    .icon__search,
-    .category__name,
-    .menu-item__icon,
-    .menu-item__head,
-    .menu-item:hover .menu-sub,
-    .check-search:checked ~ .search-box,
-    .check-search:checked ~ .go,
-    .subscribe,
-    .login {
-        display: none;
-    }
 
-    .check-under-nav:checked ~ .login-mobile {
-        display: block !important;
-    }
-
-    .form-right {
-        right: 1rem;
-    }
-
-    .icon-user {
-        width: 1.5rem;
-        display: block;
-    }
-
-    .menu-list {
-        display: flex;
-    }
-
-    .menu-item {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .menu-item__link {
-        padding-left: 1rem;
-    }
-
-    .menu-mobile {
-        padding: 2rem 20vw;
-    }
-
-    .menu {
-        width: 100%;
-        padding: 0;
-    }
-
-    .logo-menu {
-        display: block;
-        width: 100%;
-        margin: auto;
-        border-bottom: 1px solid var(--line);
-        position: relative;
-    }
-
-        .logo-menu a {
-            display: block;
-        }
-
-        .logo-menu svg {
-            width: 23rem;
-            margin-left: 50%;
-            transform: translateX(-50%);
-            padding-bottom: .5rem;
-            padding-top: 1.5rem;
-        }
-
-    .icon-exit {
-        font-size: 1.7rem;
-        position: absolute;
-        right: 1rem;
-        top: 55%;
-        transform: translateY(-50%);
-    }
-
-    .form-search-header {
-        display: flex;
-        height: auto;
-    }
-
-    .search-box__header {
-        font-family: var(--famlily-1);
-        height: 35px;
-        flex: 1;
-        min-width: 10px;
-        outline: none;
-        border: 1px solid var(--line);
-        padding: 0 1.5rem;
-        font-size: 1.3rem;
-    }
-
-    .go-header {
-        display: flex;
-        text-transform: uppercase;
-        align-items: center;
-    }
-}
 
 
 /**---------------------------------------------------------/

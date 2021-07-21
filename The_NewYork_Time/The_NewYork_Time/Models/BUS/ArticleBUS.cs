@@ -50,12 +50,7 @@ namespace The_NewYork_Time.Models.BUS
             return db.Query<Article>("select * from Article a , Section s , Category c  where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' ORDER BY idarticle DESC ");
 
         }
-        public static IEnumerable<Article> DetailArticle(int id)
-        {
-            var db = new TNYTDB();
-            return db.Query<Article>("select * from Article a , Category c where a.idcategory = c.idcategory and idarticle = '" + id + "'");
 
-        }
         public static IEnumerable<Article> ShowArticleToCate(int id)
         {
             var db = new TNYTDB();

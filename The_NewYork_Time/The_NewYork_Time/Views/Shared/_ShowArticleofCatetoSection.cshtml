@@ -11,7 +11,7 @@
         <a href="/Sections/Category/@item.idcategory">More in Read The @item.categoryname ></a>
     </div>
     <div class="us-content">
-        @Html.Partial("_ArticleForCate",The_NewYork_Time.Models.BUS.ArticleBUS.ShowArticleToCate(item.idcategory))
+        @Html.Partial("_ArticlesOfCateInSection", The_NewYork_Time.Models.BUS.ArticleBUS.ShowArticleToCate(item.idcategory))
     </div>
 
 </section>
