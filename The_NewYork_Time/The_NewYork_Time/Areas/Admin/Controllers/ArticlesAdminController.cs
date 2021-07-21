@@ -98,7 +98,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "idarticle,articlename,description,image1,content1,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
@@ -132,7 +132,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "idarticle,articlename,description,image1,content1,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
@@ -162,7 +162,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
 
         // POST: Admin/ArticlesAdmin/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult DeleteConfirmed(int id)
         {
             Article article = db.Articles.Find(id);
