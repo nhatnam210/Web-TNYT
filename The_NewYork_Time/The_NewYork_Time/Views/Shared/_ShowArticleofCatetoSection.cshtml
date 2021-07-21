@@ -1,0 +1,19 @@
+﻿@model IEnumerable<The_NewYork_Time.Models.Category>
+
+@foreach(var item in Model)
+{ 
+<!-- Section US -->
+<section id="us">
+    <div class="nation-header">
+        <h2>
+            <a href="/Sections/Category/@item.idcategory">@item.categoryname</a>
+        </h2>
+        <a href="/Sections/Category/@item.idcategory">More in Read The @item.categoryname ></a>
+    </div>
+    <div class="us-content">
+        @Html.Partial("_ArticlesOfCateInSection", The_NewYork_Time.Models.BUS.ArticleBUS.ShowArticleToCate(item.idcategory))
+    </div>
+
+</section>
+<!-- End Section Us -->
+}

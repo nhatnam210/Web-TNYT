@@ -20,8 +20,9 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
-            ViewBag.TenSortParm = String.IsNullOrEmpty(sortOrder) ? "Ten" : "";
+            ViewBag.IdSortParm = String.IsNullOrEmpty(sortOrder) ? "Id" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "Date_desc" : "Date";
+            ViewBag.TenSortParm = sortOrder == "Ten" ? "Ten_desc" : "Ten";
 
             //phan trang
             if (searchString != null)
@@ -46,8 +47,8 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             //sắp xếp 
             switch (sortOrder)
             {
-                case "Ten":
-                    articles = articles.OrderByDescending(s => s.articlename);
+                case "Id":
+                    articles = articles.OrderByDescending(s => s.idarticle);
                     break;
                 case "Date":
                     articles = articles.OrderBy(s => s.date);
@@ -55,8 +56,14 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                 case "Date_desc":
                     articles = articles.OrderByDescending(s => s.date);
                     break;
-                default:
+                case "Ten":
                     articles = articles.OrderBy(s => s.articlename);
+                    break;
+                case "Ten_desc":
+                    articles = articles.OrderByDescending(s => s.articlename);
+                    break;
+                default:
+                    articles = articles.OrderBy(s => s.idarticle);
                     break;
             }
             //var articles = db.Articles.Include(a => a.Cetegory);
@@ -91,7 +98,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "idarticle,articlename,description,image1,content1,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
@@ -125,7 +132,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "idarticle,articlename,description,image1,content1,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
@@ -155,7 +162,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
 
         // POST: Admin/ArticlesAdmin/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult DeleteConfirmed(int id)
         {
             Article article = db.Articles.Find(id);

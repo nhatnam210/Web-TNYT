@@ -1,6 +1,5 @@
 ﻿@model PagedList.IPagedList<The_NewYork_Time.Models.Article>
 @using PagedList.Mvc;
-<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
@@ -26,9 +25,9 @@
             <!-- Topbar Search -->
             <form method="post" action="/Admin/ArticlesAdmin"  class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group">
-                    <input type="text" name="SearchString"  class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
+                    <input class="col-md-10" type="text" name="SearchString"  class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
                            aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
+                    <div class="input-group-append col-md-2">
                         <button class="btn btn-primary" type="submit">
                             <i class="fas fa-search fa-sm"></i>
                         </button>
@@ -100,59 +99,30 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
                             <thead>
-                                <tr>
-                                    
+                                <tr>  
+                                    <th>
+                                        @Html.ActionLink("IdArticle", "Index", new { sortOrder = ViewBag.IdSortParm, currentFilter = ViewBag.CurrentFilter })
+                                    </th>
                                     
                                     <th>
-                                        @Html.ActionLink("CategoryName", "Index", new { sortOrder = ViewBag.TenSortParm , currentFilter = ViewBag.CurrentFilter })
+                                        CategoryName
                                     </th>
                                     <th>
                                         @Html.ActionLink(" Date", "Index", new { sortOrder = ViewBag.DateSortParm , currentFilter = ViewBag.CurrentFilter })
                                     </th>
                                     <th>
-                                        articlename
+                                        @Html.ActionLink("ArticleName", "Index", new { sortOrder = ViewBag.TenSortParm, currentFilter = ViewBag.CurrentFilter })                      
                                     </th>
                                     <th>
-                                        description
+                                        Description
                                     </th>
                                     <th>
-                                        image1
-                                    </th>
-                                    @*<th>
-                                        image2
+                                        Image
                                     </th>
                                     <th>
-                                        image3
-                                    </th>
-                                    <th>
-                                        image4a
-                                    </th>
-                                    <th>
-                                        image4b
-                                    </th>
-                                    <th>
-                                        image5
-                                    </th>*@
-                                    <th>
-                                        content1
-                                    </th>
-                                    @*<th>
-                                        content2
-                                    </th>
-                                    <th>
-                                        content3
-                                    </th>
-                                    <th>
-                                        content4
-                                    </th>
-                                    <th>
-                                        content5
-                                    </th>*@
-                                    <th>
-                                        author
-                                    </th>
-                                    
-                                    <th> Option</th>
+                                        Author
+                                    </th>                                   
+                                    <th width="170px"> Option</th>
                                 </tr>
                             </thead>
 
@@ -160,12 +130,14 @@
                                 @foreach (var item in Model)
                                 {
                                 <tr>
-
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.idarticle)
+                                    </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Cetegory.categoryname)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.date)
+                                        @item.date.ToString("dd/MM/yyyy")
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.articlename)
@@ -174,38 +146,8 @@
                                         @Html.DisplayFor(modelItem => item.description)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.image1)
+                                        <img src="@Html.DisplayFor(modelItem => item.image1)" width="200px" height="auto" alt="Alternate Text" />
                                     </td>
-                                    @*<td>
-                                        @Html.DisplayFor(modelItem => item.image2)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.image3)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.image4a)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.image4b)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.image5)
-                                    </td>*@
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.content1)
-                                    </td>
-                                    @*<td>
-                                        @Html.DisplayFor(modelItem => item.content2)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.content3)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.content4)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.content5)
-                                    </td>*@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.author)
                                     </td>

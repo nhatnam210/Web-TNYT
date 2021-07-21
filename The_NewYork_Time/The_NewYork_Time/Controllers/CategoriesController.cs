@@ -134,12 +134,13 @@ namespace The_NewYork_Time.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Article article = db.Articles.Find(id);
-            if (article == null)
+            //Article article = db.Articles.Find(id);
+            var objArticle = db.Articles.Where(p => p.idarticle == id);
+            if (objArticle == null)
             {
                 return HttpNotFound();
             }
-            return View(article);
+            return View(objArticle);
         }
     }
 }

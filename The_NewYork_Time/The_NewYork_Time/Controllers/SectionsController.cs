@@ -149,9 +149,9 @@ namespace The_NewYork_Time.Views
         //    }
         //    return View(category);
         //}
-        public ActionResult Category(int id, int page = 1, int pagesize = 3)
+        public ActionResult Category(int id, int page = 1, int pagesize = 5)
         {
-            var ds = The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTheoCate(id).ToPagedList(page, pagesize); ;
+            var ds = The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTheoCate(id).ToPagedList(page, pagesize);
             return View(ds);
         }
     }

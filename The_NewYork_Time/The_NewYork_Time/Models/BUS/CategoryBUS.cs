@@ -8,26 +8,16 @@ namespace The_NewYork_Time.Models.BUS
 {
     public class CategoryBUS
     {
-        public static IEnumerable<Category> DanhSachCaTe(int id)
-        {
-            var db = new TNYTDB();
-            return db.Query<Category>("select * from Category where idsection =  '" + id + "'");
-        }
-        public static IEnumerable<Category> ShowsectionName(int id)
+        public static IEnumerable<Category> ShowCateBySec(int id)
         {
             var db = new TNYTDB();
             return db.Query<Category>("select * from Category where idsection =  '" + id + "'");
         }
 
-       
-
-        public static IEnumerable<Category> CateGoryNameNav(int id)
+        public static IEnumerable<Category> ShowCategoryName(int id)
         {
             var db = new TNYTDB();
-            return db.Query<Category>("select * from  Category where idsection =  '" + id + "'");
+            return db.Query<Category>("select * from  Category where idcategory =  '" + id + "'");
         }
-
-        
-
     }
 }

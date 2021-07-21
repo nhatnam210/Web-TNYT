@@ -6,8 +6,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @*@Styles.Render("~/Content/css")*@
     @Scripts.Render("~/bundles/modernizr")
-    <link rel="stylesheet" href="~/Assets/css/style.css">
     <link rel="stylesheet" href="~/Assets/css/base.css">
+    <link rel="stylesheet" href="~/Assets/css/style.css">
     <link rel="stylesheet" href="~/Assets/css/global.css">
     <link rel="stylesheet" href="~/Assets/css/index.css">
     @*<link rel="stylesheet" href="~/Assets/css/responsive.css">*@
@@ -22,8 +22,11 @@
     <!--<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>-->
     <!-- jQuery -->
     <!--<script src="https://code.jquery.com/jquery-latest.min.js"></script>-->
-
     @*<script src="~/Assets/js/index.js"></script>*@
+
+
+
+
     <script language="javascript" src="~/Assets/js/javascript.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
@@ -58,8 +61,12 @@
     @Html.Partial("_nav",The_NewYork_Time.Models.BUS.SectionBUS.DanhSachSection())
     <!--Custom Code body HTML-->
     <div class="container body-content">
-        @RenderBody()
-
+        <div>
+            @RenderBody()
+        </div>
+        <div>
+            @Html.Partial("_FooterPage", The_NewYork_Time.Models.BUS.SectionBUS.DanhSachSection())
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

@@ -1,7 +1,7 @@
 ﻿@model The_NewYork_Time.Models.Section
 @{
     ViewBag.Title = "ShowCate";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 
@@ -12,7 +12,7 @@
         <div class="section-title">
             <h1>@Html.DisplayFor(model => model.sectionname) News</h1>
         </div>
-       @Html.Partial("_Category", The_NewYork_Time.Models.BUS.CategoryBUS.DanhSachCaTe(Model.idsection))
+       @Html.Partial("_Category", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(Model.idsection))
     </header>
     <!-- End Section Header -->
     <!-- Section New Info -->
@@ -68,119 +68,11 @@
     </section>
     <!-- End Section New Info -->
     <!-- Section US -->
-    <section id="us">
-        <div class="nation-header">
-            <h2>
-                <a href="">Us</a>
-            </h2>
-            <a href="#">More in Read The US ></a>
-        </div>
-        <div class="us-content">
-            <ul class="list-content">
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/19/world/19india-epidemic-esp-1/19india-epidemic-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Luego de la crisis de la COVID-19, India enfrenta la epidemia de un ‘hongo negro’</a>
-                    </h2>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/21/business/22china-vaccine-ESP-1/00china-vaccine-1-videoLarge-v2.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">El aumento de los contagios de COVID-19 en algunos países que usaron vacunas chinas genera dudas sobre su efectividad</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/19/world/19brazil-drought1-esp-1/merlin_178300212_97c0596a-8222-4038-b829-194f09e55f3b-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Brasil, entre la sequía y el coronavirus</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/18/science/18SCI-SKYFALL-ESP-00/18SCI-SKYFALL1-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Cayó casi tres kilómetros y se fue caminando</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/20/magazine/19mag-father-ESP-04/20mag-father-02-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Mi padre desapareció cuando yo tenía 7 años. Ese misterio me convirtió en quien soy</a>
-                    </h2>
-                </li>
-            </ul>
-        </div>
-
-    </section>
+    @Html.Partial("_ShowArticleofCatetoSection",The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(Model.idsection))
     <!-- End Section Us -->
-    <!-- Section VietNam -->
-    <section id="vietnam">
-        <div class="nation-header">
-            <h2>
-                <a href="">Vietnam</a>
-            </h2>
-            <a href="#">More in Read The Vietnam ></a>
-        </div>
-        <div class="us-content">
-            <ul class="list-content">
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/04/27/world/xxisrael-river-dispatch01/merlin_186075969_26582726-c437-4423-87f2-60466253bd36-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Fight Over a Gentle Stream Distills Israel’s Political Divide</a>
-                    </h2>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/11/world/11G7-Dispatch/11G7-Dispatch-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Question Looms Over This Year’s Group of 7: Where Are All the Protesters?</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/06/06/world/06italy-dispatch1/merlin_188576283_eb73ec7b-d8e9-4f2c-aca9-096bc76d7c06-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">Wedding Receptions Are Back, and Italy’s Candy Makers Are Delighted</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/05/18/world/00helmand-dispatch-marja-top/00helmand-dispatch-marja-top-videoLarge-v2.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">A Siege, a Supply Run and a Descent Into a Decade-Old Battle</a>
-                    </h2>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://static01.nyt.com/images/2021/05/22/world/00BRAZIL-MURALS-DISPATCH1B/merlin_187943031_f5e99c6e-6f3a-4c2b-96e9-5219d79896dd-videoLarge.jpg" alt="">
-                    </a>
-                    <h2>
-                        <a href="#">‘Good for the Soul’: Giant Murals Turn São Paulo Into Open Air Gallery</a>
-                    </h2>
-                </li>
-            </ul>
-        </div>
-
-    </section>
-    <!-- End Section Vietnam -->
+    
     <!-- Section Latest -->
-    @Html.Partial("_ArticleLastest",The_NewYork_Time.Models.BUS.ArticleBUS.DanhsachArticleLastest(Model.idsection))
+    @Html.Partial("_ArticleLastestBySection", The_NewYork_Time.Models.BUS.ArticleBUS.DanhsachArticleLastest(Model.idsection))
     <!-- End Section Latest -->
 </main>
 <script>

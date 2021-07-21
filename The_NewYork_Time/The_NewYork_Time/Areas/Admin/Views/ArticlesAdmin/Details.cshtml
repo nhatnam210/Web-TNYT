@@ -5,10 +5,9 @@
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Article</h4>
+<div class="form" >
+    <h2 class="admin-title">Details Article</h2>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -43,46 +42,6 @@
             @Html.DisplayFor(model => model.image1)
         </dd>
 
-        @*<dt>
-            @Html.DisplayNameFor(model => model.image2)
-        </dt>*@
-
-        @*<dd>
-            @Html.DisplayFor(model => model.image2)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.image3)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.image3)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.image4a)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.image4a)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.image4b)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.image4b)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.image5)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.image5)
-        </dd>*@
-
         <dt>
             @Html.DisplayNameFor(model => model.content1)
         </dt>
@@ -91,38 +50,7 @@
             @Html.DisplayFor(model => model.content1)
         </dd>
 
-        @*<dt>
-            @Html.DisplayNameFor(model => model.content2)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.content2)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.content3)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.content3)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.content4)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.content4)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.content5)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.content5)
-        </dd>*@
-
+      
         <dt>
             @Html.DisplayNameFor(model => model.author)
         </dt>
@@ -141,7 +69,4 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idarticle }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+

@@ -3,25 +3,29 @@
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Category";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-@*@Html.Partial("_SectionName",The_NewYork_Time.Models.BUS.CategoryBUS.ShowsectionName())*@
-<!-- Section Latest -->
+<!-- Section header -->
+@*@foreach (var i in Model)
+{
+  @Html.Partial("_CategoryHeader", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCategoryName(i.Cetegory.idcategory))
+}*@
+<!-- End Section Header -->
 <section id="latest">
     <div>
         <!-- Tab items -->
         <div class="tabs">
             <div class="tab-item active">
-
-                All Article 
+                All Article
             </div>
-            @*<div class="tab-item">
+            @*@Html.Partial("_ShowCateNameInPage",The_NewYork_Time.Models.BUS.CategoryBUS.ShowCategoryName(new { id = }))*@
+            <div class="tab-item">
                 <form action="">
                     <input placeholder="Search" style="padding: 2px 0; border-radius: 5px;">
-                    <i class="fas fa-search"></i>
+                    <i class="ti-search"></i>
                 </form>
 
-            </div>*@
+            </div>
 
             <div class="line"></div>
         </div>
@@ -34,7 +38,7 @@
                     <div class="lastes-item rowp">
                         <div class="lastes-item-content">
                             <div class="col col-2 display-sm">
-                                <span>@item.date</span>
+                                <span>@item.date.ToString("dd/MM/yyy")</span>
                             </div>
                             <div class="col col-7 col-sm12">
                                 <h2>
@@ -47,69 +51,48 @@
                                     By @item.author
                                 </p>
                             </div>
-                            <div class="col col-3 col-sm12 mt-19">
+                            <div class="col col-3 col-sm12">
                                 <a href="/Categories/Article/@item.idarticle">
                                     <img src="@item.image1" alt="">
                                 </a>
                             </div>
                         </div>
-                        
-
-
 
 
                     </div>
                 }
-               
+
+                <!-- Pagination Start -->
+                <div class="col-md-12 page">
+                    <div class="pagination justify-content-center">
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                        @Html.PagedListPager(Model, Page => Url.Action("Category", "Sections", new { Page }))
+                    </div>
+                </div>
+                <!-- Pagination Start -->
+            </div>
+            <div class="tab-pane">
+                <div class="lastes-item rowp">
+                    <div class="lastes-item-content">
+                        <div class="col col-2 display-sm">
+                            <span>June 24, 2021</span>
+                        </div>
+                        <div class="col col-7 col-sm12">
+                            <h2>
+                                <a href="#">
+                                    Brazil Passes 500,000 Covid Deaths, a Tragedy With No Sign of Letup
+                                </a>
+                            </h2>
+                            <p>With 2.7 percent of the world’s population, Brazil has suffered 13 percent of the Covid-19 fatalities, and the pandemic there is not abating.</p>
+                        </div>
+                        <div class="col col-3 col-sm12">
+                            <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            @*<div class="tab-pane">
-                <div class="lastes-item rowp">
-                    <div class="col col-2 display-sm">
-                        <span>June 24, 2021</span>
-                    </div>
-                    <div class="col col-7 col-sm12">
-                        <h2>
-                            <a href="#">
-                                Brazil Passes 500,000 Covid Deaths, a Tragedy With No Sign of Letup
-                            </a>
-                        </h2>
-                        <p>With 2.7 percent of the world’s population, Brazil has suffered 13 percent of the Covid-19 fatalities, and the pandemic there is not abating.</p>
-                    </div>
-                    <div class="col col-3 col-sm12 mt-19">
-                        <img src="https://static01.nyt.com/images/2021/06/21/world/00Brazil-Covid-Deaths-Photos-Top-promo/00Brazil-Covid-Deaths-Photos-Top-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
-                    </div>
-                </div>
-                <div class="lastes-item rowp">
-                    <div class="col col-2 display-sm">
-                        <span>June 24, 2021</span>
-                    </div>
-                    <div class="col col-7 col-sm12">
-                        <h2>
-                            <a href="#">
-                                Why More People Are Getting Two Different Coronavirus Vaccines
-                            </a>
-                        </h2>
-                        <p>
-                            Several countries are allowing mix-and-match inoculation, which scientists hope will have benefits, and Chancellor Angela Merkel of Germany is among those to get it.
 
-                        </p>
-                    </div>
-                    <div class="col col-3 col-sm12 mt-19">
-                        <img src="https://static01.nyt.com/images/2021/06/23/world/23mix-n-match-explainer01/merlin_187969563_eed9bb59-2ad2-4862-bb44-ebbd4ca946a5-mediumThreeByTwo252.jpg?quality=100&auto=webp" alt="">
-                    </div>
-                </div>
-
-
-            </div>*@
-            <!-- Pagination Start -->
-            <div class="col-md-12" style="max-width:1200px;margin:auto">
-                <div class="pagination justify-content-center">
-                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-                    @Html.PagedListPager(Model, Page => Url.Action("Category", "Sections", new { Page }))
-                </div>
-            </div>
-            <!-- Pagination Start -->
 
         </div>
     </div>
@@ -118,4 +101,3 @@
     tab()
 </script>
 <!-- End Section Latest -->
-

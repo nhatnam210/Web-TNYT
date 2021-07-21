@@ -25,9 +25,9 @@
             <!-- Topbar Search -->
             <form method="post" action="/Admin/CategoriesAdmin" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group">
-                    <input type="text" name="SearchString" class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
+                    <input class="col-md-10"  type="text" name="SearchString" class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
                            aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
+                    <div class="input-group-append col-md-2">
                         <button class="btn btn-primary" type="submit">
                             <i class="fas fa-search fa-sm"></i>
                         </button>
@@ -84,7 +84,7 @@
         <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">Categories</h1>
+            <h1 class="h3 mb-2 text-gray-800">Category</h1>
             <p>
                 @Html.ActionLink("Create New", "Create")
             </p>
@@ -99,13 +99,14 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        Id Category
+                                        @Html.ActionLink("IdCategory", "Index", new { sortOrder = ViewBag.IdSortParm, currentFilter = ViewBag.CurrentFilter })
                                     </th>
                                     <th>
                                         Id Section
                                     </th>
                                     <th>
-                                        Category Name
+                                        @Html.ActionLink("CategoryName", "Index", new { sortOrder = ViewBag.TenSortParm, currentFilter = ViewBag.CurrentFilter })
+
                                     </th>
                                     <th>
                                         Option

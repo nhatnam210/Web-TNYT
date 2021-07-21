@@ -2,6 +2,7 @@ namespace The_NewYork_Time.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -26,10 +27,11 @@ namespace The_NewYork_Time.Models
         [StringLength(500)]
         public string description { get; set; }
 
+        [DisplayName("image")]
         public string image1 { get; set; }
 
-       
 
+        [DisplayName("content")]
         public string content1 { get; set; }
 
        
