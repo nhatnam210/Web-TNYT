@@ -6,13 +6,24 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 @*@Html.Partial("_SectionName",The_NewYork_Time.Models.BUS.CategoryBUS.ShowsectionName())*@
-<!-- Section Latest -->
+<!-- Section header -->
+<header id="section-header" class="page"">
+
+        <div class="section-world">
+            <p> world</p>
+        </div>
+        <div class="section-title">
+            <h1>USA</h1>
+        </div>
+
+</header>
+<!-- End Section Header -->
 <section id="latest">
     <div>
         <!-- Tab items -->
         <div class="tabs">
             <div class="tab-item active">
-                All Article 
+                All Article
             </div>
             @*@Html.Partial("_ShowCateNameInPage",The_NewYork_Time.Models.BUS.CategoryBUS.ShowCategoryName(new { id = }))*@
             <div class="tab-item">
@@ -59,7 +70,7 @@
                 }
 
                 <!-- Pagination Start -->
-                <div class="col-md-12" style="max-width:1200px;margin:auto">
+                <div class="col-md-12 page">
                     <div class="pagination justify-content-center">
                         Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
                         @Html.PagedListPager(Model, Page => Url.Action("Category", "Sections", new { Page }))
@@ -97,4 +108,3 @@
     tab()
 </script>
 <!-- End Section Latest -->
-
