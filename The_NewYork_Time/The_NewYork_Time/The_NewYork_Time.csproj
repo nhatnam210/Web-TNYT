@@ -3432,6 +3432,10 @@
     <Content Include="Views\Shared\_ShowArticleofCatetoSection.cshtml" />
     <Content Include="Views\Shared\_ArticlesOfCateInSection.cshtml" />
     <Content Include="Views\Shared\_CategoryHeader.cshtml" />
+    <Content Include="Views\Shared\_4ArticleRandomInHome.cshtml" />
+    <Content Include="Views\Shared\_1stNewArticleHome.cshtml" />
+    <Content Include="Views\Shared\_SectionChan.cshtml" />
+    <Content Include="Views\Shared\_ArticleChan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
