@@ -452,4 +452,8 @@ D:\.IT\DO AN\Do An Web\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_
 D:\.IT\DO AN\Do An Web\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.dll
 D:\.IT\DO AN\Do An Web\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.pdb
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csprojAssemblyReference.cache
+<<<<<<< HEAD
 D:\.IT\DO AN\Do An Web\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
+=======
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
+>>>>>>> 34b1908a68389ea0712613a091912b5c8f480e78

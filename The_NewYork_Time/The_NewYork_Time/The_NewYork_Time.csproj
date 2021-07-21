@@ -3432,8 +3432,15 @@
     <Content Include="Views\Shared\_ShowArticleofCatetoSection.cshtml" />
     <Content Include="Views\Shared\_ArticlesOfCateInSection.cshtml" />
     <Content Include="Views\Shared\_CategoryHeader.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Shared\_FooterPage.cshtml" />
     <Content Include="Views\Shared\_CateOfFooterPage.cshtml" />
+=======
+    <Content Include="Views\Shared\_4ArticleRandomInHome.cshtml" />
+    <Content Include="Views\Shared\_1stNewArticleHome.cshtml" />
+    <Content Include="Views\Shared\_SectionChan.cshtml" />
+    <Content Include="Views\Shared\_ArticleChan.cshtml" />
+>>>>>>> 34b1908a68389ea0712613a091912b5c8f480e78
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
