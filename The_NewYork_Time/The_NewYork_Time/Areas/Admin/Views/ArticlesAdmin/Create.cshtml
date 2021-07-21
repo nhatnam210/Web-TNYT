@@ -4,10 +4,10 @@
     ViewBag.Title = "Create";
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
 }
-
+<script src="~/Areas/AssetAdmin/ckeditor/ckeditor.js"></script>
 @using (Html.BeginForm("Create", "ArticlesAdmin", FormMethod.Post, new { @class = "form" }))
 {
-    @Html.AntiForgeryToken()
+    
 
     <div class="form-horizontal">
         <h2 class="admin-title">Create Article</h2>
@@ -50,8 +50,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.content1, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.content1, htmlAttributes: new { id = "content", @class = "control-label" })
-                @Html.ValidationMessageFor(model => model.content1, "", new { @class = "text-danger" })
+                <textarea id="editor1" class="ckeditor" name="content1" [ValidateInput(false)]></textarea>
+                @*@Html.TextAreaFor(model => model.content1, htmlAttributes: new { id = "content", @class = "control-label" })
+                @Html.ValidationMessageFor(model => model.content1, "", new { @class = "text-danger" })*@
             </div>
         </div>
 

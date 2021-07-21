@@ -94,7 +94,7 @@
                         <div class="author_link">
                             <span>By</span>
                             <span class="author__name">
-                                <a href="https://www.facebook.com/nguyennhatnam.tran">Nhat Naw</a>
+                                <a href="https://www.facebook.com/nguyennhatnam.tran">@item.author</a>
                             </span>
                         </div>
                         <span class="time">@item.date</span>
@@ -107,10 +107,10 @@
                 <div class="rown">
                     <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="main-content">
-                            @item.content1
+                            @Html.Raw(item.content1)
                         </div>
                     </div>
-                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1">
+                    @*<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1">
                         <div class="request-sign-up">
                             <div class="rown ">
                                 <div class="col l-8 m-8 s-8">
@@ -124,31 +124,30 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
-                        <div class="main-content">
-                            @item.content1
-                        </div>
-                    </div>
-
-                    <div class="pic-content col l-7 m-8 s-12">
-                        <img src="@item.image1" width="100%" alt="">
-                        <span class="main-pic__description">
-                            The fries are served on their own or as an accompaniment to
-                            chapli kebabs in a platter.<span class="main-pic__description--small">
-                                Adam Friedlander for The
-                                New York Times
+                    </div>*@
+                    <!--<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                        <div class="main-content">-->
+                    @*@Html.Raw(item.content1)*@
+                    <!--</div>
+                    </div>-->
+                    @*<div class="pic-content col l-7 m-8 s-12">
+                            <img src="@item.image1" width="100%" alt="">
+                            <span class="main-pic__description">
+                                The fries are served on their own or as an accompaniment to
+                                chapli kebabs in a platter.<span class="main-pic__description--small">
+                                    Adam Friedlander for The
+                                    New York Times
+                                </span>
                             </span>
-                        </span>
-                    </div>
+                        </div>*@
                     <!--Read Content-->
-                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1 ">
+                    <!--<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1 ">
                         <div class="main-content">
-                            @item.content1
+                            @Html.Raw(item.content1)
                         </div>
-                    </div>
+                    </div>-->
                     <!--End Read Content-->
-                    <div class="pic-content col l-6 m-8 s-12">
+                    <!--<div class="pic-content col l-6 m-8 s-12">
                         <img src="@item.image1" width="100%" alt="">
                         <span class="main-pic__description">
                             Karim Khan, the cart’s chef and owner, drew on Pakistani and
@@ -157,15 +156,15 @@
                                 New York Times
                             </span>
                         </span>
-                    </div>
+                    </div>-->
                     <!--Read Content-->
-                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                    <!--<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="main-content">
-                            @item.content1
+                            @Html.Raw(item.content1)
                         </div>
-                    </div>
+                    </div>-->
                     <!--End Read Content-->
-                    <div class="col l-12 s-12 m-6 m-12">
+                    <!--<div class="col l-12 s-12 m-6 m-12">
                         <div class="rown">
                             <div class="col l-6 m-6 s-12">
                                 <img src="@item.image1" width="100%" alt="">
@@ -188,16 +187,15 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!--Read Content-->
-                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                    <!--<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="main-content">
-                            @item.content1
+                            @Html.Raw(item.content1)
                         </div>
-                    </div>
+                    </div>-->
                     <!--End Read Content-->
-
-                    <div class="pic-content col l-5 m-8 s-12">
+                    <!--<div class="pic-content col l-5 m-8 s-12">
                         <img src="@item.image1" width="100%" alt="">
                         <span class="main-pic__description">
                             Potatoes enter; fries leave.Credit...<span class="main-pic__description--small">
@@ -205,9 +203,9 @@
                                 New York Times
                             </span>
                         </span>
-                    </div>
+                    </div>-->
                     <!--Read Content-->
-                    <div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                    <!--<div class=" col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="main-content">
                             After he decided that New York might have an opening for a chapli-focused food cart, he began
                             with his mother’s recipe, an Afghan version, and later modified it with guidance from a friend,
@@ -226,10 +224,10 @@
                             another. But they are, without a doubt, the only fries in town that are cut to order by forcing
                             a russet potato through a hand-operated press mounted to the wall of a chapli kebab cart.
                         </div>
-                    </div>
+                    </div>-->
                     <!--End Read Content-->
                     <!--Other Article-->
-                    <div class="other-articles col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                    <!--<div class="other-articles col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                         <div class="other-articles__title">More on Chapli and Restaurants</div>
                         <div class="other-articles__list">
                             <a href="" class="other-articles__link">
@@ -299,7 +297,7 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                     <!--End Other Article-->
                     <!--Map-->
                     <div class="map col l-7 m-8 s-12">
