@@ -73,7 +73,26 @@ namespace The_NewYork_Time.Models.BUS
         public static IEnumerable<Article> ShowArticleSectionchan(int id)
         {
             var db = new TNYTDB();
-            return db.Query<Article>("select top 3 * from Article a , Category c , Section s where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' ORDER BY idarticle DESC");
+            return db.Query<Article>("select top 6 * from Article a , Category c , Section s where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' ORDER BY idarticle DESC");
+
+        }
+        public static IEnumerable<Article> ShowArticleSectionle(int id)
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("select top 6 * from Article a , Category c , Section s where a.idcategory = c.idcategory and c.idsection = s.idsection and s.idsection = '" + id + "' ORDER BY idarticle DESC");
+
+        }
+
+        public static IEnumerable<Article> Show2ndArticleHome()
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("SELECT top 1 * FROM Article WHERE idarticle IN(SELECT Max(idarticle - 1) from Article a , Section s, Category c where a.idcategory = c.idcategory and c.idsection = s.idsection GROUP BY idarticle)ORDER BY idarticle DESC");
+
+        }
+        public static IEnumerable<Article> Show3rdArticleHome()
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("SELECT top 1 * FROM Article WHERE idarticle IN(SELECT Max(idarticle - 2) from Article a , Section s, Category c where a.idcategory = c.idcategory and c.idsection = s.idsection GROUP BY idarticle)ORDER BY idarticle DESC");
 
         }
     }

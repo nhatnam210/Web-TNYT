@@ -3436,9 +3436,12 @@
     <Content Include="Views\Shared\_CateOfFooterPage.cshtml" />
     <Content Include="Views\Shared\_4ArticleRandomInHome.cshtml" />
     <Content Include="Views\Shared\_1stNewArticleHome.cshtml" />
-    <Content Include="Views\Shared\_SectionChan.cshtml" />
     <Content Include="Views\Shared\_ArticleChan.cshtml" />
-
+    <Content Include="Views\Shared\_SectionChan.cshtml" />
+    <Content Include="Views\Shared\_SectionLe.cshtml" />
+    <Content Include="Views\Shared\_ArticleLe.cshtml" />
+    <Content Include="Views\Shared\_2ndNewArticleHome.cshtml" />
+    <Content Include="Views\Shared\_3rdNewArticleHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

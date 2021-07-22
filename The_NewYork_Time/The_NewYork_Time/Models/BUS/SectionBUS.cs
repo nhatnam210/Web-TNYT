@@ -23,5 +23,11 @@ namespace The_NewYork_Time.Models.BUS
             return db.Query<Section>("select * from Section where idsection % 2 = 0 ");
 
         }
+        public static IEnumerable<Section> SectionLe()
+        {
+            var db = new TNYTDB();
+            return db.Query<Section>("select * from Section where idsection % 2 != 0 ");
+
+        }
     }
 }
