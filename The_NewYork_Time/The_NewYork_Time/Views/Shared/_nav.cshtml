@@ -1,6 +1,6 @@
-﻿ @model IEnumerable<The_NewYork_Time.Models.Section>
-    
-    <!--navbar and menu-->
+﻿@model IEnumerable<The_NewYork_Time.Models.Section>
+@using Microsoft.AspNet.Identity
+<!--navbar and menu-->
 <div class="up-to-head">
     <a href="#header"><i class="up-to-head__icon ti-arrow-up"></i></a>
 </div>
@@ -37,35 +37,35 @@
                     <div class="menu-sub">
                         <p class="menu-sub__header">@item.sectionname</p>
                         <!--<!--menu sub list-->
-                        @Html.Partial("_showcatename", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(item.idsection))          
+                        @Html.Partial("_showcatename", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(item.idsection))
                     </div>
                 </li>
             }
 
             <!--<li class="menu-item ">
-    <a href="#" class="menu-item__link">World <i class="ti-angle-right menu-item__icon"></i></a>
-    <div class="menu-sub">
-        <p class="menu-sub__header">world</p>-->
+            <a href="#" class="menu-item__link">World <i class="ti-angle-right menu-item__icon"></i></a>
+            <div class="menu-sub">
+                <p class="menu-sub__header">world</p>-->
             <!--menu sub list-->
             <!--<ul class="menu-sub__list">
-                <li class="menu-sub__item"><a href="#" class="menu-item__link">Arfica</a></li>
-                <li class="menu-sub__item"><a href="#" class="menu-item__link">Viet Nam</a></li>
-                <li class="menu-sub__item"><a href="#" class="menu-item__link">Arfica</a></li>
-            </ul>
-        </div>
-    </li>
-    <li class="menu-item ">
-        <a href="#" class="menu-item__link">World <i class="ti-angle-right menu-item__icon"></i></a>
-        <div class="menu-sub">
-            <p class="menu-sub__header">world</p>-->
+                        <li class="menu-sub__item"><a href="#" class="menu-item__link">Arfica</a></li>
+                        <li class="menu-sub__item"><a href="#" class="menu-item__link">Viet Nam</a></li>
+                        <li class="menu-sub__item"><a href="#" class="menu-item__link">Arfica</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menu-item ">
+                <a href="#" class="menu-item__link">World <i class="ti-angle-right menu-item__icon"></i></a>
+                <div class="menu-sub">
+                    <p class="menu-sub__header">world</p>-->
             <!--menu sub list-->
             <!--<ul class="menu-sub__list">
-                <li class="menu-sub__item"><a href="#" class="menu-item__link">Arfica</a></li>
-                <li class="menu-sub__item"><a href="#" class="menu-item__link">Viet Nam</a></li>
-                <li class="menu-sub__item"><a href="#" class="menu-item__link">Arfica</a></li>
-            </ul>
-        </div>
-    </li>-->
+                        <li class="menu-sub__item"><a href="#" class="menu-item__link">Arfica</a></li>
+                        <li class="menu-sub__item"><a href="#" class="menu-item__link">Viet Nam</a></li>
+                        <li class="menu-sub__item"><a href="#" class="menu-item__link">Arfica</a></li>
+                    </ul>
+                </div>
+            </li>-->
 
         </ul>
     </div>
@@ -73,21 +73,21 @@
 
 <div id="header" class="grid navbar-sec">
     <div class="row navbar__header">
-        <div class="col form-left">
-           
-            <div class="nav__icon">
-                <label for="check-menu" class="icon__menu"><i class="ti-menu"></i></label>
-                <label for="check-search" class="icon__search"><i class="ti-search"></i></label>
+        <form name="timkiem" method="post" action="/Search/Index">
+            <div class="col form-left">
+                <div class="nav__icon">
+                    <label for="check-menu" class="icon__menu"><i class="ti-menu"></i></label>
+                    <label for="check-search" class="icon__search"><i class="ti-search"></i></label>
+
+                </div>
+                <input type="checkbox" hidden class="check-search" id="check-search">
+                <input type="text" name="searchString" class="search-box" placeholder="SEARCH">
+                <input type="submit" value="Go" class="btn go">
+                <a href="#" class="category__name"></a>
+
             </div>
+        </form>
 
-            <input type="checkbox" hidden class="check-search" id="check-search">
-
-            <input type="text" class="search-box" placeholder="SEARCH">
-            <a href="facebook.com" class="btn go">go</a>
-
-
-            <a href="#" class="category__name"></a>
-        </div>
 
         <div class="logo">
             <a href="/Home">
@@ -105,8 +105,43 @@
                     <circle cx="8" cy="4" r="4"></circle>
                 </svg>
             </label>
-            @Html.ActionLink("Đăng ký", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn login btn-primary px-3 text-uppercase fw-bold" })
-            @Html.ActionLink("Đăng nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn login btn-primary px-3 text-uppercase fw-bold" })
+            @if (Request.IsAuthenticated)
+            {
+                if (User.IsInRole("Admin"))
+                {
+                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                    @Html.AntiForgeryToken()
+
+                    <ul class="nav navbar-nav navbar-right" style="display:flex;list-style:none;">
+
+                        <li><a class="btn login btn-primary px-3 text-uppercase fw-bold" href="/Admin/Manage">Admin Page</a></li>
+                        <li><a class="btn login btn-primary px-3 text-uppercase fw-bold" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+                    </ul>
+                    }
+                }
+                else
+                {
+
+                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <ul class="nav navbar-nav navbar-right" style="display:flex;list-style:none;">
+                            <li class="get-name">
+                                @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                            </li>
+                            <li><a class="btn login btn-primary px-3 text-uppercase fw-bold" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+                        </ul>
+                    }
+                }
+            }
+            else
+            {
+                @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn login btn-primary px-3 text-uppercase fw-bold" })
+                @Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn login btn-primary px-3 text-uppercase fw-bold" })
+            }
+
         </div>
     </div>
 </div>

@@ -95,5 +95,6 @@ namespace The_NewYork_Time.Models.BUS
             return db.Query<Article>("SELECT top 1 * FROM Article WHERE idarticle IN(SELECT Max(idarticle - 2) from Article a , Section s, Category c where a.idcategory = c.idcategory and c.idsection = s.idsection GROUP BY idarticle)ORDER BY idarticle DESC");
 
         }
+        
     }
 }

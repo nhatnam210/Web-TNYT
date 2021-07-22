@@ -1,0 +1,66 @@
+﻿@model PagedList.IPagedList<The_NewYork_Time.Models.Article>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Search</h2>
+
+<div id="div1">
+    <div id="div2">
+        <p>Showing 29.212 results for:</p>
+        <h3> Covid </h3>
+        <select style="margin-left: -109px;">
+            <option value="">Sort by Relevance</option>
+            <option value="">Sort by Newest</option>
+            <option value="">Sort by Oldest</option>
+        </select>
+
+        <select>
+            <option value="">Section</option>
+            <option value="">U.S</option>
+            <option value="">World</option>
+        </select>
+
+    </div>
+    <form action="" class="search">
+        <label for="birthday">Date Range:</label>
+        <input type="date" id="Date Range" name="Date Range">
+        <button type="submit"> Go</button>
+    </form>
+</div>
+@foreach (var item in Model)
+{
+    <div class="lastes-item rowp">
+        <div class="col col-2">
+            <span>@item.date</span>
+        </div>
+        <div class="col col-7">
+            <a class="caterogy" href="#">Health</a>
+            <h2>
+                <a href="#">
+                    @item.articlename
+                </a>
+            </h2>
+            <p>@item.description.</p>
+            <a id="author" href="#">By @item.author</a>
+            <br>
+            <p id="print">Print Edition: </p>
+            <a href="">May 25,1968</a> | <a href="">Johnathan</a>
+        </div>
+        <div class="col col-3">
+            <img src="@item.image1" alt="">
+        </div>
+    </div>
+    <!-- Pagination Start -->
+    <div class="col-md-12 page">
+        <div class="pagination justify-content-center">
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            @Html.PagedListPager(Model, Page => Url.Action("Category", "Sections", new { Page }))
+        </div>
+    </div>
+    <!-- Pagination Start -->
+}
+

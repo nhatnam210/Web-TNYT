@@ -130,6 +130,11 @@ namespace The_NewYork_Time.Views
             base.Dispose(disposing);
         }
 
+        public List<Article> SearchByKey(string key)
+        {
+            return ViewBag.seach=db.Articles.SqlQuery("select * from Article where articlename like %" + key + "%").ToList();
+
+        }
        
     }
 }
