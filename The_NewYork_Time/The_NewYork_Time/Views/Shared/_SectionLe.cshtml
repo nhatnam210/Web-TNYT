@@ -1,0 +1,5 @@
+﻿@model IEnumerable<The_NewYork_Time.Models.Section>
+@foreach (var item in Model)
+{
+    @Html.Partial("_ArticleLe", The_NewYork_Time.Models.BUS.ArticleBUS.ShowArticleSectionle(item.idsection))
+}
