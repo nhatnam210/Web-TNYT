@@ -1582,4 +1582,20 @@ select {
         .connect-icon:hover {
             font-size: 30px;
         }
+
+.save{
+    font-size:20px;
+    transform:translateY(5px);
+    
+}
+.red{
+    color:red;
+}
+.get-name{
+    padding: 4px 12px;
+    position: absolute;
+    left: -175px;
+    font-size: 15px;
+    top: -6px;
+}
 /**---------------------------------------------------------/

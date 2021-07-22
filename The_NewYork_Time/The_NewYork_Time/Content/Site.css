@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    
     padding-bottom: 20px;
 }
 
@@ -27,3 +27,10 @@ form {
     width: 100% !important;
 }
 
+.navbar-nav{
+    flex-direction:row !important;
+}
+.btn{
+    font-size:0.85rem !important;
+    
+}

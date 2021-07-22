@@ -37,6 +37,18 @@ h5 {
     padding-top: 12px !important;
     padding-bottom: 12px !important;   
 }
+.search-box{
+    display:none;
+}
+.go{
+    display:none!important;
+}
+.check-search:checked ~ .search-box{
+    display:inline-block;
+}
+.check-search:checked ~ .go {
+    display: inline-block !important;
+}
 
 
 .mt-12 {
@@ -125,6 +137,7 @@ ul .nav {
 }
 .paper-body ul {
     padding: 0px;
+    list-style:none;
 }
 .paper-item-abstract {
     color: rgba(0, 0, 0, 0.6);
@@ -139,6 +152,22 @@ ul .nav {
 .ti-arrow-circle-right {
     font-size: 12px;
     color: #333;
+}
+
+.btn {
+    font-family: Arial;
+    background-color: #0b5ed7;
+    border: 0;
+    padding: 1.2rem;
+    color: #fff !important;
+    font-weight: bold;
+    margin-left: 1rem;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    transition: all linear .2s;
+    text-decoration: none;
+    text-align: center;
 }
 
 /* *** FOOTER *** */

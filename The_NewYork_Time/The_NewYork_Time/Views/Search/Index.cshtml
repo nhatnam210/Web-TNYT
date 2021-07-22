@@ -1,0 +1,75 @@
+﻿@model PagedList.IPagedList<The_NewYork_Time.Models.Article>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    var currentFilter = ViewBag.CurrentFilter;
+}
+
+
+<!-- End Section Header -->
+<section id="latest">
+    <div>
+        <!-- Tab items -->
+        <div class="tabs">
+            <div class="tab-item active">
+                Show All Result Of @currentFilter
+            </div>
+           
+           
+
+            <div class="line"></div>
+        </div>
+
+        <!-- Tab content -->
+        <div class="tab-content ">
+            <div class="tab-pane active">
+                @foreach (var item in Model)
+                {
+                    <div class="lastes-item rowp">
+                        <div class="lastes-item-content">
+                            <div class="col col-2 display-sm">
+                                <span>@item.date.ToString("dd/MM/yyy")</span>
+                            </div>
+                            <div class="col col-7 col-sm12">
+                                <h2>
+                                    <a href="/Categories/Article/@item.idarticle">
+                                        @item.articlename
+                                    </a>
+                                </h2>
+                                <p>@item.description</p>
+                                <p class="article-author">
+                                    By @item.author
+                                </p>
+                            </div>
+                            <div class="col col-3 col-sm12">
+                                <a href="/Categories/Article/@item.idarticle">
+                                    <img src="@item.image1" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                }
+
+                <!-- Pagination Start -->
+                <div class="col-md-12 page">
+                    <div class="pagination justify-content-center">
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                        @Html.PagedListPager(Model, Page => Url.Action("Index", "Search", new { Page }))
+                    </div>
+                </div>
+                <!-- Pagination Start -->
+            </div>
+            
+
+
+        </div>
+    </div>
+</section>
+<script>
+    tab()
+</script>
+<!-- End Section Latest -->

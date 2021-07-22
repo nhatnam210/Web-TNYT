@@ -45,5 +45,7 @@ namespace The_NewYork_Time.Controllers
             }
             return View(section);
         }
+
+        
     }
 }
