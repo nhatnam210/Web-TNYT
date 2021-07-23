@@ -3455,8 +3455,8 @@
     <Content Include="Views\Shared\_3rdNewArticleHome.cshtml" />
     <Content Include="Views\Search\Search.cshtml" />
     <Content Include="Views\Search\Index.cshtml" />
-    <Content Include="Views\Articles\Attending.cshtml" />
     <Content Include="Views\Categories\Article.cshtml" />
+    <Content Include="Views\Account\Storage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
