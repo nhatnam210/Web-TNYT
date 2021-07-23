@@ -15,8 +15,6 @@ namespace The_NewYork_Time.Models
             Storages = new HashSet<Storage>();
         }
 
-        public bool isLogin = false;
-        public bool isShowSave = false;
         public int Id { get; set; }
 
         [Required]
@@ -31,14 +29,16 @@ namespace The_NewYork_Time.Models
 
         public string contentarticle { get; set; }
 
+        public bool isLogin = false;
+        public bool isShowSave = false;
+
         [Required]
         [StringLength(50)]
         public string author { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? date { get; set; }
+        public DateTime date { get; set; }
 
-        public int? idcategory { get; set; }
+        public int idcategory { get; set; }
 
         public virtual Category Category { get; set; }
 

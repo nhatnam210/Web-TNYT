@@ -137,7 +137,9 @@ namespace The_NewYork_Time.Controllers
             }
             //Article article = db.Articles.Find(id);
             var objArticle = db.Articles.Where(p => p.Id == id);
-            if (objArticle == null)
+
+            Article article = db.Articles.Find(id);
+            if (article == null)
             {
                 return HttpNotFound();
             }
@@ -155,7 +157,7 @@ namespace The_NewYork_Time.Controllers
                 }
             }
             
-            return View(objArticle);
+            return View(article);
         }
     }
 }

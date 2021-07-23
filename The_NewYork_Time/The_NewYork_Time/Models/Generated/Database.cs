@@ -6,7 +6,7 @@
 // 
 //     Connection String Name: `TNYT`
 //     Provider:               `System.Data.SqlClient`
-//     Connection String:      `data source=DESKTOP-A73BAU0\SQLEXPRESS01;initial catalog=TNYT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework`
+//     Connection String:      `data source=LAP-NAW\SQLEXPRESS;initial catalog=TNYT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework`
 //     Schema:                 ``
 //     Include Views:          `False`
 
@@ -128,8 +128,8 @@ namespace TNYT
 		[Column] public string image { get; set; }
 		[Column] public string contentarticle { get; set; }
 		[Column] public string author { get; set; }
-		[Column] public DateTime? date { get; set; }
-		[Column] public int? idcategory { get; set; }
+		[Column] public DateTime date { get; set; }
+		[Column] public int idcategory { get; set; }
 	}
     
 	[TableName("dbo.AspNetRoles")]

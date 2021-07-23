@@ -224,7 +224,6 @@
     <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="Models\Storage.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\TNYTContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -3431,7 +3430,6 @@
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
-    <Content Include="Views\Categories\Article.cshtml" />
     <Content Include="Views\Shared\_Category.cshtml" />
     <Content Include="Views\Shared\_Random_10_Article.cshtml" />
     <Content Include="Views\Shared\_Top1ArticleSection.cshtml" />
@@ -3458,6 +3456,7 @@
     <Content Include="Views\Search\Search.cshtml" />
     <Content Include="Views\Search\Index.cshtml" />
     <Content Include="Views\Articles\Attending.cshtml" />
+    <Content Include="Views\Categories\Article.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
