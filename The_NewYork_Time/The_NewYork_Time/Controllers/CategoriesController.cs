@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -17,7 +18,7 @@ namespace The_NewYork_Time.Controllers
         // GET: Categories
         public ActionResult Index()
         {
-            var cetegories = db.Cetegories.Include(c => c.Section);
+            var cetegories = db.Categories.Include(c => c.Section);
             return View(cetegories.ToList());
         }
 
@@ -28,7 +29,7 @@ namespace The_NewYork_Time.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Cetegories.Find(id);
+            Category category = db.Categories.Find(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -52,7 +53,7 @@ namespace The_NewYork_Time.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Cetegories.Add(category);
+                db.Categories.Add(category);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -68,7 +69,7 @@ namespace The_NewYork_Time.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Cetegories.Find(id);
+            Category category = db.Categories.Find(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -101,7 +102,7 @@ namespace The_NewYork_Time.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Cetegories.Find(id);
+            Category category = db.Categories.Find(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -114,8 +115,8 @@ namespace The_NewYork_Time.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Category category = db.Cetegories.Find(id);
-            db.Cetegories.Remove(category);
+            Category category = db.Categories.Find(id);
+            db.Categories.Remove(category);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -135,11 +136,25 @@ namespace The_NewYork_Time.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Article article = db.Articles.Find(id);
-            var objArticle = db.Articles.Where(p => p.idarticle == id);
+            var objArticle = db.Articles.Where(p => p.Id == id);
             if (objArticle == null)
             {
                 return HttpNotFound();
             }
+            var userID = User.Identity.GetUserId();
+            foreach (Article item in objArticle)
+            {
+                //lấy danh sanh tham gia khóa học
+                if (userID != null)
+                {
+                    item.isLogin = true;
+                    //Kiểm tra user đó chưa tham gia khóa học
+                    Storage find = db.Storages.FirstOrDefault(p => p.ArticleId == item.Id && p.UserId == userID);
+                    if (find == null)
+                        item.isShowSave = true;
+                }
+            }
+            
             return View(objArticle);
         }
     }

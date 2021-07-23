@@ -38,11 +38,11 @@
                     <div class="lastes-item rowp">
                         <div class="lastes-item-content">
                             <div class="col col-2 display-sm">
-                                <span>@item.date.ToString("dd/MM/yyy")</span>
+                                <span>@item.date</span>
                             </div>
                             <div class="col col-7 col-sm12">
                                 <h2>
-                                    <a href="/Categories/Article/@item.idarticle">
+                                    <a href="/Categories/Article/@item.Id">
                                         @item.articlename
                                     </a>
                                 </h2>
@@ -52,8 +52,8 @@
                                 </p>
                             </div>
                             <div class="col col-3 col-sm12">
-                                <a href="/Categories/Article/@item.idarticle">
-                                    <img src="@item.image1" alt="">
+                                <a href="/Categories/Article/@item.Id">
+                                    <img src="@item.image" alt="">
                                 </a>
                             </div>
                         </div>

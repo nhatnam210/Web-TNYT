@@ -15,8 +15,7 @@ namespace The_NewYork_Time.Models
             Articles = new HashSet<Article>();
         }
 
-        [Key]
-        public int idcategory { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [StringLength(50)]

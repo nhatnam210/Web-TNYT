@@ -18,7 +18,7 @@ namespace The_NewYork_Time.Views
         // GET: Articles
         public ActionResult Index()
         {
-            var articles = db.Articles.Include(a => a.Cetegory);
+            var articles = db.Articles.Include(a => a.Category);
             return View(articles.ToList());
         }
 
@@ -40,7 +40,7 @@ namespace The_NewYork_Time.Views
         // GET: Articles/Create
         public ActionResult Create()
         {
-            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname");
+            ViewBag.idcategory = new SelectList(db.Categories, "idcategory", "categoryname");
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace The_NewYork_Time.Views
                 return RedirectToAction("Index");
             }
 
-            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            ViewBag.idcategory = new SelectList(db.Categories, "idcategory", "categoryname", article.idcategory);
             return View(article);
         }
 
@@ -74,7 +74,7 @@ namespace The_NewYork_Time.Views
             {
                 return HttpNotFound();
             }
-            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            ViewBag.idcategory = new SelectList(db.Categories, "idcategory", "categoryname", article.idcategory);
             return View(article);
         }
 
@@ -91,7 +91,7 @@ namespace The_NewYork_Time.Views
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            ViewBag.idcategory = new SelectList(db.Categories, "idcategory", "categoryname", article.idcategory);
             return View(article);
         }
 

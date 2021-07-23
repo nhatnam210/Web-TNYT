@@ -23,9 +23,9 @@
             </form>
 
             <!-- Topbar Search -->
-            <form method="post" action="/Admin/ArticlesAdmin"  class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <form method="post" action="/Admin/ArticlesAdmin" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group">
-                    <input class="col-md-10" type="text" name="SearchString"  class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
+                    <input class="col-md-10" type="text" name="SearchString" class="form-control bg-light border-0 small" placeholder="Search for @ViewBag.CurrentFilter"
                            aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append col-md-2">
                         <button class="btn btn-primary" type="submit">
@@ -89,7 +89,7 @@
                 @Html.ActionLink("Create New", "Create")
             </p>
 
-            
+
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -99,19 +99,19 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
                             <thead>
-                                <tr>  
+                                <tr>
                                     <th>
                                         @Html.ActionLink("IdArticle", "Index", new { sortOrder = ViewBag.IdSortParm, currentFilter = ViewBag.CurrentFilter })
                                     </th>
-                                    
+
                                     <th>
                                         CategoryName
                                     </th>
                                     <th>
-                                        @Html.ActionLink(" Date", "Index", new { sortOrder = ViewBag.DateSortParm , currentFilter = ViewBag.CurrentFilter })
+                                        @Html.ActionLink(" Date", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
                                     </th>
                                     <th>
-                                        @Html.ActionLink("ArticleName", "Index", new { sortOrder = ViewBag.TenSortParm, currentFilter = ViewBag.CurrentFilter })                      
+                                        @Html.ActionLink("ArticleName", "Index", new { sortOrder = ViewBag.TenSortParm, currentFilter = ViewBag.CurrentFilter })
                                     </th>
                                     <th>
                                         Description
@@ -121,7 +121,7 @@
                                     </th>
                                     <th>
                                         Author
-                                    </th>                                   
+                                    </th>
                                     <th width="170px"> Option</th>
                                 </tr>
                             </thead>
@@ -129,35 +129,35 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.idarticle)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Cetegory.categoryname)
-                                    </td>
-                                    <td>
-                                        @item.date.ToString("dd/MM/yyyy")
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.articlename)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.description)
-                                    </td>
-                                    <td>
-                                        <img src="@Html.DisplayFor(modelItem => item.image1)" width="200px" height="auto" alt="Alternate Text" />
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.author)
-                                    </td>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Id)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Category.categoryname)
+                                        </td>
+                                        <td>
+                                            @item.date
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.articlename)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.description)
+                                        </td>
+                                        <td>
+                                            <img src="@Html.DisplayFor(modelItem => item.image)" width="200px" height="auto" alt="Alternate Text" />
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.author)
+                                        </td>
 
-                                    <td>
-                                        @Html.ActionLink("Edit", "Edit", new { id = item.idarticle }) |
-                                        @Html.ActionLink("Details", "Details", new { id = item.idarticle }) |
-                                        @Html.ActionLink("Delete", "Delete", new { id = item.idarticle })
-                                    </td>
-                                </tr>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                        </td>
+                                    </tr>
                                 }
 
 

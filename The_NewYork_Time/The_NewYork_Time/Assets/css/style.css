@@ -276,7 +276,7 @@ html {
 }
 
 .list-content img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -1594,8 +1594,19 @@ select {
 .get-name{
     padding: 4px 12px;
     position: absolute;
-    left: -175px;
+    right: 100px;
     font-size: 15px;
     top: -6px;
+}
+.btn-default{
+    background:#fff !important;
+    color: #333 !important;
+    outline:2px solid #333;
+    
+}
+.btn-default:hover{
+    color : #1d6ed8 !important;
+    background:#fff!important;
+    outline:2px solid #1d6ed8;
 }
 /**---------------------------------------------------------/

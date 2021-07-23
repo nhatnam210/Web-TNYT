@@ -11,15 +11,12 @@ namespace The_NewYork_Time.Models
     {
         [Key]
         [Column(Order = 0)]
-        public string Id { get; set; }
+        public string UserId { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int idarticle { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime date { get; set; }
+        public int ArticleId { get; set; }
 
         public virtual Article Article { get; set; }
     }

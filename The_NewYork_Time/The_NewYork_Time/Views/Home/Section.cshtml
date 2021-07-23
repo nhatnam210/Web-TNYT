@@ -12,7 +12,7 @@
         <div class="section-title">
             <h1>@Html.DisplayFor(model => model.sectionname) News</h1>
         </div>
-       @Html.Partial("_Category", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(Model.idsection))
+       @Html.Partial("_Category", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(Model.Id))
     </header>
     <!-- End Section Header -->
     <!-- Section New Info -->
@@ -47,32 +47,32 @@
                         </div>
 
                     </div>*@
-                    @Html.Partial("_Top1ArticleSection",The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop1(Model.idsection))
+                    @Html.Partial("_Top1ArticleSection",The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop1(Model.Id))
                     
-                    @Html.Partial("_2ndArticleSection",The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop2(Model.idsection))
+                    @Html.Partial("_2ndArticleSection",The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop2(Model.Id))
                   
                 </div>
 
                 <div class="col col-3 col-md12 col-sm12">
                     <div class="rowp">
-                        @Html.Partial("_3rdArticleSection", The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop3(Model.idsection))
-                        @Html.Partial("_4thArticleSection", The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop4(Model.idsection))
+                        @Html.Partial("_3rdArticleSection", The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop3(Model.Id))
+                        @Html.Partial("_4thArticleSection", The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTop4(Model.Id))
                     </div>
 
                 </div>
             </div>
         </div>
         <!--show 10 aricle random-->
-        @Html.Partial("_Random_10_Article", The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleRandom(Model.idsection))
+        @Html.Partial("_Random_10_Article", The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleRandom(Model.Id))
         <!--end show 10 aricle random-->
     </section>
     <!-- End Section New Info -->
     <!-- Section US -->
-    @Html.Partial("_ShowArticleofCatetoSection",The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(Model.idsection))
+    @Html.Partial("_ShowArticleofCatetoSection",The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(Model.Id))
     <!-- End Section Us -->
     
     <!-- Section Latest -->
-    @Html.Partial("_ArticleLastestBySection", The_NewYork_Time.Models.BUS.ArticleBUS.DanhsachArticleLastest(Model.idsection))
+    @Html.Partial("_ArticleLastestBySection", The_NewYork_Time.Models.BUS.ArticleBUS.DanhsachArticleLastest(Model.Id))
     <!-- End Section Latest -->
 </main>
 <script>

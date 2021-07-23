@@ -2,7 +2,7 @@
 <ul class="footer-category__list">
     @foreach (var item in Model)
     {
-    <li class="footer-category__item"><a href="@Url.Action("Category","Sections",new {id =item.idcategory })" class="footer-category__link">@item.categoryname</a></li>
+    <li class="footer-category__item"><a href="@Url.Action("Category","Sections",new {id =item.Id })" class="footer-category__link">@item.categoryname</a></li>
     }
 
 

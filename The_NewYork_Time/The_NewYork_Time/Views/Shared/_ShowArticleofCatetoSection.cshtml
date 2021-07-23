@@ -6,12 +6,12 @@
 <section id="us">
     <div class="nation-header">
         <h2>
-            <a href="/Sections/Category/@item.idcategory">@item.categoryname</a>
+            <a href="/Sections/Category/@item.Id">@item.categoryname</a>
         </h2>
-        <a href="/Sections/Category/@item.idcategory">More in Read The @item.categoryname ></a>
+        <a href="/Sections/Category/@item.Id">More in Read The @item.categoryname ></a>
     </div>
     <div class="us-content">
-        @Html.Partial("_ArticlesOfCateInSection", The_NewYork_Time.Models.BUS.ArticleBUS.ShowArticleToCate(item.idcategory))
+        @Html.Partial("_ArticlesOfCateInSection", The_NewYork_Time.Models.BUS.ArticleBUS.ShowArticleToCate(item.Id))
     </div>
 
 </section>

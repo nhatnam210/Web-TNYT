@@ -33,11 +33,11 @@
             @foreach (var item in Model)
             {
                 <li class="menu-item ">
-                    <a href="@Url.Action("Section","Home",new {id =item.idsection })" class="menu-item__link">@item.sectionname <i class="ti-angle-right menu-item__icon"></i></a>
+                    <a href="@Url.Action("Section","Home",new {id =item.Id })" class="menu-item__link">@item.sectionname <i class="ti-angle-right menu-item__icon"></i></a>
                     <div class="menu-sub">
                         <p class="menu-sub__header">@item.sectionname</p>
                         <!--<!--menu sub list-->
-                        @Html.Partial("_showcatename", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(item.idsection))
+                        @Html.Partial("_showcatename", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(item.Id))
                     </div>
                 </li>
             }

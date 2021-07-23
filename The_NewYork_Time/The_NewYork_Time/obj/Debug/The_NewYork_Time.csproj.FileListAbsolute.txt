@@ -453,3 +453,9 @@ D:\.IT\DO AN\Do An Web\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_
 D:\.IT\DO AN\Do An Web\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.pdb
 D:\WebTNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csprojAssemblyReference.cache
 D:\.IT\DO AN\Do An Web\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Net.Http.Formatting.dll
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Web.Http.dll
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Web.Http.WebHost.dll
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Net.Http.Formatting.xml
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Web.Http.xml
+D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Web.Http.WebHost.xml

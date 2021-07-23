@@ -6,7 +6,7 @@
             <div class="col-md-4">
                 <div class="paper">
                     <div class="paper-body ">
-                        <h5 class="title-paper "><a class="text-decoration-none text-dark" href="@Url.Action("Article","Categories" ,new { id =item.idarticle})">@item.articlename</a></h5>
+                        <h5 class="title-paper "><a class="text-decoration-none text-dark" href="@Url.Action("Article","Categories" ,new { id =item.Id})">@item.articlename</a></h5>
                         <ul class="paper-list-abstract" style="list-style:none;">
                             <li class="paper-item-abstract text-decoration-none text-black-50">@item.description</li>
                         </ul>
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <a href=""><img class="carg-img" style=" width: 100%;" src="@item.image1" alt="@Url.Action("Article","Categories" ,new { id =item.idarticle})"></a>
+                <a href=""><img class="carg-img" style=" width: 100%;" src="@item.image" alt="@Url.Action("Article","Categories" ,new { id =item.Id})"></a>
                 <p class="caption-picture text-decoration-none text-dark">Allen Weisselberg, center, arriving in court to face charges of receiving fringe benefits without paying taxes on them. Jefferson Siegel for The New York Times</p>
             </div>
         </div>
