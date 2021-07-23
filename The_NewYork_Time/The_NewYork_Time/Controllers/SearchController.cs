@@ -44,7 +44,7 @@ namespace The_NewYork_Time.Controllers
             switch (sortOrder)
             {
                 case "Id":
-                    articles = articles.OrderByDescending(s => s.idarticle);
+                    articles = articles.OrderByDescending(s => s.Id);
                     break;
                 case "Date":
                     articles = articles.OrderBy(s => s.date);
@@ -59,7 +59,7 @@ namespace The_NewYork_Time.Controllers
                     articles = articles.OrderByDescending(s => s.articlename);
                     break;
                 default:
-                    articles = articles.OrderBy(s => s.idarticle);
+                    articles = articles.OrderBy(s => s.Id);
                     break;
             }
             //var articles = db.Articles.Include(a => a.Cetegory);

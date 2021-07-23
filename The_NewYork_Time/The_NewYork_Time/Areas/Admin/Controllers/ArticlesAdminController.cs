@@ -1,5 +1,4 @@
-﻿using Intercom.Core;
-using PagedList;
+﻿using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -39,16 +38,16 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                            select s;
             if (!String.IsNullOrEmpty(searchString))
             {
-                articles = articles.Where(s => s.articlename.Contains(searchString));   
-                                       //|| s.author.Contains(searchString)
-                                       //|| s.description.Contains(searchString)
-                                       //|| s.content1.Contains(searchString));
+                articles = articles.Where(s => s.articlename.Contains(searchString));
+                //|| s.author.Contains(searchString)
+                //|| s.description.Contains(searchString)
+                //|| s.content1.Contains(searchString));
             }
             //sắp xếp 
             switch (sortOrder)
             {
                 case "Id":
-                    articles = articles.OrderByDescending(s => s.idarticle);
+                    articles = articles.OrderByDescending(s => s.Id);
                     break;
                 case "Date":
                     articles = articles.OrderBy(s => s.date);
@@ -63,7 +62,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                     articles = articles.OrderByDescending(s => s.articlename);
                     break;
                 default:
-                    articles = articles.OrderBy(s => s.idarticle);
+                    articles = articles.OrderBy(s => s.Id);
                     break;
             }
             //var articles = db.Articles.Include(a => a.Cetegory);
@@ -90,7 +89,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // GET: Admin/ArticlesAdmin/Create
         public ActionResult Create()
         {
-            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname");
+            ViewBag.idcategory = new SelectList(db.Categories, "Id", "categoryname");
             return View();
         }
 
@@ -99,7 +98,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Create([Bind(Include = "idarticle,articlename,description,image1,content1,author,date,idcategory")] Article article)
+        public ActionResult Create([Bind(Include = "Id,articlename,description,image,contentarticle,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
             {
@@ -108,7 +107,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            ViewBag.idcategory = new SelectList(db.Categories, "Id", "categoryname", article.idcategory);
             return View(article);
         }
 
@@ -124,7 +123,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            ViewBag.idcategory = new SelectList(db.Categories, "Id", "categoryname", article.idcategory);
             return View(article);
         }
 
@@ -133,7 +132,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Edit([Bind(Include = "idarticle,articlename,description,image1,content1,author,date,idcategory")] Article article)
+        public ActionResult Edit([Bind(Include = "Id,articlename,description,image,contentarticle,author,date,idcategory")] Article article)
         {
             if (ModelState.IsValid)
             {
@@ -141,7 +140,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.idcategory = new SelectList(db.Cetegories, "idcategory", "categoryname", article.idcategory);
+            ViewBag.idcategory = new SelectList(db.Categories, "Id", "categoryname", article.idcategory);
             return View(article);
         }
 

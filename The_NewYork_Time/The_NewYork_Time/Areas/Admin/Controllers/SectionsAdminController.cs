@@ -46,7 +46,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             switch (sortOrder)
             {
                 case "Id":
-                    sections = sections.OrderByDescending(s => s.idsection);
+                    sections = sections.OrderByDescending(s => s.Id);
                     break;
                 case "Ten":
                     sections = sections.OrderBy(s => s.sectionname);
@@ -55,7 +55,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                     sections = sections.OrderByDescending(s => s.sectionname);
                     break;
                 default:
-                    sections = sections.OrderBy(s => s.idsection);
+                    sections = sections.OrderBy(s => s.Id);
                     break;
             }
             //var articles = db.Articles.Include(a => a.Cetegory);

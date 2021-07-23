@@ -2,7 +2,6 @@ namespace The_NewYork_Time.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -16,8 +15,9 @@ namespace The_NewYork_Time.Models
             Storages = new HashSet<Storage>();
         }
 
-        [Key]
-        public int idarticle { get; set; }
+        public bool isLogin = false;
+        public bool isShowSave = false;
+        public int Id { get; set; }
 
         [Required]
         [StringLength(255)]
@@ -27,25 +27,20 @@ namespace The_NewYork_Time.Models
         [StringLength(500)]
         public string description { get; set; }
 
-        [DisplayName("image")]
-        public string image1 { get; set; }
+        public string image { get; set; }
 
-
-        [DisplayName("content")]
-        public string content1 { get; set; }
-
-       
+        public string contentarticle { get; set; }
 
         [Required]
-        [StringLength(255)]
+        [StringLength(50)]
         public string author { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime date { get; set; }
+        public DateTime? date { get; set; }
 
-        public int idcategory { get; set; }
+        public int? idcategory { get; set; }
 
-        public virtual Category Cetegory { get; set; }
+        public virtual Category Category { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Storage> Storages { get; set; }

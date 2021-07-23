@@ -34,7 +34,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             }
             ViewBag.CurrentFilter = searchString;
             //tìm kiếm
-            var categories = from s in db.Cetegories
+            var categories = from s in db.Categories
                            select s;
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -47,7 +47,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             switch (sortOrder)
             {
                 case "Id":
-                    categories = categories.OrderByDescending(s => s.idcategory);
+                    categories = categories.OrderByDescending(s => s.Id);
                     break;
                 case "Ten":
                     categories = categories.OrderBy(s => s.categoryname);
@@ -56,7 +56,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                     categories = categories.OrderByDescending(s => s.categoryname);
                     break;
                 default:
-                    categories = categories.OrderBy(s => s.idcategory);
+                    categories = categories.OrderBy(s => s.Id);
                     break;
             }
             //var articles = db.Articles.Include(a => a.Cetegory);
@@ -72,7 +72,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Cetegories.Find(id);
+            Category category = db.Categories.Find(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Cetegories.Add(category);
+                db.Categories.Add(category);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -112,7 +112,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Cetegories.Find(id);
+            Category category = db.Categories.Find(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -145,7 +145,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = db.Cetegories.Find(id);
+            Category category = db.Categories.Find(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -158,8 +158,8 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Category category = db.Cetegories.Find(id);
-            db.Cetegories.Remove(category);
+            Category category = db.Categories.Find(id);
+            db.Categories.Remove(category);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

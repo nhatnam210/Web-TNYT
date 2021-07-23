@@ -13,9 +13,10 @@ namespace The_NewYork_Time.Models
         }
 
         public virtual DbSet<Article> Articles { get; set; }
-        public virtual DbSet<Category> Cetegories { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Section> Sections { get; set; }
         public virtual DbSet<Storage> Storages { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -26,15 +27,15 @@ namespace The_NewYork_Time.Models
 
             modelBuilder.Entity<Category>()
                 .HasMany(e => e.Articles)
-                .WithRequired(e => e.Cetegory)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.Category)
+                .HasForeignKey(e => e.idcategory);
 
             modelBuilder.Entity<Section>()
-                .HasMany(e => e.Cetegories)
+                .HasMany(e => e.Categories)
                 .WithRequired(e => e.Section)
+                .HasForeignKey(e => e.idsection)
                 .WillCascadeOnDelete(false);
         }
-
         public System.Data.Entity.DbSet<TNYT.AspNetUser> AspNetUsers { get; set; }
     }
 }

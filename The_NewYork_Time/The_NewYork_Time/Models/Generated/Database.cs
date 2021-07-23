@@ -6,7 +6,7 @@
 // 
 //     Connection String Name: `TNYT`
 //     Provider:               `System.Data.SqlClient`
-//     Connection String:      `data source=LAPTOP-9F4GMIKT\SQLEXPRESS;initial catalog=TNYT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework`
+//     Connection String:      `data source=DESKTOP-A73BAU0\SQLEXPRESS01;initial catalog=TNYT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework`
 //     Schema:                 ``
 //     Include Views:          `False`
 
@@ -118,18 +118,18 @@ namespace TNYT
 	}
     
 	[TableName("dbo.Article")]
-	[PrimaryKey("idarticle")]
+	[PrimaryKey("Id")]
 	[ExplicitColumns]
     public partial class Article : TNYTDB.Record<Article>  
     {
-		[Column] public int idarticle { get; set; }
+		[Column] public int Id { get; set; }
 		[Column] public string articlename { get; set; }
 		[Column] public string description { get; set; }
-		[Column] public string image1 { get; set; }
-		[Column] public string content1 { get; set; }
+		[Column] public string image { get; set; }
+		[Column] public string contentarticle { get; set; }
 		[Column] public string author { get; set; }
-		[Column] public DateTime date { get; set; }
-		[Column] public int idcategory { get; set; }
+		[Column] public DateTime? date { get; set; }
+		[Column] public int? idcategory { get; set; }
 	}
     
 	[TableName("dbo.AspNetRoles")]
@@ -191,32 +191,31 @@ namespace TNYT
 	}
     
 	[TableName("dbo.Category")]
-	[PrimaryKey("idcategory")]
+	[PrimaryKey("Id")]
 	[ExplicitColumns]
     public partial class Category : TNYTDB.Record<Category>  
     {
-		[Column] public int idcategory { get; set; }
+		[Column] public int Id { get; set; }
 		[Column] public string categoryname { get; set; }
 		[Column] public int idsection { get; set; }
 	}
     
 	[TableName("dbo.Section")]
-	[PrimaryKey("idsection")]
+	[PrimaryKey("Id")]
 	[ExplicitColumns]
     public partial class Section : TNYTDB.Record<Section>  
     {
-		[Column] public int idsection { get; set; }
+		[Column] public int Id { get; set; }
 		[Column] public string sectionname { get; set; }
 	}
     
 	[TableName("dbo.Storage")]
-	[PrimaryKey("Id", AutoIncrement=false)]
+	[PrimaryKey("UserId", AutoIncrement=false)]
 	[ExplicitColumns]
     public partial class Storage : TNYTDB.Record<Storage>  
     {
-		[Column] public string Id { get; set; }
-		[Column] public int idarticle { get; set; }
-		[Column] public DateTime date { get; set; }
+		[Column] public string UserId { get; set; }
+		[Column] public int ArticleId { get; set; }
 	}
     
 	[TableName("dbo.sysdiagrams")]

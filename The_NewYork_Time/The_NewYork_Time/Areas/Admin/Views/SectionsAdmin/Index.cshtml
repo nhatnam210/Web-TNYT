@@ -113,15 +113,15 @@
                                 {
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.idsection)
+                                            @Html.DisplayFor(modelItem => item.Id)
                                         </td>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.sectionname)
                                         </td>
                                         <td>
-                                            @Html.ActionLink("Edit", "Edit", new { id = item.idsection }) |
-                                            @Html.ActionLink("Details", "Details", new { id = item.idsection }) |
-                                            @Html.ActionLink("Delete", "Delete", new { id = item.idsection })
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                                         </td>
                                     </tr>
 

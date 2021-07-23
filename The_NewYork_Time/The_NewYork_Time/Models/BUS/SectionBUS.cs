@@ -9,7 +9,7 @@ namespace The_NewYork_Time.Models.BUS
         public static IEnumerable<Section> ShowsectionName(int id)
         {
             var db = new TNYTDB();
-            return db.Query<Section>("select * from Section where idsection =  '" + id + "'");
+            return db.Query<Section>("select * from Section where Id =  '" + id + "'");
         }
 
         public static IEnumerable<Section> DanhSachSection()
@@ -20,13 +20,13 @@ namespace The_NewYork_Time.Models.BUS
         public static IEnumerable<Section> Sectionchan()
         {
             var db = new TNYTDB();
-            return db.Query<Section>("select * from Section where idsection % 2 = 0 ");
+            return db.Query<Section>("select * from Section where Id % 2 = 0 ");
 
         }
         public static IEnumerable<Section> SectionLe()
         {
             var db = new TNYTDB();
-            return db.Query<Section>("select * from Section where idsection % 2 != 0 ");
+            return db.Query<Section>("select * from Section where Id % 2 != 0 ");
 
         }
     }

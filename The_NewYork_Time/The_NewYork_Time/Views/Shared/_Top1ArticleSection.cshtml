@@ -1,17 +1,18 @@
 ﻿@model IEnumerable<The_NewYork_Time.Models.Article>
 
-@foreach(var item in Model ){
+@foreach(var item in Model )
+{
 <div class="col col-6 col-md7 col-sm12 content-left">
     <div class="head-img">
-        <a href="/Categories/Article/@item.idarticle">
-            <img src="@item.image1" alt="">
+        <a href="/Categories/Article/@item.Id">
+            <img src="@item.image" alt="">
         </a>
 
         <p>@item.author FOR THE NEW YORK TIMES</p>
     </div>
     <div class="head-content">
         <div class="head-title">
-            <h2><a href="#">@item.articlename</a></h2>
+            <h2><a href="/Categories/Article/@item.Id">@item.articlename</a></h2>
         </div>
         <div class="head-descrip">
             <p>@item.description</p>

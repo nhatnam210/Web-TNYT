@@ -119,18 +119,18 @@
                                 {
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.idcategory)
+                                            @Html.DisplayFor(modelItem => item.Id)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.Section.idsection)
+                                            @Html.DisplayFor(modelItem => item.Section.Id)
                                         </td>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.categoryname)
                                         </td>
                                         <td>
-                                            @Html.ActionLink("Edit", "Edit", new { id = item.idcategory }) |
-                                            @Html.ActionLink("Details", "Details", new { id = item.idcategory }) |
-                                            @Html.ActionLink("Delete", "Delete", new { id = item.idcategory })
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                                         </td>
                                     </tr>
                                 }

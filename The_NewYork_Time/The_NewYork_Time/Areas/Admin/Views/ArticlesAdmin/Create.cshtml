@@ -5,22 +5,16 @@
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
 }
 <script src="~/Areas/AssetAdmin/ckeditor/ckeditor.js"></script>
+
+
 @using (Html.BeginForm("Create", "ArticlesAdmin", FormMethod.Post, new { @class = "form" }))
 {
-    
+
 
     <div class="form-horizontal">
-        <h2 class="admin-title">Create Article</h2>
+        <h4>Article</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.idcategory, "idcategory", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("idcategory", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.idcategory, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.articlename, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -38,24 +32,21 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.image1, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.image, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.image1, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.image1, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.image, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
             </div>
         </div>
 
-
-
         <div class="form-group">
-            @Html.LabelFor(model => model.content1, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.contentarticle, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <textarea id="editor1" class="ckeditor" name="content1" [ValidateInput(false)]></textarea>
                 @*@Html.TextAreaFor(model => model.content1, htmlAttributes: new { id = "content", @class = "control-label" })
-                @Html.ValidationMessageFor(model => model.content1, "", new { @class = "text-danger" })*@
+            @Html.ValidationMessageFor(model => model.content1, "", new { @class = "text-danger" })*@
             </div>
         </div>
-
 
         <div class="form-group">
             @Html.LabelFor(model => model.author, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -73,6 +64,14 @@
             </div>
         </div>
 
+        <div class="form-group">
+            @Html.LabelFor(model => model.idcategory, "idcategory", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idcategory", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.idcategory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
         <div class="form-group col-md-10">
             <div class="col-md-offset-2 btn-touch">
                 <input type="submit" value="Create" class="btn btn-success" />
@@ -81,3 +80,6 @@
     </div>
 }
 
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

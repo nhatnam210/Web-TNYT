@@ -29,9 +29,9 @@
                                 @foreach (var item in Model)
                                 {
                                     <div class="col l-2-4 m-6 s-12 form-section">
-                                        <a href="/Home/Section/@item.idsection" style="text-decoration:none;"><p class="footer-section-name">@item.sectionname</p></a>
+                                        <a href="/Home/Section/@item.Id" style="text-decoration:none;"><p class="footer-section-name">@item.sectionname</p></a>
                                         
-                                        @Html.Partial("_CateOfFooterPage", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(item.idsection))
+                                        @Html.Partial("_CateOfFooterPage", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCateBySec(item.Id))
                                     </div>
                                 }
                             </div>

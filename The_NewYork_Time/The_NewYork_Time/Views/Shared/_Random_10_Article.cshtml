@@ -6,11 +6,11 @@
         @foreach (var item in Model)
         {
             <li>
-                <a href="/Categories/Article/@item.idarticle">
-                    <img  src="@item.image1" alt="">
+                <a href="/Categories/Article/@item.Id">
+                    <img  src="@item.image" alt="">
                 </a>
                 <h2 style="word-break: break-word; padding-top: 20px;">
-                    <a href="/Categories/Article/@item.idarticle">@item.articlename</a>
+                    <a href="/Categories/Article/@item.Id">@item.articlename</a>
                 </h2>
 
             </li>
