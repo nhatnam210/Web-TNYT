@@ -1,4 +1,6 @@
-﻿using PagedList;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -130,11 +132,21 @@ namespace The_NewYork_Time.Views
             base.Dispose(disposing);
         }
 
-        public List<Article> SearchByKey(string key)
+        [Authorize]
+        public ActionResult Attending()
         {
-            return ViewBag.seach=db.Articles.SqlQuery("select * from Article where articlename like %" + key + "%").ToList();
+            ApplicationUser currentUser = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>()
+                .FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+            var listFavorites = db.Storages.Where(p => p.UserId == currentUser.Id).ToList();
+            var article = new List<Article>();
+            foreach (Storage temp in listFavorites)
+            {
+                Article objCourse = temp.Article;
+                
+                article.Add(objCourse);
+            }
 
+            return View(article);
         }
-       
     }
 }

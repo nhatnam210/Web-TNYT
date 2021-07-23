@@ -22,7 +22,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li style="padding:4px 12px;">
-                    @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    @Html.ActionLink(User.Identity.GetUserName(), "Attending", "Articles", routeValues: null, htmlAttributes: new { title = "Manage" })
                 </li>
                 <li><a class="btn login btn-primary px-3 text-uppercase fw-bold" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
             </ul>
