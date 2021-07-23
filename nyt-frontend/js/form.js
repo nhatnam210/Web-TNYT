@@ -20,7 +20,7 @@ $(document).ready(function() {
             $("#errmail").html("Please enter your username or email address");
         } else {
             $(".access").css("display", "none");
-            $(".inp-pass").css("display", "block");
+            $(".inp-pass").css("display", " ");
             $(".agree").css("display", "block");
             $(".button-box").css("display", "none");
 

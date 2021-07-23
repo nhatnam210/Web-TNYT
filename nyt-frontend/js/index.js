@@ -3,16 +3,16 @@ const daysOfWeek = [
     'Sunday', 'Monday', 'Tuesday', 'Wednesday',
     'Thursday', 'Friday', 'Saturday'
 ]; const months = [
-        'January', 'February', 'March', 'April', 'May', 'June', 'July',
-        'August', 'September', 'October', 'November', 'December'
+    'January', 'February', 'March', 'April', 'May', 'June', 'July',
+    'August', 'September', 'October', 'November', 'December'
 ]
     
 // ---- NEWS HEADER CATEGORIES
 const categories = [
-        'World', 'U.S.', 'Politics', 'N.Y.', 'Business',
-        'Opinion', 'Tech', 'Science', 'Health', 'Sports',
-        'Arts', 'Books', 'Style', 'Food', 'Travel',
-        'Magazine', 'T Magazine', 'Real Estate', 'Video'
+    'World', 'U.S.', 'Politics', 'N.Y.', 'Business',
+    'Opinion', 'Tech', 'Science', 'Health', 'Sports',
+    'Arts', 'Books', 'Style', 'Food', 'Travel',
+    'Magazine', 'T Magazine', 'Real Estate', 'Video'
 ]
     
 // ---- NEWS FOOTER CATEGORIES
@@ -110,6 +110,7 @@ const drawerGroupFirst = [
 }
 
 function parseToday() {
+    // Get today string
     let today = new Date()
     let dow = daysOfWeek[today.getDay()]
     let dd = String(today.getDate()).padStart(2, '0')
@@ -118,14 +119,13 @@ function parseToday() {
 
     today = dow + ', ' + mmmm + ' ' + dd + ', ' + yyyy
     $('#info-today').html('<b>' + today + '</b>')
+    $('#mobile-info-today').html('<b>' + today + '</b>')
 }
 
 function parseCategory() {
     categories.forEach(category => $('#header-navbar').append(
-        '<li class="nav-item"><a class="nav-link" href="#">' + category + '</a></li>'
+        '<li class="nav-item small" style="margin: -5px;"><a class="nav-link" href="#">' + category + '</a></li>'
     ));
-    $(".nav-item").css("margin", "-5px");
-    $(".nav-item").css("font-size", "12px");
 }
 
 function parseFooterColumns() {
@@ -150,7 +150,6 @@ function parseFooterColumns() {
 }
 
 function parseDrawer() {
-    // First group
     drawerGroupFirst.forEach(row => {
         let id = row.toLowerCase().replaceAll('.', '').replaceAll(' ','')
         $('#group-first').append(
@@ -221,6 +220,16 @@ function parseDrawer() {
         '<li class="list-group-item border-0 p-0 mt-1">' +
         '<a href="#" class="btn col-link small fw-bold p-0 m-0 dropdown-item">' + row + '</a></li>'
     ));
+    $('#group-more').append(
+        '<li class="list-group-item border-0 p-0 mt-1">' +
+        '<a href="https://y8.com" class="btn col-link small fw-bold p-0 m-0 dropdown-item">' +
+        '<ion-icon name="game-controller-outline"></ion-icon>Play Games</a></li>'
+    )
+    $('#group-more').append(
+        '<li class="list-group-item border-0 p-0 mt-1">' +
+        '<a href="https://youtu.be" class="btn col-link small fw-bold p-0 m-0 dropdown-item">' +
+        '<ion-icon name="film-outline"></ion-icon>Watch Videos</a></li>'
+    )
     $('#group-more').append('</ul>')
 }
 
@@ -230,5 +239,28 @@ $(document).ready(
         parseCategory()
         parseFooterColumns()
         parseDrawer()
+
+        $('#mobile-btn-offcanvas').on(
+            'click',
+            function () {
+                // Remove header buttons
+                $('#mobile-btn-offcanvas').addClass('d-none')
+                $('#mobile-btn-account').addClass('d-none')
+                // Show offcanvas and close buttons
+                $('#mobile-offcanvas').removeClass('d-none')
+                $('#mobile-btn-offcanvas-close').removeClass('d-none')
+            }
+        )
+        $('#mobile-btn-offcanvas-close').on(
+            'click',
+            function () {
+                // Re-show header buttons
+                $('#mobile-btn-offcanvas').removeClass('d-none')
+                $('#mobile-btn-account').removeClass('d-none')
+                // Hide offcanvas and close buttons
+                $('#mobile-offcanvas').addClass('d-none')
+                $('#mobile-btn-offcanvas-close').addClass('d-none')
+            }
+        )
     }
 )

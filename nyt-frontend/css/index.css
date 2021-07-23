@@ -94,7 +94,6 @@ header .title-lang {
 /* li.btn-group > .dropdown-toggle:active {
     pointer-events: none;
 } */
- 
 /* end */
 
 
@@ -341,7 +340,9 @@ header .title-lang {
 
 
 /* *** FOOTER *** */
-
+footer {
+    background: white;
+}
 #footer-logo {
     border-top: 4px double lightgray;
 }
@@ -353,4 +354,77 @@ header .title-lang {
 
 #footer-copyright {
     border-top: 1px solid lightgray;
+}
+
+
+/* *** MOBILE LAYOUTS *** */
+#mobile-header {
+    display: none;
+}
+@media only screen and (max-device-width: 480px) {
+    #header {
+        display: none;
+    } #mobile-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 64px auto 64px;
+        border-bottom: 1px solid lightgray;
+        background: white;
+        z-index: 6000;
+    } #mobile-btn-offcanvas {
+        margin-left: 8px;
+        margin-right: auto;
+        grid-row: 1;
+        grid-column: 1;
+    } #mobile-btn-logo {
+        align-self: center;
+        grid-row: 1;
+        grid-column: 2;
+    }#mobile-btn-account, #mobile-btn-offcanvas-close {
+        margin-right: 8px;
+        margin-left: auto;
+        grid-row: 1;
+        grid-column: 3;
+    } #mobile-btn-offcanvas, #mobile-btn-account, #mobile-btn-offcanvas-close {
+        width: 32px;
+        height: 32px
+    } #mo-search {
+        margin-top: 48px !important;
+    }
+
+    #mobile-offcanvas {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left:0;
+        width: 100vw; /* viewport width */
+        height: 100vh; /* viewport height */
+        overflow-y: scroll;
+        overflow-x: hidden;
+        z-index: 5000;
+        background: white;
+    } #mo-nav ul {
+        list-style: none;
+        columns: 2 !important;
+        -webkit-columns: 2 !important;
+        -moz-columns: 2 !important;
+    } #mo-nav ul a {
+        color: black;
+        text-decoration: none;
+    } #mo-nav ul li {
+        padding: 8px 0 !important;
+    }
+    
+    #mobile-info {
+        background: #eee;
+        border-bottom: 1px solid lightgray;
+        font-size: x-small;
+    }
+
+    #navbar, .minishow-tab {
+        display: none;
+    }
 }
