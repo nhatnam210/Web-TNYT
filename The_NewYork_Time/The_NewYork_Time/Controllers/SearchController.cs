@@ -16,9 +16,7 @@ namespace The_NewYork_Time.Controllers
         {
             
             ViewBag.CurrentSort = sortOrder;
-            ViewBag.IdSortParm = String.IsNullOrEmpty(sortOrder) ? "Id" : "";
-            ViewBag.DateSortParm = sortOrder == "Date" ? "Date_desc" : "Date";
-            ViewBag.TenSortParm = sortOrder == "Ten" ? "Ten_desc" : "Ten";
+            
 
             //phan trang
             if (searchString != null)
@@ -43,21 +41,7 @@ namespace The_NewYork_Time.Controllers
             //sắp xếp 
             switch (sortOrder)
             {
-                case "Id":
-                    articles = articles.OrderByDescending(s => s.Id);
-                    break;
-                case "Date":
-                    articles = articles.OrderBy(s => s.date);
-                    break;
-                case "Date_desc":
-                    articles = articles.OrderByDescending(s => s.date);
-                    break;
-                case "Ten":
-                    articles = articles.OrderBy(s => s.articlename);
-                    break;
-                case "Ten_desc":
-                    articles = articles.OrderByDescending(s => s.articlename);
-                    break;
+               
                 default:
                     articles = articles.OrderBy(s => s.Id);
                     break;

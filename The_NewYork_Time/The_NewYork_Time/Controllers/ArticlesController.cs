@@ -133,7 +133,7 @@ namespace The_NewYork_Time.Views
         }
 
         [Authorize]
-        public ActionResult Attending()
+        public ActionResult Attending(int? page)
         {
             ApplicationUser currentUser = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>()
                 .FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
@@ -145,8 +145,12 @@ namespace The_NewYork_Time.Views
                 
                 article.Add(objCourse);
             }
-
-            return View(article);
+            
+            //var articles = db.Articles.Include(a => a.Cetegory);
+            int pageSize = 1;
+            int pageNumber = (page ?? 1);
+            return View(article.ToPagedList(pageNumber, pageSize));
+            
         }
     }
 }
