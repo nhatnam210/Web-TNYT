@@ -47,7 +47,7 @@ namespace The_NewYork_Time.Models.BUS
         public static IEnumerable<Article> DanhsachArticleLastest(int id)
         {
             var db = new TNYTDB();
-            return db.Query<Article>("select a.Id,articlename,description,image,contentarticle,author from Article a , Section s , Category c  where a.idcategory = c.Id and c.idsection = s.Id and s.Id = '" + id + "' ORDER BY a.Id DESC ");
+            return db.Query<Article>("select a.Id,articlename,description,image,contentarticle,author,date from Article a , Section s , Category c  where a.idcategory = c.Id and c.idsection = s.Id and s.Id = '" + id + "' ORDER BY a.Id DESC ");
 
         }
 

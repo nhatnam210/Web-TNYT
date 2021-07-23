@@ -35,7 +35,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             ViewBag.CurrentFilter = searchString;
             //tìm kiếm
             var users = from s in db.AspNetUsers
-                           select s;
+                        select s;
             if (!String.IsNullOrEmpty(searchString))
             {
                 users = users.Where(s => s.UserName.Contains(searchString));

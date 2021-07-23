@@ -16,7 +16,6 @@ namespace The_NewYork_Time.Models
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Section> Sections { get; set; }
         public virtual DbSet<Storage> Storages { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -27,8 +26,9 @@ namespace The_NewYork_Time.Models
 
             modelBuilder.Entity<Category>()
                 .HasMany(e => e.Articles)
-                .WithOptional(e => e.Category)
-                .HasForeignKey(e => e.idcategory);
+                .WithRequired(e => e.Category)
+                .HasForeignKey(e => e.idcategory)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Section>()
                 .HasMany(e => e.Categories)
