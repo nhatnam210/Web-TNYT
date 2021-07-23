@@ -58,11 +58,11 @@
                                     {
                                         if (@Model.isShowSave)
                                         {
-                                            <button data-course-id="@Model.Id" style="cursor:pointer;" class="btn btn-default btn-sm js-tongle-attendance">Save</button>
+                                            <button data-article-id="@Model.Id" style="cursor:pointer;" class="btn btn-default btn-sm js-tongle-storage">Save</button>
                                         }
                                         else
                                         {
-                                            <button data-course-id="@Model.Id" style="cursor:pointer;" class="btn btn-success btn-sm js-tongle-attendance">Saved</button>
+                                            <button data-article-id="@Model.Id" style="cursor:pointer;" class="btn btn-success btn-sm js-tongle-storage">Saved</button>
                                         }
                                     }
                                 </span>
@@ -259,18 +259,18 @@
 @section scripts{
     <script>
         $(document).ready(function () {
-            $(".js-tongle-attendance").click(function (e) {
+            $(".js-tongle-storage").click(function (e) {
                 var button = $(e.target);
-                $.post("/api/storages", { Id: button.attr("data-course-id") })
+                $.post("/api/storages", { Id: button.attr("data-article-id") })
                     .done(function (result) {
                         if (result == "cancel") {
-                            alert("Remove from your storage Successfully !")
+                            alert("Removed from your storage successfully !")
                             button
                                 .removeClass("btn-success")
                                 .addClass("btn-default")
                                 .text("Save");
                         } else {
-                            alert("Save to your storage Successfully !!!!!!")
+                            alert("Saved to your storage successfully !")
                             button
                                 .removeClass("btn-default")
                                 .addClass("btn-success")

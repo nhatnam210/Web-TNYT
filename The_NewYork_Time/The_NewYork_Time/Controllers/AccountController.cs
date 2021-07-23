@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -8,13 +9,17 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using PagedList;
 using The_NewYork_Time.Models;
 
 namespace The_NewYork_Time.Controllers
 {
+
     [Authorize]
     public class AccountController : Controller
     {
+        private TNYTContext db = new TNYTContext();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -171,6 +176,30 @@ namespace The_NewYork_Time.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+
+        [Authorize]
+        public ActionResult Storage(int? page)
+        {
+            ApplicationUser currentUser = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>()
+                .FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+            var listFavorites = db.Storages.Where(p => p.UserId == currentUser.Id).ToList();
+            var article = new List<Article>();
+            foreach (Storage temp in listFavorites)
+            {
+                Article objArticle = temp.Article;
+
+                article.Add(objArticle);
+            }
+
+            //var articles = db.Articles.Include(a => a.Cetegory);
+            int pageSize = 1;
+            int pageNumber = (page ?? 1);
+            return View(article.ToPagedList(pageNumber, pageSize));
+
+        }
+
+
+
 
         //
         // GET: /Account/ConfirmEmail

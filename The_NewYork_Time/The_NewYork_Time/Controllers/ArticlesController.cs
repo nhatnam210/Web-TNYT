@@ -131,26 +131,6 @@ namespace The_NewYork_Time.Views
             }
             base.Dispose(disposing);
         }
-
-        [Authorize]
-        public ActionResult Attending(int? page)
-        {
-            ApplicationUser currentUser = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>()
-                .FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
-            var listFavorites = db.Storages.Where(p => p.UserId == currentUser.Id).ToList();
-            var article = new List<Article>();
-            foreach (Storage temp in listFavorites)
-            {
-                Article objCourse = temp.Article;
-                
-                article.Add(objCourse);
-            }
-            
-            //var articles = db.Articles.Include(a => a.Cetegory);
-            int pageSize = 1;
-            int pageNumber = (page ?? 1);
-            return View(article.ToPagedList(pageNumber, pageSize));
-            
-        }
+        
     }
 }

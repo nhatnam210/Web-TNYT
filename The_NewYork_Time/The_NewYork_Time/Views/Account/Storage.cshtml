@@ -1,8 +1,8 @@
 ﻿@model PagedList.IPagedList<The_NewYork_Time.Models.Article>
 @using PagedList.Mvc;
-<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
 @{
-    ViewBag.Title = "Attending";
+    ViewBag.Title = "Storage";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
@@ -55,7 +55,7 @@
                 <div class="col-md-12 page">
                     <div class="pagination justify-content-center">
                         Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-                        @Html.PagedListPager(Model, Page => Url.Action("Attending", "Articles", new { Page }))
+                        @Html.PagedListPager(Model, Page => Url.Action("Storage", "Account", new { Page }))
                     </div>
                 </div>
                 <!-- Pagination Start -->
