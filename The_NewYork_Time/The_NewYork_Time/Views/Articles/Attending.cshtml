@@ -1,0 +1,64 @@
+﻿@model IEnumerable<The_NewYork_Time.Models.Article>
+@{
+    ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<!-- End Section Header -->
+<section id="latest">
+    <div>
+        <!-- Tab items -->
+        <div class="tabs">
+            <div class="tab-item active">
+                Favorite
+            </div>
+
+
+
+            <div class="line"></div>
+        </div>
+
+        <!-- Tab content -->
+        <div class="tab-content ">
+            <div class="tab-pane active">
+                @foreach (var item in Model)
+                {
+                    <div class="lastes-item rowp">
+                        <div class="lastes-item-content">
+                            <div class="col col-2 display-sm">
+                                <span>@item.date</span>
+                            </div>
+                            <div class="col col-7 col-sm12">
+                                <h2>
+                                    <a href="/Categories/Article/@item.Id">
+                                        @item.articlename
+                                    </a>
+                                </h2>
+                                <p>@item.description</p>
+                                <p class="article-author">
+                                    By @item.author
+                                </p>
+                            </div>
+                            <div class="col col-3 col-sm12">
+                                <a href="/Categories/Article/@item.Id">
+                                    <img src="@item.image" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                }
+
+                
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+<script>
+    tab()
+</script>
+<!-- End Section Latest -->
