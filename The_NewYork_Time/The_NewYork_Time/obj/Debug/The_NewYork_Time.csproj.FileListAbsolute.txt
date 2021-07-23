@@ -459,4 +459,3 @@ D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Web.Http.WebHost.d
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Net.Http.Formatting.xml
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Web.Http.xml
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\System.Web.Http.WebHost.xml
-D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
