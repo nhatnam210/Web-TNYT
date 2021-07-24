@@ -1,4 +1,4 @@
-* {
+.lineor {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -35,6 +35,7 @@ section p {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .login-form {
@@ -45,7 +46,7 @@ section p {
 }
 
 .input-box {
-    margin-bottom: 10px;
+    margin:12px 0;
 }
 
 .input-box input {
@@ -68,6 +69,9 @@ section p {
     border-radius: 4px;
     height: 40px;
     border: none;
+    cursor: pointer;
+    font-family: 'Noto Sans HK', sans-serif;
+    
 }
 
 #errmail {
@@ -81,13 +85,14 @@ section p {
 
 .lineor {
     font-size: 0.875em;
-    margin: 1.1em 0px 0px;
+    margin: 1.1em 0px;
     line-height: 1em;
     font-weight: 500;
     font-family: nyt-franklin, helvetica, arial, sans-serif;
     color: rgb(102, 102, 102);
     position: relative;
     text-align: center;
+    padding-bottom:12px;
 }
 
 .lineor::before {
@@ -116,7 +121,7 @@ section p {
 }
 
 .service p {
-    font-size: 11px;
+    font-size: 12px;
     color: rgb(18, 18, 18);
     text-align: center;
 }
@@ -137,6 +142,8 @@ section p {
     height: 40px;
     text-align: center;
     cursor: pointer;
+    
+
 }
 
 .contact a {
@@ -272,4 +279,31 @@ footer a:hover {
 
 .text-sign a {
     margin: 0;
+}
+.login-text {
+    font-size: 1.5rem;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+.register {
+    padding: 11px 172px;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+.register:hover{
+    background-color: rgb(41, 41, 41);
+}
+.btn-login{
+    cursor:pointer;
+}
+.register-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Noto Sans HK', sans-serif;
 }

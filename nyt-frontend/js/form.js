@@ -15,23 +15,23 @@ $(document).ready(function() {
 
         }
     }
-    $("#continue").click(function() {
-        if (ktramail() == false) {
-            $("#errmail").html("Please enter your username or email address");
-        } else {
-            $(".access").css("display", "none");
-            $(".inp-pass").css("display", " ");
-            $(".agree").css("display", "block");
-            $(".button-box").css("display", "none");
+    // $("#continue").click(function() {
+    //     if (ktramail() == false) {
+    //         $("#errmail").html("Please enter your username or email address");
+    //     } else {
+    //         $(".access").css("display", "none");
+    //         $(".inp-pass").css("display", " ");
+    //         $(".agree").css("display", "block");
+    //         $(".button-box").css("display", "none");
 
-            $(".button-box-agree").css("display", "block");
-            $(".text-sign").css("display", "block");
-            $("footer").css("margin-top", "120px");
-            $("#edit").css("display", "block")
+    //         $(".button-box-agree").css("display", "block");
+    //         $(".text-sign").css("display", "block");
+    //         $("footer").css("margin-top", "120px");
+    //         $("#edit").css("display", "block")
 
-        }
+    //     }
 
-    })
+    // })
 
 
 })
