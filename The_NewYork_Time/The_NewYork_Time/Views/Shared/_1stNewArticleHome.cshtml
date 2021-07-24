@@ -3,10 +3,10 @@
     <div class="row">
         @foreach (var item in Model)
         {
-            <div class="col-sm-6">
+            <div class="col-sm-6 title-center">
                 <div class="paper">
                     <div class="paper-body ">
-                        <h5 class="title-paper "><a class="text-decoration-none text-dark" href="@Url.Action("Article","Categories" ,new { id =item.Id})">@item.articlename</a></h5>
+                        <h5 class="title-paper "><a style="font-size:2rem;"  class="text-decoration-none text-dark" href="@Url.Action("Article","Categories" ,new { id =item.Id})">@item.articlename</a></h5>
                         <ul class="paper-list-abstract">
                             <li class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="@Url.Action("Article","Categories" ,new { id =item.Id})">@item.description</a></li>
                             
