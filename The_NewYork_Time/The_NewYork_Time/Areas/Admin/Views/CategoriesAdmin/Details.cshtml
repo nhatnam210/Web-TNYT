@@ -5,10 +5,9 @@
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Category</h4>
+<div class="form">
+    <h2 class="admin-title">Details Category</h2>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -28,8 +27,10 @@
         </dd>
 
     </dl>
+<div class=" col-md-12 back-to-list">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+<div class=" col-md-12 back-to-list">
     @Html.ActionLink("Back to List", "Index")
-</p>
+</div>
+</div>

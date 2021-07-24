@@ -5,7 +5,6 @@
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
 }
 
-<h2>Create</h2>
 
 @using (Html.BeginForm("Create", "CategoriesAdmin", FormMethod.Post, new { @class = "form" }))
 {
@@ -36,7 +35,7 @@
             <input type="submit" value="Create" class="btn btn-success" />
         </div>
     </div>
-    <div>
+    <div class="col-md-10 back-to-list">
         @Html.ActionLink("Back to List", "Index")
     </div>
 </div>

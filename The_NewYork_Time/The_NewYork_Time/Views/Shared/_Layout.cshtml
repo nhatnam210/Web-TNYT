@@ -6,12 +6,12 @@
     <title>@ViewBag.Title - The New York Time</title>
     @*@Styles.Render("~/Content/css")*@
     @Scripts.Render("~/bundles/modernizr")
-    @*<link rel="stylesheet" href="~/Assets/css/style.css">*@
+    <link rel="stylesheet" href="~/Assets/css/style.css">
     @*<link rel="stylesheet" href="~/Assets/css/base.css">*@
     <link rel="stylesheet" href="~/Assets/css/global.css">
     <link rel="stylesheet" href="~/Assets/css/index.css">
     @*<link rel="stylesheet" href="~/Assets/css/responsive.css">*@
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
      @*themify icons*@ 
     <link rel="stylesheet" href="~/Assets/themify-icons/themify-icons.css" />
      @*CSS only*@ 
@@ -38,21 +38,16 @@
                 @*<a href="#" class="btn btn-light px-2"><ion-icon name="search-outline" /></a>*@
                 <form name="timkiem" method="post" action="/Search/Index">
                     <div class="col form-left">
-                        <div class="nav__icon">
-
-
-
-                        </div>
-                        <label for="check-search" class="icon__search"><i class="ti-search"></i></label>
+                        <label for="check-search" class="icon__search"><i class="ti-search flex"></i></label>
                         <input type="checkbox" hidden class="check-search" id="check-search">
                         <input type="text" name="searchString" class="search-box" placeholder="SEARCH">
-                        <input type="submit" value="Go" class="btn go">
+                        <input type="submit" value="Go" class="btn btn-primary go">
                         <a href="#" class="category__name"></a>
 
                     </div>
                 </form>
             </div>
-            <div id="header-subtitle">
+            <div id="header-subtitle" class="mt-15" >
                 <p id="info-today" />
                 <p id="info-subtitle">Today's Paper</p>
             </div>
