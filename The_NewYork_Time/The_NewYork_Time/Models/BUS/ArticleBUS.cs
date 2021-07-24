@@ -79,7 +79,7 @@ namespace The_NewYork_Time.Models.BUS
         public static IEnumerable<Article> ShowArticleSectionle(int id)
         {
             var db = new TNYTDB();
-            return db.Query<Article>("select top 4 a.Id,articlename,description,image,contentarticle,author from Article a , Category c , Section s where a.idcategory = c.Id and c.idsection = s.Id and s.Id = '" + id + "' ORDER BY s.Id DESC");
+            return db.Query<Article>("select top 6 a.Id,articlename,description,image,contentarticle,author from Article a , Category c , Section s where a.idcategory = c.Id and c.idsection = s.Id and s.Id = '" + id + "' ORDER BY s.Id DESC");
 
         }
 

@@ -20,7 +20,6 @@ namespace The_NewYork_Time.Views
         public ActionResult Category(int id, int page = 1, int pagesize = 5)
         {
             var ds = The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTheoCate(id).ToPagedList(page, pagesize);
-            
             return View(ds);
         }
     }
