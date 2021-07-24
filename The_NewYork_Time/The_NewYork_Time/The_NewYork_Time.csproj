@@ -2761,6 +2761,7 @@
     <Content Include="Areas\AssetAdmin\vendor\jquery\jquery.slim.js" />
     <Content Include="Areas\AssetAdmin\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Assets\css\base.css" />
+    <Content Include="Assets\css\form.css" />
     <Content Include="Assets\css\global.css" />
     <Content Include="Assets\css\index.css" />
     <Content Include="Assets\css\responsive.css" />

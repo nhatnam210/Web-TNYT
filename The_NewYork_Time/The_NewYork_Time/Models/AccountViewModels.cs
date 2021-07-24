@@ -7,6 +7,7 @@ namespace The_NewYork_Time.Models
     {
         [Required]
         [Display(Name = "Email")]
+
         public string Email { get; set; }
     }
 
