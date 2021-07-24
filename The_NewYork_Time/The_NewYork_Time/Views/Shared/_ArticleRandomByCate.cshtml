@@ -1,0 +1,30 @@
+﻿@model IEnumerable<The_NewYork_Time.Models.Article>
+
+
+<div class="other-articles col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+    <div class="other-articles__title">Suggest Article</div>
+    @foreach (var item in Model)
+    {
+
+        <div class="other-articles__list">
+            <a href="@Url.Action("Article","Categories" ,new { id =item.Id})" class="other-articles__link">
+                <div class="other-articles__item">
+                    <div class="rown">
+                        <div class="other-articles-picture__item col l-3 m-3 s-4">
+                            <img src="@item.image" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="other-articles-title__item col l-9 m-9 s-8">
+                            <div class="wrap">
+                                <div class="other-articles-title__son">@item.articlename</div>
+                                <div class="other-articles-title__time">@item.date.ToString("dd/MM/yyyy")</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+    }
+</div>
+

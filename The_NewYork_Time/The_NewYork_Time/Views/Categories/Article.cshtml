@@ -118,7 +118,8 @@
                 </div>
                 <!--End Read Content-->
                 <!--Other Article-->
-                <div class="other-articles col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
+                @Html.Partial("_ArticleRandomByCate", The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleRandomByCate(Model.idcategory))
+                @*<div class="other-articles col l-6 l-o-3 m-10 m-o-1 s-10 s-o-1  ">
                     <div class="other-articles__title">More on Chapli and Restaurants</div>
                     <div class="other-articles__list">
                         <a href="" class="other-articles__link">
@@ -136,59 +137,9 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="other-articles__link">
-                            <div class="other-articles__item">
-                                <div class="rown">
-                                    <div class="other-articles-picture__item col l-3 m-3 s-4">
-                                        <img src="@Model.image" width="100%" height="100%" alt="">
-                                    </div>
-                                    <div class="other-articles-title__item col l-9 m-9 s-8">
-                                        <div class="wrap">
-                                            <div class="other-articles-title__son">
-                                                A Brooklyn Landmark Holds Its Head High
-                                                Again tran nguyen nhat
-                                            </div>
-                                            <div class="other-articles-title__time">June 14, 2021</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="" class="other-articles__link">
-                            <div class="other-articles__item">
-                                <div class="rown">
-                                    <div class="other-articles-picture__item col l-3 m-3 s-4">
-                                        <img src="@Model.image" width="100%" height="100%" alt="">
-                                    </div>
-                                    <div class="other-articles-title__item col l-9 m-9 s-8">
-                                        <div class="wrap">
-                                            <div class="other-articles-title__son">Chapli Burgers</div>
-                                            <div class="other-articles-title__time">July 28, 2018</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="" class="other-articles__link">
-                            <div class="other-articles__item">
-                                <div class="rown">
-                                    <div class="other-articles-picture__item col l-3 m-3 s-4">
-                                        <img src="@Model.image" width="100%" height="100%" alt="">
-                                    </div>
-                                    <div class="other-articles-title__item col l-9 m-9 s-8">
-                                        <div class="wrap">
-                                            <div class="other-articles-title__son">
-                                                A Brooklyn Landmark Holds Its Head High
-                                                Again tran nguyen nhat
-                                            </div>
-                                            <div class="other-articles-title__time">June 14, 2021</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                       
                     </div>
-                </div>
+                </div>*@
                 <!--End Other Article-->
                 <!--Map-->
                 <div class="map col l-7 m-8 s-12">

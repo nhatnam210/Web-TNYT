@@ -14,6 +14,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
     public class CategoriesAdminController : Controller
     {
         private TNYTContext db = new TNYTContext();
+
         [Authorize(Roles = "Admin")]
         // GET: Admin/CategoriesAdmin
         public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
@@ -35,7 +36,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             ViewBag.CurrentFilter = searchString;
             //tìm kiếm
             var categories = from s in db.Categories
-                           select s;
+                             select s;
             if (!String.IsNullOrEmpty(searchString))
             {
                 categories = categories.Where(s => s.categoryname.Contains(searchString));
@@ -83,7 +84,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // GET: Admin/CategoriesAdmin/Create
         public ActionResult Create()
         {
-            ViewBag.idsection = new SelectList(db.Sections, "idsection", "sectionname");
+            ViewBag.idsection = new SelectList(db.Sections, "Id", "sectionname");
             return View();
         }
 
@@ -92,7 +93,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idcategory,categoryname,idsection")] Category category)
+        public ActionResult Create([Bind(Include = "Id,categoryname,idsection")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -101,7 +102,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.idsection = new SelectList(db.Sections, "idsection", "sectionname", category.idsection);
+            ViewBag.idsection = new SelectList(db.Sections, "Id", "sectionname", category.idsection);
             return View(category);
         }
 
@@ -117,7 +118,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.idsection = new SelectList(db.Sections, "idsection", "sectionname", category.idsection);
+            ViewBag.idsection = new SelectList(db.Sections, "Id", "sectionname", category.idsection);
             return View(category);
         }
 
@@ -126,7 +127,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idcategory,categoryname,idsection")] Category category)
+        public ActionResult Edit([Bind(Include = "Id,categoryname,idsection")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -134,7 +135,7 @@ namespace The_NewYork_Time.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.idsection = new SelectList(db.Sections, "idsection", "sectionname", category.idsection);
+            ViewBag.idsection = new SelectList(db.Sections, "Id", "sectionname", category.idsection);
             return View(category);
         }
 

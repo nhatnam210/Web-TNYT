@@ -6,7 +6,7 @@
 // 
 //     Connection String Name: `TNYT`
 //     Provider:               `System.Data.SqlClient`
-//     Connection String:      `data source=LAP-NAW\SQLEXPRESS;initial catalog=TNYT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework`
+//     Connection String:      `data source=LAPTOP-9F4GMIKT\SQLEXPRESS;initial catalog=TNYT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework`
 //     Schema:                 ``
 //     Include Views:          `False`
 
@@ -216,17 +216,5 @@ namespace TNYT
     {
 		[Column] public string UserId { get; set; }
 		[Column] public int ArticleId { get; set; }
-	}
-    
-	[TableName("dbo.sysdiagrams")]
-	[PrimaryKey("diagram_id")]
-	[ExplicitColumns]
-    public partial class sysdiagram : TNYTDB.Record<sysdiagram>  
-    {
-		[Column] public string name { get; set; }
-		[Column] public int principal_id { get; set; }
-		[Column] public int diagram_id { get; set; }
-		[Column] public int? version { get; set; }
-		[Column] public byte[] definition { get; set; }
 	}
 }
