@@ -3341,16 +3341,6 @@
     <Content Include="Areas\AssetAdmin\package.json" />
     <Content Include="Areas\Admin\Views\Shared\_MenuAdmin.cshtml" />
     <Content Include="Areas\Admin\Views\Manage\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\SectionsAdmin\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\SectionsAdmin\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\SectionsAdmin\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\SectionsAdmin\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\SectionsAdmin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\CategoriesAdmin\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\CategoriesAdmin\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\CategoriesAdmin\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\CategoriesAdmin\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\CategoriesAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Details.cshtml" />
@@ -3369,6 +3359,16 @@
     <Content Include="Areas\Admin\Views\ArticlesAdmin\Details.cshtml" />
     <Content Include="Areas\Admin\Views\ArticlesAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ArticlesAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SectionsAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\SectionsAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\SectionsAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\SectionsAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SectionsAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoriesAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoriesAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoriesAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoriesAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoriesAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3457,6 +3457,7 @@
     <Content Include="Views\Search\Index.cshtml" />
     <Content Include="Views\Categories\Article.cshtml" />
     <Content Include="Views\Account\Storage.cshtml" />
+    <Content Include="Views\Shared\_ArticleRandomByCate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

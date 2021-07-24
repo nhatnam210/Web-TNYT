@@ -95,6 +95,11 @@ namespace The_NewYork_Time.Models.BUS
             return db.Query<Article>("SELECT top 1 * FROM Article a WHERE Id IN(SELECT Max(a.Id - 2) from Article a , Section s, Category c where a.idcategory = c.Id and c.idsection = s.Id GROUP BY a.Id)ORDER BY a.Id DESC");
 
         }
-        
+        public static IEnumerable<Article> DanhSachArticleRandomByCate(int id)
+        {
+            var db = new TNYTDB();
+            return db.Query<Article>("SELECT TOP 4 a.Id,date,articlename,description,image,author FROM Article as a where a.idcategory = '" + id + "'  ORDER BY NEWID()");
+        }
+
     }
 }

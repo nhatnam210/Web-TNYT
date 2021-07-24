@@ -5,19 +5,12 @@
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
 }
 
+<h2>Details</h2>
 
-
-<div  class="max">
-    <h2 class="admin-title">Details Section</h2>
+<div>
+    <h4>Section</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Id)
-        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.sectionname)
         </dt>
@@ -28,7 +21,7 @@
 
     </dl>
 </div>
-@*<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idsection }) |
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
-</p>*@
+</p>
