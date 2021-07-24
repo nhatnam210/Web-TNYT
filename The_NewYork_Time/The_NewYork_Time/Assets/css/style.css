@@ -1470,9 +1470,9 @@ select {
     left: 0;
 }
 
-.form-right {
-    right: 0;
-}
+    .form-right {
+        right: 0;    
+    }
 
 .btn {
     font-family: var(--famlily-1);

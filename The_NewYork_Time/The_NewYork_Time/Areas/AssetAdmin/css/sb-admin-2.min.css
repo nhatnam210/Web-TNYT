@@ -11518,3 +11518,8 @@ body.sidebar-toggled footer.sticky-footer {
 .max {
     width: 100%;
 }
+
+.back-to-list {
+    text-align: center !important;
+    margin: 20px 0 !important;
+}

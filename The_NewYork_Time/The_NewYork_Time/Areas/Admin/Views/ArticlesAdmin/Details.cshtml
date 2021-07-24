@@ -5,10 +5,10 @@
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Article</h4>
+
+<div class="form">
+    <h2 class="admin-title">Details Article</h2>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -40,7 +40,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.image)
+            <img src="@Html.DisplayFor(model => model.image)" width="50%"alt="Alternate Text" />     
         </dd>
 
         <dt>
@@ -68,8 +68,12 @@
         </dd>
 
     </dl>
+    <div class=" col-md-12 back-to-list">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+    </div>
+    <div class=" col-md-12 back-to-list">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+

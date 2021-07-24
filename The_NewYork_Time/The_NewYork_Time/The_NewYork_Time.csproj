@@ -3340,10 +3340,7 @@
     <Content Include="Areas\AssetAdmin\package.json" />
     <Content Include="Areas\Admin\Views\Shared\_MenuAdmin.cshtml" />
     <Content Include="Areas\Admin\Views\Manage\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Index.cshtml" />
     <Content Include="Areas\AssetAdmin\ckeditor\plugins\scayt\CHANGELOG.md" />
     <Content Include="Areas\AssetAdmin\ckeditor\plugins\scayt\LICENSE.md" />

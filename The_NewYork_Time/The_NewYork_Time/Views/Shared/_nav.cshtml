@@ -82,7 +82,7 @@
                 </div>
                 <input type="checkbox" hidden class="check-search" id="check-search">
                 <input type="text" name="searchString" class="search-box" placeholder="SEARCH">
-                <input type="submit" value="Go" class="btn go">
+                <input type="submit" value="Go" class="btn btn-primary go">
                 <a href="#" class="category__name"></a>
 
             </div>
@@ -115,8 +115,8 @@
 
                     <ul class="nav navbar-nav navbar-right" style="display:flex;list-style:none;">
 
-                        <li><a class="btn login btn-primary px-3 text-uppercase fw-bold" href="/Admin/Manage">Admin Page</a></li>
-                        <li><a class="btn login btn-primary px-3 text-uppercase fw-bold" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+                        <li><a class="btn login btn-primary  text-uppercase fw-bold" href="/Admin/Manage">Admin Page</a></li>
+                        <li><a class="btn login btn-primary  text-uppercase fw-bold" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
                     </ul>
                     }
                 }
@@ -131,15 +131,15 @@
                             <li class="get-name">
                                 @Html.ActionLink(User.Identity.GetUserName(), "Storage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
                             </li>
-                            <li><a class="btn login btn-primary px-3 text-uppercase fw-bold" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+                            <li><a class="btn login btn-primary  text-uppercase fw-bold" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
                         </ul>
                     }
                 }
             }
             else
             {
-                @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn login btn-primary px-3 text-uppercase fw-bold" })
-                @Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn login btn-primary px-3 text-uppercase fw-bold" })
+                @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn login btn-primary  text-uppercase fw-bold" })
+                @Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn login btn-primary  text-uppercase fw-bold" })
             }
 
         </div>
