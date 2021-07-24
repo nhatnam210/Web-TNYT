@@ -9,7 +9,7 @@
 
 
 <body>
-    
+
     <div class="container">
         <div class="d-flex flex-column p-1">
 
@@ -92,204 +92,173 @@
                     <!-- other-news -->
                     @Html.Partial("_4ArticleRandomInHome", The_NewYork_Time.Models.BUS.ArticleBUS.ShowArticleRandomHome())
                     <!-- end: other-news -->
+                    
                     <!-- menu news -->
-                    <div class="container-fluid  ">
-                        <div class="row ">
-                            <!-- Left side -->
-                            <div class="col-md-8 bg-light" style="border-right: 1px solid #757575;">
-                                <div class="row paper-border-top">
-                                    @Html.Partial("_2ndNewArticleHome", The_NewYork_Time.Models.BUS.ArticleBUS.Show2ndArticleHome())
-                                    <!-- 1 paper -->
-                                    @Html.Partial("_3rdNewArticleHome", The_NewYork_Time.Models.BUS.ArticleBUS.Show3rdArticleHome())
-                                </div>
+                <div class="container-fluid  ">
+                    <div class="row ">
+                        <!-- Left side -->
+                        <div class="col-md-8 bg-light" style="border-right: 1px solid #757575;">
+                            <div class="row paper-border-top">
+                                @Html.Partial("_2ndNewArticleHome", The_NewYork_Time.Models.BUS.ArticleBUS.Show2ndArticleHome())
+                                <!-- 1 paper -->
+                                @Html.Partial("_3rdNewArticleHome", The_NewYork_Time.Models.BUS.ArticleBUS.Show3rdArticleHome())
+                            </div>
 
-                                <!-- other news replay -->
-                                @Html.Partial("_SectionLe", The_NewYork_Time.Models.BUS.SectionBUS.SectionLe())
+                            <!-- other news replay -->
+                            @Html.Partial("_SectionLe", The_NewYork_Time.Models.BUS.SectionBUS.SectionLe())
 
-                                <!-- triple layout -->
-                                @*<div class="row paper-border-top-light">
-                                        <div class="col-md">
-                                            <div class="paper ">
-                                                <div class="paper-body">
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>*@
-
-
-                                <!--<div class="row paper-border-top">
-                                    <div class="col-8">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="paper">
-                                                    <div class="paper-body ">
-                                                        <h5 class="title-paper "><a class="text-decoration-none text-dark" href="">Trump Organization and Top Executive Are Indicted in Tax Investigation</a></h5>
-                                                        <ul class="paper-list-abstract">
-                                                            <li class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <a href=""><div class="box" style="width: 100%;"></div></a>
-                                                <p class="caption-picture"><a class="text-decoration-none text-dark" href="">Allen Weisselberg, center, arriving in court to face charges of receiving fringe benefits without paying taxes on them. Jefferson Siegel for The New York Times</a></p>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!-- only one layout -->
-                                <!--<div class="col-4 paper-border-left">
-                                        <div class="paper ">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
-                                <!-- double layout  -->
-                                <!--<div class="row paper-border-top-light">
-                                    <div class="col-md">
-                                        <div class="paper ">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md paper-border-left">
-                                        <div class="paper">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
-                                <!-- the Great Read  -->
-                                <!--<div class="row ">
-                                    <h5 class="paper-border-top" style="font-size: 1rem;"><a class="text-decoration-none text-dark" href="#">The Great Read </a></h5>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md">
-                                        <div class="paper ">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md">
-                                        <div class="box" style="min-width: 100%; max-height: 100%;"></div>
-                                    </div>
-                                </div>
-                                <div class="row paper-border-top-light">
-                                    <div class="col-md">
-                                        <div class="paper ">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md">
-                                        <div class="box" style="min-width: 100%; max-height: 100%;"></div>
-                                    </div>
-                                </div>
-
-                                <div class="row paper-border-top-light">
-                                    <div class="col-md">
-                                        <div class="paper ">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md paper-border-left">
-                                        <div class="paper">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row paper-border-top">
-                                    <div class="col-8">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="paper">
-                                                    <div class="paper-body ">
-                                                        <h5 class="title-paper "><a class="text-decoration-none text-dark" href="">Trump Organization and Top Executive Are Indicted in Tax Investigation</a></h5>
-                                                        <ul class="paper-list-abstract">
-                                                            <li class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <a href=""><div class="box" style="width: 100%;"></div></a>
-                                                <p class="caption-picture"><a class="text-decoration-none text-dark" href="">Allen Weisselberg, center, arriving in court to face charges of receiving fringe benefits without paying taxes on them. Jefferson Siegel for The New York Times</a></p>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!-- only one layout -->
-                                <!--<div class="col-4 paper-border-left">
-                                        <div class="paper ">
-                                            <div class="paper-body">
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Allen Weisselberg, center, arriving in court to face charges of receiving fringe benefits without paying taxes on them. Jefferson Siegel for The New York Times</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row paper-border-top-light">
-                                    <div class="col-md">
-                                        <div class="paper ">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md paper-border-left">
-                                        <div class="paper">
-                                            <div class="paper-body">
-                                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
-                                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
+                            <!-- triple layout -->
+                            @*<div class="row paper-border-top-light">
+                    <div class="col-md">
+                        <div class="paper ">
+                            <div class="paper-body">
 
 
                             </div>
+                        </div>
+                    </div>
+
+                </div>*@
 
 
 
 
-                            <!-- end: left side -->
-                            <!-- Right side -->
 
-                            <div class="col-md-4 paper-border-top bg-light paper-border-left">
-                                <!-- opinion stage -->
-                                <div class="row ">
-                                    <h5 class="title-paper" style="font-size: 1rem;"><a class="text-decoration-none text-dark" href="#">Opinion</a></h5>
-                                </div>
-                                @Html.Partial("_Sectionchan", The_NewYork_Time.Models.BUS.SectionBUS.Sectionchan())
 
-                                <!-- end: opinion stage -->
-                                <!-- end: editors's Picks stage -->
+
+
+
+                            @*<div class="row paper-border-top-light">
+                    <div class="col-md">
+                        <div class="paper ">
+                            <div class="paper-body">
+                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
+                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
                             </div>
-                            <!-- end: right side -->
+                        </div>
+                    </div>
+                    <div class="col-md paper-border-left">
+                        <div class="paper">
+                            <div class="paper-body">
+                                <h5 class="title-paper"><a class="text-decoration-none text-dark" href="">House Opens Jan. 6 Investigation Over Republican Opposition</a></h5>
+                                <p class="paper-item-abstract"><a class="text-decoration-none text-black-50" href="#">Lawyers for Mr. Trump’s family business and its chief financial officer, Allen Weisselberg, are expected to appear in court on Thursday.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
 
 
                         </div>
+
+
+
+
+                        <!-- end: left side -->
+                        <!-- Right side -->
+
+                        <div class="col-md-4 paper-border-top bg-light paper-border-left">
+                            <!-- opinion stage -->
+                            <div class="row ">
+                                <h5 class="title-paper" style="font-size: 1rem;"><a class="text-decoration-none text-dark" href="#">Opinion</a></h5>
+                            </div>
+                            @Html.Partial("_Sectionchan", The_NewYork_Time.Models.BUS.SectionBUS.Sectionchan())
+
+                            <!-- end: opinion stage -->
+                            <!-- end: editors's Picks stage -->
+                        </div>
+                        <!-- end: right side -->
+
+
                     </div>
+                    <div class="row">
+                        <div class="newcontainer">
+                            <div class="new-navbar">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3col-lg-3">
+                                        <div class="new-navbar_paper">
+                                            <div class="row" style="border-right:2px solid #ccc">
+                                                <div class="col-xl-7">
+                                                    <a href="">
+                                                        <h3>Great Weekends Listens</h3>
+                                                    </a>
+
+                                                    <a href="">
+                                                        <p>
+                                                            The secrecy of the art market, David Choe’s TV show and more.
+                                                        </p>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xl-5">
+                                                    <img style="width: 100%;height: 92px; " src="https://static01.nyt.com/images/2021/06/20/arts/02narrated-1/00launder-square640.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3">
+                                        <div class="new-navbar_paper">
+                                            <div class="row " style="border-right:2px solid #ccc">
+                                                <div class="col-xl-7">
+                                                    <a href="">
+                                                        <h3>Listen to ‘The Book Review Podcast’</h3>
+                                                    </a>
+
+                                                    <a href="">
+                                                        <p> An outsider finds suspense in Hollywood. </p>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xl-5">
+                                                    <img src="https://static01.nyt.com/images/2021/07/02/books/02pod-cover/02pod-cover-square320.png?format=pjpg&quality=75&auto=webp&disable=upscale " alt="" style="width: 100%;height:92px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3">
+                                        <div class="new-navbar_paper">
+                                            <div class="row " style="border-right:2px solid #ccc">
+                                                <div class="col-xl-7">
+
+                                                    <a href="">
+                                                        <h3>Listen to ‘The Modern Love Podcast’</h3>
+                                                    </a>
+
+                                                    <a href="">
+                                                        <p> When two open marriages collide. </p>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xl-5">
+                                                    <img src="https://static01.nyt.com/images/2020/01/12/fashion/30MODERNLOVE-PODCAST/12MODERN-OPEN-square640.jpg?format=pjpg&quality=75&auto=webp&disable=upscale " alt="" style="width:100%;height: 92px; padding: 0;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3">
+                                        <div class="new-navbar_paper">
+                                            <div class="row">
+                                                <div class="col-xl-7">
+
+                                                    <a href="">
+                                                        <h3>Listen to ‘Day X’</h3>
+                                                    </a>
+
+                                                    <a href="">
+                                                        <p> Has the far right infiltrated the German military?</p>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xl-5">
+                                                    <img style="background-color: #ccc;width: 100%;height: 92px; " src="https://static01.nyt.com/images/2021/04/27/podcasts/dayx-podcast-albumartwork/dayx-podcast-albumartwork-square640-v2.jpg?format=pjpg&quality=75&auto=webp&disable=upscale
+                                                    " alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                       
+                    
+                </div>
                 </div>
                 <!-- end:menu news -->
 
