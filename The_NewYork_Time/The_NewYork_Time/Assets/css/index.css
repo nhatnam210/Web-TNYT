@@ -74,8 +74,10 @@ h5 {
     
 }
 
-a:hover{
-    color: rgba(0, 0, 0, 0.6) !important;
+a:hover {
+   
+    text-decoration: underline !important;
+    color: #333 !important;
 }
 /* *** HEADER *** */
 /* title lang */

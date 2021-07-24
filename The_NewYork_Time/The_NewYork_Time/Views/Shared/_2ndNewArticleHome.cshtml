@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <a href=""><img class="carg-img" style=" width: 100%;" src="@item.image" alt="@Url.Action("Article","Categories" ,new { id =item.Id})"></a>
+                <a href="@Url.Action("Article","Categories" ,new { id =item.Id})"><img class="carg-img" style=" width: 100%;" src="@item.image" alt="@Url.Action("Article","Categories" ,new { id =item.Id})"></a>
                 <p class="caption-picture text-decoration-none text-dark">Allen Weisselberg, center, arriving in court to face charges of receiving fringe benefits without paying taxes on them. Jefferson Siegel for The New York Times</p>
             </div>
         </div>

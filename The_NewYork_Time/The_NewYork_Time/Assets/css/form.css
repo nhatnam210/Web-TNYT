@@ -9,25 +9,21 @@ html {
     height: 620px;
 }
 
-header {
+/*header {
     display: flex;
     align-items: center;
     padding: 15px 0;
     border-bottom: 2px solid #efefef;
-}
+}*/
 
 section {
     padding-top: 30px;
 }
 
-section p {
-    font-size: 18px;
-    font-family: 'Noto Sans HK', sans-serif;
-    font-weight: 700;
-}
+
 
 .input-box span {
-    font-size: 12px;
+    color:red;
 }
 
 .container {
