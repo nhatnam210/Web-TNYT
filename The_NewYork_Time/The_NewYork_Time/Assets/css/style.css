@@ -479,6 +479,7 @@ html {
 .lastes-item a {
     text-decoration: none;
     color: var(--text-dark);
+    
 }
 
     .lastes-item a:hover {
@@ -490,10 +491,11 @@ html {
     font-feature-settings: 'kern';
     margin-bottom: 8px;
     font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 25px;
+    
     padding-bottom: 8px;
+    font-size: 2.2375rem;
+    font-weight: 700;
+    line-height: 2.6875rem;
 }
 
 .lastes-item img {
@@ -769,7 +771,7 @@ select {
 }
 
 .main-pic__number {
-    border-right: 1px solid #fff;
+    
     padding-right: 1.5rem;
 }
 
