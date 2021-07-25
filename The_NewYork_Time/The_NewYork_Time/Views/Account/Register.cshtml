@@ -11,7 +11,7 @@
         @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
         {
             @Html.AntiForgeryToken()
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.ValidationSummary(true, "", new { @class = "login-text__red " })
 
             <div class="input-box edit">
                 @Html.LabelFor(m => m.Email, new { @class = "col-md-3 control-label login-text" })

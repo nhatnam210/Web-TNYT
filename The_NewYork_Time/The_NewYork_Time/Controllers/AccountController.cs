@@ -192,7 +192,11 @@ namespace The_NewYork_Time.Controllers
             }
 
             //var articles = db.Articles.Include(a => a.Cetegory);
+<<<<<<< HEAD
             int pageSize = 3;
+=======
+            int pageSize = 5;
+>>>>>>> 5b8d45b8c7cdce35e121772c04b2f83f709cf653
             int pageNumber = (page ?? 1);
             return View(article.ToPagedList(pageNumber, pageSize));
 

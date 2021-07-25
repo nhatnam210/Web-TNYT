@@ -281,8 +281,15 @@ footer a:hover {
     font-family: 'Noto Sans HK', sans-serif;
 }
 
+.login-text__red {
+    font-size: 1.5rem;
+    font-family: 'Noto Sans HK', sans-serif;
+    margin-top: 12px;
+    color: red;
+}
+
 .register {
-    padding: 11px 172px;
+    padding: 11px 168px;
     background: #000000;
     color: #ffffff;
     text-decoration: none;
