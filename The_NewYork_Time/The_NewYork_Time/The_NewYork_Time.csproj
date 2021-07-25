@@ -3364,10 +3364,8 @@
     <Content Include="Areas\Admin\Views\CategoriesAdmin\Details.cshtml" />
     <Content Include="Areas\Admin\Views\CategoriesAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\CategoriesAdmin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -3442,6 +3440,8 @@
     <Content Include="Views\Categories\Article.cshtml" />
     <Content Include="Views\Account\Storage.cshtml" />
     <Content Include="Views\Shared\_ArticleRandomByCate.cshtml" />
+    <Content Include="Views\Shared\_FooterHome.cshtml" />
+    <Content Include="Views\Shared\_CateForFooterHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
