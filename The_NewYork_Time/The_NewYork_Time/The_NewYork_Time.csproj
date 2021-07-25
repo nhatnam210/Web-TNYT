@@ -3442,6 +3442,8 @@
     <Content Include="Views\Categories\Article.cshtml" />
     <Content Include="Views\Account\Storage.cshtml" />
     <Content Include="Views\Shared\_ArticleRandomByCate.cshtml" />
+    <Content Include="Views\Shared\_FooterHome.cshtml" />
+    <Content Include="Views\Shared\_CateForFooterHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
