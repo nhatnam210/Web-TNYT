@@ -42,11 +42,12 @@
     <div class="form-group">
         @Html.LabelFor(model => model.contentarticle, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <textarea id="editor1" class="ckeditor" name="content1" [ValidateInput(false)]></textarea>
+            <textarea class="ckeditor" name="contentarticle" [ValidateInput(false)]></textarea>
             @*@Html.TextAreaFor(model => model.content1, htmlAttributes: new { id = "content", @class = "control-label" })
                 @Html.ValidationMessageFor(model => model.content1, "", new { @class = "text-danger" })*@
         </div>
     </div>
+    
 
     <div class="form-group">
         @Html.LabelFor(model => model.author, htmlAttributes: new { @class = "control-label col-md-2" })
