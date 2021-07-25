@@ -3341,8 +3341,6 @@
     <Content Include="Areas\AssetAdmin\package.json" />
     <Content Include="Areas\Admin\Views\Shared\_MenuAdmin.cshtml" />
     <Content Include="Areas\Admin\Views\Manage\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Index.cshtml" />
     <Content Include="Areas\AssetAdmin\ckeditor\plugins\scayt\CHANGELOG.md" />
     <Content Include="Areas\AssetAdmin\ckeditor\plugins\scayt\LICENSE.md" />
     <Content Include="Areas\AssetAdmin\ckeditor\plugins\scayt\README.md" />
@@ -3366,6 +3364,11 @@
     <Content Include="Areas\Admin\Views\CategoriesAdmin\Details.cshtml" />
     <Content Include="Areas\Admin\Views\CategoriesAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\CategoriesAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AspNetUsersAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

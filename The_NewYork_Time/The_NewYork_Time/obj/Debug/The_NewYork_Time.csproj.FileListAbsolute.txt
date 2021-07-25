@@ -581,10 +581,10 @@ D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Microsoft.Owin.Security.Twitte
 D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csprojAssemblyReference.cache
 D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CoreCompileInputs.cache
 D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.CopyComplete
 D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.dll
 D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.pdb
 D:\.IT\DO AN\Do An Web\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
 D:\TNYT\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csproj.AssemblyReference.cache
+D:\Web-TNYT\The_NewYork_Time\The_NewYork_Time\obj\Debug\The_NewYork_Time.csprojAssemblyReference.cache

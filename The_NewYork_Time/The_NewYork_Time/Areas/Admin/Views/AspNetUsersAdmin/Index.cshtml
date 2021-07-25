@@ -6,9 +6,6 @@
     Layout = "~/Areas/Admin/Views/Shared/_Main_Layout.cshtml";
 }
 
-
-
-
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -89,8 +86,8 @@
             <!-- Page Heading -->
             <h1 class="h3 mb-2 text-gray-800">User</h1>
             @*<p>
-                @Html.ActionLink("Create New", "Create")
-            </p>*@
+                    @Html.ActionLink("Create New", "Create")
+                </p>*@
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -102,13 +99,15 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        ID
-                                    </th>
-                                    <th>
                                         Email
                                     </th>
+
                                     <th>
                                         User Name
+                                    </th>
+
+                                    <th>
+                                        EmailConfirmed
                                     </th>
                                     <th> Option</th>
                                 </tr>
@@ -119,13 +118,13 @@
                                 {
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.Id)
-                                        </td>
-                                        <td>
                                             @Html.DisplayFor(modelItem => item.Email)
                                         </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.UserName)
+                                        </td>
                                         @*<td>
-                                                @Html.DisplayFor(modelItem => item.EmailConfirmed)
+                                                
                                             </td>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.PasswordHash)
@@ -152,10 +151,11 @@
                                                 @Html.DisplayFor(modelItem => item.AccessFailedCount)
                                             </td>*@
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.UserName)
+                                            @Html.DisplayFor(modelItem => item.EmailConfirmed)
                                         </td>
                                         <td>
-                                            @Html.ActionLink("Details", "Details", new { id = item.Id })
+                                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                                         </td>
                                     </tr>
                                 }
@@ -189,6 +189,3 @@
     <!-- End of Footer -->
 
 </div>
-
-
-
