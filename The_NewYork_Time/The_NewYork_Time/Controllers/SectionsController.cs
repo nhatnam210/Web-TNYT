@@ -19,8 +19,15 @@ namespace The_NewYork_Time.Views
         
         public ActionResult Category(int id, int page = 1, int pagesize = 5)
         {
-            var ds = The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTheoCate(id).ToPagedList(page, pagesize);
-            return View(ds);
+            //var ds = The_NewYork_Time.Models.BUS.ArticleBUS.DanhSachArticleTheoCate(id).ToPagedList(page, pagesize);
+            IQueryable<Article> listArticle = null;
+
+            listArticle = from a in db.Articles
+                          where a.idcategory == id
+                          orderby a.Id
+                          select a;
+            var showlist = listArticle.ToPagedList(page, pagesize);
+            return View(showlist);
         }
     }
 
