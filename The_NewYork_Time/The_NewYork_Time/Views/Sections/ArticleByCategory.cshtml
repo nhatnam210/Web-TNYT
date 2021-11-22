@@ -1,26 +1,7 @@
 ﻿@model PagedList.IPagedList<The_NewYork_Time.Models.Article>
 @using PagedList.Mvc;
 
-@{
-    ViewBag.Title = "Categories";
-    Layout = "~/Views/Shared/_Layout2.cshtml";
-}
-<!-- Section header -->
-@*@foreach (var i in Model)
-{
-  @Html.Partial("_CategoryHeader", The_NewYork_Time.Models.BUS.CategoryBUS.ShowCategoryName(i.Cetegory.idcategory))
-}*@
-<header id="section-header" class="page">
-    <div class="section-world">
-        <a href="/Home/Section/@Model[0].Category.Section.Id" class="section-header-link">
-            <p>@Model[0].Category.Section.sectionname</p>
-        </a>
-    </div>
-    <div class="section-title">
-        <h1>@Model[0].Category.categoryname</h1>
-    </div>
-</header>
-<!-- End Section Header -->
+
 <section id="latest">
     <div>
         <!-- Tab items -->
@@ -29,14 +10,14 @@
                 All Article
             </div>
             @*@Html.Partial("_ShowCateNameInPage",The_NewYork_Time.Models.BUS.CategoryBUS.ShowCategoryName(new { id = }))*@
+
             @*<div class="tab-item">
-                <form action="">
-                    <input placeholder="Search" style="padding: 2px 0; border-radius: 5px;">
-                    <i class="ti-search"></i>
-                </form>
+                    <form action="">
+                        <input placeholder="Search" style="padding: 2px 0; border-radius: 5px;">
+                        <i class="ti-search"></i>
+                    </form>
 
-            </div>*@
-
+                </div>*@
             <div class="line"></div>
         </div>
 
@@ -48,7 +29,7 @@
                     <div class="lastes-item rowp">
                         <div class="lastes-item-content">
                             <div class="col col-2 display-sm">
-                                <span>@item.date.ToString("dd/MM/yyyy")</span>
+                                <span>@item.date.ToString("dd/MM/yyyy") </span>
                             </div>
                             <div class="col col-7 col-sm12">
                                 <h2>
@@ -73,21 +54,38 @@
                 }
 
                 <!-- Pagination Start -->
-                <div class="col-md-12 page">
-                    <div class="pagination justify-content-center">
-                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-                        @Html.PagedListPager(Model, Page => Url.Action("Category", "Sections", new { Page }))
-                    </div>
+            <div class="col-md-12 page">
+                <div class="pagination justify-content-center">
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                    @*@Html.PagedListPager(Model, page => Url.Action("ArticleByCategory", "Sections", new { page }))*@
+                    @*@Html.PagedListPager(Model, page => Url.Action("ArticleByCategory", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { HttpMethod = "GET", UpdateTargetId = "latest" }))*@
+                    @Html.PagedListPager(Model, page => Url.Action("GetArticleByCategory", "Sections",
+            new
+            {
+                page,
+             
+            }),
+            PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new PagedListRenderOptions
+            {
+                 Display = PagedListDisplayMode.IfNeeded,
+                 MaximumPageNumbersToDisplay = 5
+            },
+            new AjaxOptions
+            {
+                 InsertionMode = InsertionMode.Replace,
+                 HttpMethod = "Get",
+                 UpdateTargetId = "CricketersGrid",
+                 LoadingElementId = "divProcessing"
+            }))
+
+
                 </div>
+                @*@{
+                    Html.RenderAction("ArticleByCategory", "Sections", new { id = Model.Id, page = 1, pagesize = 5 });
+                }*@
+            </div>
                 <!-- Pagination Start -->
             </div>
-            
-
-
         </div>
     </div>
 </section>
-<script>
-    tab()
-</script>
-<!-- End Section Latest -->
